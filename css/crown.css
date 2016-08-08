@@ -1,0 +1,173 @@
+table {
+	border-top: 1px solid #0f0f55;
+	border-left: 1px solid #0f0f55;
+	border-bottom: 1px solid #0f0f55;
+}
+.left {
+	float: left;
+}
+.float {
+	overflow: hidden;
+}
+.title {
+	/*text-transform: uppercase;*/
+	color: #061556;
+	margin-bottom: 5px;
+}
+.crown-large-title {
+	font-size: 24px;
+	color: #000f57;
+}
+.crown-subtitle {
+	font-size: 16px;
+	color: #195f9b;
+}
+
+.crown-benefits-grid {
+	width: 53px;
+	height: 13px;
+	padding-top: 120px;
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: bold;
+	text-align: center;
+	color: #0f0f55;
+	padding-right: 1px;
+}
+
+.onboard-title-header-grid {
+	background: #0f0f55;
+	margin: 0;
+	padding: 8px 0 10px 7px;
+	height: 12px;
+	width: 590px;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: bold;
+}
+.crown-header-grid {
+	padding: 8px 0 10px;
+	font-weight: bold;
+	height: 12px;
+	width: 53px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	border-right: 1px solid #0f0f55;
+	font-size: 12px;
+}
+.crown-grid {
+	margin: 0;
+	padding: 9px 0;
+	border-right: 1px solid #0f0f55;
+	border-top: 1px solid #0f0f55;
+	text-align: center;
+}
+.crown-grid-title {
+	background: #ffffff;
+	margin: 0;
+	padding: 9px;
+	width: 343px;
+	border-right: 1px solid #0f0f55;
+	border-top: 1px solid #0f0f55;
+	height: 28px;
+	color: #0F0F55;
+	font-size: 12px;
+}
+.onboard-gold-header-grid {
+	background: #f7c02f;
+}
+.onboard-platinum-header-grid {
+	background: #a1acae;
+}
+.onboard-emerald-header-grid {
+	background: #287f62;
+}
+.onboard-diamond-header-grid {
+	background: #009dc1;
+}
+.onboard-diamond-plus-header-grid {
+	background: #6e1d8f;
+}
+.onboard-pinnacle-club-header-grid {
+	background: #005195;
+}
+.onboard-gold-grid {
+	background: #fce6ac;
+}
+.onboard-platinum-grid {
+	background: #d9dedf;
+}
+.onboard-emerald-grid {
+	background: #a9ccc0;
+}
+.onboard-diamond-grid {
+	background: #99d8e6;
+}
+.onboard-diamond-plus-grid {
+	background: #c5a5d2;
+}
+.onboard-pinnacle-club-grid {
+	background: #99b9d5;
+}
+.crown-content-left {
+	width: 577px;
+}
+.crown-content-right {
+	width: 338px;
+	padding-top: 38px;
+}
+#crown-member-content-bottom {
+	width: 100%;
+	padding-bottom: 27px;
+}
+#crown-right {
+	margin: 25px 27px 25px 20px;
+}
+#crown-menu-wrap {
+	margin: 22px 0 28px 8px;
+	width: 222px;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #061556;
+}
+#crown-menu-wrap .crown-menu-item {
+	padding: 8px 0 8px 0px;
+}
+#crown-menu-wrap .underline {
+	border-bottom: #D2D3D3 1px solid;
+}
+#crown-menu-wrap .crown-menu-item a{
+	cursor: pointer;
+	color: #666666;
+}
+#crown-menu-wrap .selected a {
+	color: #195f96;
+}
+#crown-menu-wrap .crown-menu-item a:hover{
+	color: #195f96;
+	text-decoration: none;
+}
+#grid-gold {
+	background: url("../newimages/crown/all-benefits-pin-gold.png") no-repeat;
+	margin-left: 13px;
+}
+#crown-member-content-top {
+	padding-bottom: 20px;
+}
+#grid-platium {
+	background: url("../newimages/crown/all-benefits-pin-platinum.png") no-repeat;
+}
+#grid-emerald {
+	background: url("../newimages/crown/all-benefits-pin-emerald.png") no-repeat;
+}
+#grid-diamond {
+	background: url("../newimages/crown/all-benefits-pin-diamond.png") no-repeat;
+}
+#grid-diamondplus {
+	background: url("../newimages/crown/all-benefits-pin-diamond-plus.png") no-repeat;
+}
+#grid-pinnacle {
+	background: url("../newimages/crown/all-benefits-pin-pinnacle.png") no-repeat;
+}
+

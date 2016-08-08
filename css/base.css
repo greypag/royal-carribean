@@ -1,0 +1,49 @@
+﻿body {font-size:12px; color:#666666; padding:0px; margin:0px; font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a:link{text-decoration:none !important;color:#666666;}
+a:visited{text-decoration:none;color:#666666;}
+a:hover{text-decoration:underline;color:#666666;}
+a:active{text-decoration:none;color:#666666;}
+form{margin:0px;padding:0px;}
+img{border:0px;}
+select{font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; }
+.mybutton{border:solid 1px #ccc;background:#fff;font-size:12px;}
+.my400{}
+.my400 a:link{text-decoration:none;color:#a5833c;}
+.my400 a:visited{text-decoration:none;color:#a5833c;}
+.my400 a:hover{text-decoration:underline;color:#a5833c;}
+.my400 a:active{text-decoration:none;color:#a5833c;}
+.linkblue{}
+.linkblue a:link{text-decoration:none;color:#3787d0;}
+.linkblue a:visited{text-decoration:none;color:#3787d0;}
+.linkblue a:hover{text-decoration:underline;color:#3787d0;}
+.linkblue a:active{text-decoration:none;color:#3787d0;}
+.linkdate{}
+.linkdate a:link{text-decoration:underline;color:#3787d0;}
+.linkdate a:visited{text-decoration:underline;color:#3787d0;}
+.linkdate a:hover{text-decoration:underline;color:#3787d0;}
+.linkdate a:active{text-decoration:underline;color:#3787d0;}
+.mypng1{background: url(../images/common_04.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/common_04.html");}
+.mypng2{background: url(../images/common_35.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/common_35.html");}
+.mypng3{background: url(../images/common_01.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/common_01.html");}
+.mypng4{background: url(../images/common_06.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/common_06.html");}
+.mypng5{background: url(../images/legend_02_0.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_0.html");}
+.mypng43{background: url(../images/legend_02_43.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_43.html");}
+.mypng6{background: url(../images/legend_02_1.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_1.html");}
+.mypng41{background: url(../images/legend_02_41.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_41.html");}
+.mypng7{background: url(../images/legend_02_2.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_2.html");}
+.mypng42{background: url(../images/legend_02_42.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_42.html");}
+.mypng8{background: url(../images/legend_02_3.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_3.html");}
+.mypng44{background: url(../images/legend_02_44.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_44.html");}
+
+
+.mypng45{background: url(../images/legend_02_45.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02_45.html");}
+.mypng9{background: url(../images/f_tpfx1_01.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/f_tpfx1_01.html"); z-index:-1; }
+.mypng10{background: url(../images/common_12.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/common_12.html");}
+.input-search{ width:178px; height:22px; line-height:22px; border:none; padding-left:30px;float:left;background:url(../images/sea-input.gif) no-repeat;}
+
+/*水手号*/
+.mypng43ss{background: url(../images/legend_01.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_01.html");}
+.mypng44ss{background: url(../images/legend_02.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_02.html");}
+.mypng41ss{background: url(../images/legend_03.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_03.html");}
+.mypng42ss{background: url(../images/legend_04.png);_background: ; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="images/legend_04.html");}
+

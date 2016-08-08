@@ -1,0 +1,215 @@
+﻿/* CSS Document */
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+#indexm
+{
+    width: 946px;
+    padding-bottom: 30px;
+    margin: auto;
+    padding-top: 13px;
+}
+.indexkv
+{
+    width: 946px;
+    height: 361px;
+    position: relative;
+    z-index: 1;
+}
+.imleftitle2
+{
+    color: #000F57;
+    font-size: 16px;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 53px;
+}
+.indexhx
+{
+    position: absolute;
+    left: 21px;
+    top: 50px;
+    width: 243px;
+    height: 267px;
+    background-image: url(../images/i03.jpg);
+    border: 5px solid #FFF;
+    z-index: 0;
+}
+#indexmain
+{
+    width: 946px;
+    padding-top: 38px;
+}
+.imleft
+{
+    background-image: url("../images/ileftbg.jpg");
+    background-repeat: no-repeat;
+    display: inline;
+    float: left;
+    margin-left: 22px;
+    width: 253px;
+    height: 849px;
+}
+.imrig
+{
+    width: 593px;
+    float: left;
+    padding-left: 32px;
+}
+.imleftitle
+{
+    color: #000F57;
+    font-size: 16px;
+    height: 46px;
+    line-height: 44px;
+    padding-left: 53px;
+}
+.imleftf1
+{
+    line-height: 24px;
+    color: #3e3e3e;
+    height: 92px;
+    padding-left: 24px;
+    padding-top: 19px;
+}
+.imleftf3
+{
+    line-height: 24px;
+    color: #3e3e3e;
+    height: 127px;
+    padding-left: 24px;
+}
+.imleftf1 a
+{
+    color: #006ab7;
+    text-decoration: underline;
+}
+.imleftf1 a:hover
+{
+    color: #000;
+    text-decoration: underline;
+}
+.imleftf2
+{
+    height: 102px;
+    padding-top: 20px;
+    padding-left: 24px;
+}
+.imleftf224
+{
+    height: 200px;
+    padding-left: 3px;
+}
+.imleftf22
+{
+    height: 137px;
+    padding-left: 3px;
+    overflow: hidden;
+}
+.imleftf2 a
+{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+.imleftitle3
+{
+    color: #000F57;
+    font-size: 16px;
+    height: 44px;
+    line-height: 48px;
+    padding-left: 53px;
+}
+.imleftf2 a:hover
+{
+    text-decoration: underline;
+    color: #3e3e3e;
+}
+.imrigtitle
+{
+    width: 593px;
+    height: 38px;
+    background-image: url(../images/irigt.jpg);
+    color: #031054;
+    line-height: 38px;
+}
+.imrigtitle a
+{
+    color: #031054;
+    text-decoration: none;
+}
+.imrigtitle a:hover
+{
+    color: #031054;
+    text-decoration: underline;
+}
+.imrigf1
+{
+    overflow: hidden;
+    height: 200px;
+    padding: 30px 0px 15px 7px;
+}
+.imrigf11
+{
+    overflow: hidden;
+    height: 220px;
+    padding: 30px 0px 15px 7px;
+}
+.imrigf1pic
+{
+    float: left;
+    width: 201px;
+    height: 130px;
+    margin-top: 11px;
+    padding: 1px;
+    border: 1px solid #e0e0e0;
+}
+.imrigf1f
+{
+    float: left;
+    padding-left: 39px;
+}
+.imrigf2
+{
+    width: 318px;
+    padding-right: 10px;
+    height: 86px;
+    background-color: #fff9e1;
+    padding-left: 4px;
+    color: #8c8b8b;
+    line-height: 20px;
+}
+.imrigf3
+{
+    padding-top: 18px;
+    color: #555555;
+}
+/*
+.imrigf31
+{
+    padding: 5px 0px 5px 0px;
+    height: 16px;
+    overflow: hidden;
+}
+*/
+.imrigf31
+{
+    padding: 5px 0px 5px 0px;
+    overflow: hidden;
+}
+.imrigf3 a
+{
+    color: #555555;
+    text-decoration: none;
+}
+.imrigf3 a:hover
+{
+    color: #555555;
+    text-decoration: underline;
+}
+.clear
+{
+    clear: both;
+}

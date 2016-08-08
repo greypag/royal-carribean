@@ -1,0 +1,655 @@
+{
+    "8-day-7-night-western-caribean": {
+        "title" : "8日7夜 西加勒比之旅",
+        "cruise" : "海洋和悅號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"勞德代爾堡，佛羅里達州",
+                "arrive":"",
+                "depart":"1630"
+            },
+            "2" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+                "port":"拉巴第，海地",
+                "arrive":"0800",
+                "depart":"1700"
+            },
+            "4" : {
+                "port":"法爾茅斯，牙買加",
+                "arrive":"1030",
+                "depart":"1900"
+            },
+            "5" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "6" : {
+                "port":"科蘇梅爾，墨西哥",
+                "arrive":"0800",
+                "depart":"1900"
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"勞德代爾堡，佛羅里達州",
+                "arrive":"0615",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "11" : "19",
+                "12" : "3, 17"
+            },
+            "2017" : {
+                "1" : "14, 28",
+                "2" : "11, 25",
+                "3" : "11, 25",
+                "4" : "8, 22"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='float paddingBottom'><div class='left paddingRight'><img src='../newimages/top-destinations/wc_pic_01.jpg' alt='' title=''/></div><div class='left'><div class='paddingBottom'><img src='../newimages/top-destinations/wc_pic_02.jpg' alt='' title=''/></div><div><img src='../newimages/top-destinations/wc_pic_03.jpg' alt='' title=''/></div></div></div><div class='float'><img src='../newimages/top-destinations/wc_pic_04.jpg' alt='' title=''/></div>"
+       
+    },
+    "8-day-7-night-eastern-caribbean": {
+        "title" : "8日7夜 東加勒比之旅",
+        "cruise" : "海洋和悅號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"勞德代爾堡，佛羅里達州",
+                "arrive":"",
+                "depart":"1630"
+            },
+            "2" : {
+                "port":"拿騷，巴哈馬",
+                "arrive":"0700",
+                "depart":"1400"
+            },
+            "3" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "4" : {
+                "port":"夏洛特阿馬利亞，聖托馬斯",
+                "arrive":"1000",
+                "depart":"1900"
+            },
+            "5" : {
+                "port":"菲利普斯堡，聖馬丁島",
+                "arrive":"0800",
+                "depart":"1700"
+            },
+            "6" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"勞德代爾堡，佛羅里達州",
+                "arrive":"0615",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "11" : "12, 26",
+                "12" : "10"
+            },
+            "2017" : {
+                "1" : "7, 21",
+                "2" : "4, 18",
+                "3" : "4, 18",
+                "4" : "1, 15"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom'><img src='../newimages/top-destinations/ec_pic_01.jpg' alt='' title=''/></div><div><div class='left paddingRight'><img src='../newimages/top-destinations/ec_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/ec_pic_03.jpg' alt='' title=''/></div></div>"
+       
+    },
+    "8-day-7-night-alaska-sawyer-glacier": {
+        "title" : "8日7夜 阿拉斯加冰川之旅",
+        "cruise" : "海洋探險者號",
+        "caption" : "",
+        "monthRowNum" : 3,
+        "monthColNum" : 2,
+		"duplicateDay" : 1,
+        "details" : {
+            "1" : {
+				"day":"1",
+                "port":"西雅圖，華盛頓",
+                "arrive":"",
+                "depart":"1600"
+            },
+            "2" : {
+				"day":"2",
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+				"day":"3",
+                "port":"內灣航道，阿拉斯加",
+                "arrive":"",
+                "depart":""
+            },
+            "4" : {
+				"day":"3",
+                "port":"朱諾，阿拉斯加",
+                "arrive":"1200",
+                "depart":"2100"
+            },
+            "5" : {
+				"day":"4",
+                "port":"史凱威，阿拉斯加",
+                "arrive":"0700",
+                "depart":"2030"
+            },
+            "6" : {
+				"day":"5",
+                "port":"特雷西臂峽灣，阿拉斯加",
+                "arrive":"0700",
+                "depart":"1200"
+            },
+            "7" : {
+				"day":"6",
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+				"day":"7",
+                "port":"維多利亞，卑詩省",
+                "arrive":"0900",
+                "depart":"1800"
+            },
+            "9" : {
+				"day":"8",
+                "port":"西雅圖，華盛頓",
+                "arrive":"0600",
+                "depart":""
+            }			
+        },
+        "dates" : {
+            "2016" : {
+                "5" : "20, 27",
+                "6" : "3, 10, 17, 24",
+                "7" : "1, 8, 15, 22, 29",
+                "8" : "5, 12, 19, 26",
+                "9" : "2, 9"
+            },
+            "2017" : {
+                "5" : "19, 26",
+                "6" : "2, 9, 16, 23, 30",
+                "7" : "7, 14, 21, 28",
+                "8" : "4, 11, 18, 25",
+                "9" : "1, 8"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom'><img src='../newimages/top-destinations/med1_pic_01.jpg' alt='' title=''/></div><div class='paddingBottom float'><div class='left paddingRight'><img src='../newimages/top-destinations/med1_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/med1_pic_03.jpg' alt='' title=''/></div></div><div><img src='../newimages/top-destinations/med1_pic_04.jpg' alt='' title=''/></div>"       
+    },
+    "8-day-7-night-western-mediterranean": {
+        "title" : "8日7夜 西地中海之旅",
+        "cruise" : "海洋和悅號",
+        "caption" : "",
+        "monthRowNum" : 3,
+        "monthColNum" : 2,
+        "details" : {
+            "1" : {
+                "port":"巴塞羅那，西班牙",
+                "arrive":"",
+                "depart":"1800"
+            },
+            "2" : {
+                "port":"帕爾馬，西班牙",
+                "arrive":"0800",
+                "depart":"1600"
+            },
+            "3" : {
+                "port":"普羅旺斯，法國",
+                "arrive":"0900",
+                "depart":"1800"
+            },
+            "4" : {
+                "port":"拉斯佩齊亞，義大利",
+                "arrive":"0830",
+                "depart":"2030"
+            },
+            "5" : {
+                "port":"羅馬，義大利",
+                "arrive":"0700",
+                "depart":"2000"
+            },
+            "6" : {
+                "port":"那不勒斯，義大利",
+                "arrive":"0700",
+                "depart":"2000"
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"巴塞隆拿，西班牙",
+                "arrive":"0500",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "6" : "12, 19, 26",
+                "7" : "3, 10, 17, 24, 31",
+                "8" : "7, 14, 21, 28",
+                "9" : "4, 11, 18, 25",
+				"10" : "2, 9, 16"
+            }
+
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom float'><img src='../newimages/top-destinations/med2_pic_01.jpg' alt='' title=''/></div><div class='paddingBottom float'><div class='left paddingRight'><img src='../newimages/top-destinations/med2_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/med2_pic_03.jpg' alt='' title=''/></div></div><div><img src='../newimages/top-destinations/med2_pic_04.jpg' alt='' title=''/></div>"
+    },
+    "12-day-11-night-artic-cicle": {
+        "title" : "12日11夜 北極圈之旅",
+        "cruise" : "海洋旋律號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"哥本哈根，丹麥",
+                "arrive":"",
+                "depart":"1700"
+            },
+            "2" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+                "port":"奧勒松，挪威",
+                "arrive":"0700",
+                "depart":"1400"
+            },
+            "4" : {
+                "port":"北極圈 (航行)",
+                "arrive":"",
+                "depart":""
+            },
+            "5" : {
+                "port":"霍寧斯沃格，挪威",
+                "arrive":"1100",
+                "depart":"1900"
+            },
+            "6" : {
+                "port":"特羅姆瑟，挪威",
+                "arrive":"0800",
+                "depart":"1700"
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"蓋朗厄爾，挪威",
+                "arrive":"1100",
+                "depart":"1900"
+            },
+            "9" : {
+                "port":"奧爾登，挪威",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "10" : {
+                "port":"卑爾根，挪威",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "11" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "12" : {
+                "port":"哥本哈根，丹麥",
+                "arrive":"0700",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "6" : "5"
+            }
+
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom'><img src='../newimages/top-destinations/gree_pic_01.jpg' alt='' title=''/></div><div><div class='left paddingRight'><img src='../newimages/top-destinations/gree_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/gree_pic_03.jpg' alt='' title=''/></div></div><div style='clear:both;float:left;padding-top:20px'><img src='../newimages/top-destinations/gree_pic_04.jpg' alt='' title=''/></div><div style='float:right;padding-top:20px'><img src='../newimages/top-destinations/gree_pic_05.jpg' alt='' title=''/></div>"
+       
+    },
+    "8-day-7-night-scandinavia-and-russia": {
+        "title" : "8日7夜 斯堪的納維亞和俄羅斯之旅",
+        "cruise" : "海洋旋律號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"哥本哈根，丹麥",
+                "arrive":"",
+                "depart":"1700"
+            },
+            "2" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+                "port":"斯德哥爾摩，瑞典",
+                "arrive":"0900",
+                "depart":"1700"
+            },
+            "4" : {
+                "port":"愛沙尼亞，塔林",
+                "arrive":"0930",
+                "depart":"1730"
+            },
+            "5" : {
+                "port":"聖彼得堡，俄羅斯",
+                "arrive":"0700",
+                "depart":"1930"
+            },
+            "6" : {
+                "port":"赫爾辛基，芬蘭",
+                "arrive":"0700",
+                "depart":"1400"
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"哥本哈根，丹麥",
+                "arrive":"0700",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "5" : "22, 29"
+            }
+
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='left paddingRight'><img src='../newimages/top-destinations/ne_pic_01.jpg' alt='' title=''/></div><div class='left'><div class='paddingBottom'><img src='../newimages/top-destinations/ne_pic_02.jpg' alt='' title=''/></div><div><img src='../newimages/top-destinations/ne_pic_03.jpg' alt='' title=''/></div></div><div style='clear:both;padding-top:20px'><img src='../newimages/top-destinations/ne_pic_04.jpg' alt='' title=''/></div>"
+       
+    },
+    "8-day-7-night-greek-isles": {
+        "title" : "8日7夜 希臘小島之旅",
+        "cruise" : "海洋珠寶號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"羅馬（奇維塔韋基亞），意大利",
+                "arrive":"",
+                "depart":"1700"
+            },
+            "2" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+                "port":"聖托里尼，希臘",
+                "arrive":"1300",
+                "depart":"2200"
+            },
+            "4" : {
+                "port":"米科諾斯，希臘",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "5" : {
+                "port":"雅典（比雷埃夫斯），希臘",
+                "arrive":"0600",
+                "depart":"1800"
+            },
+            "6" : {
+                "port":"卡塔科隆，希臘",
+                "arrive":"1000",
+                "depart":"1700"
+            },
+            "7" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "8" : {
+                "port":"羅馬（奇維塔韋基亞），意大利", 
+                "arrive":"0500",
+                "depart":""
+            }
+        },
+        "dates" : { 
+            "2016" : {
+                "6" : "19",
+                "7" : "3, 17, 31", 
+				"8" : "14, 28"
+            } 
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom'><img src='../newimages/top-destinations/asia_pic_01.jpg' alt='' title=''/></div><div><div class='left paddingRight'><img src='../newimages/top-destinations/asia_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/asia_pic_03.jpg' alt='' title=''/></div></div><div style='clear:both;padding-top:20px'><img src='../newimages/top-destinations/asia_pic_04.jpg' alt='' title=''/></div>"
+       
+    },
+    "11-day-10-night-south-pacific": {
+        "title" : "11日10夜 南太平洋之旅",
+        "cruise" : "海洋探險者號",
+        "caption" : "",
+        "monthRowNum" : 4,
+        "monthColNum" : 3,
+        "details" : {
+            "1" : {
+                "port":"悉尼，澳大利亞",
+                "arrive":"",
+                "depart":"1830"
+            },
+            "2" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "3" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "4" : {
+                "port":"利福，洛亞蒂群島",
+                "arrive":"1000",
+                "depart":"1800"
+            },
+            "5" : {
+                "port":"瓦努，阿圖維拉",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "6" : {
+                "port":"神秘島，瓦努阿圖",
+                "arrive":"0800",
+                "depart":"1700"
+            },
+            "7" : {
+                "port":"努美阿，新喀裡多尼亞",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "8" : {
+                "port":"島松樹，新喀裡多尼亞",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "9" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "10" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "11" : {
+                "port":"悉尼，澳大利亞",
+                "arrive":"0630",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "11" : "10"
+            },
+            "2017" : {
+                "1" : "3, 25",
+                "2" : "4, 22"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom float'><img src='../newimages/top-destinations/aust_pic_01.jpg' alt='' title=''/></div><div class='paddingBottom float'><div class='left paddingRight'><img src='../newimages/top-destinations/aust_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/aust_pic_03.jpg' alt='' title=''/></div></div><div><img src='../newimages/top-destinations/aust_pic_04.jpg' alt='' title=''/></div>"
+       
+    },
+    "8-day-7-night-arabian-gulf": {
+        "title" : "8日7夜 阿拉伯灣之旅",
+        "cruise" : "海洋夢幻號",
+        "caption" : "",
+        "monthRowNum" : 3,
+        "monthColNum" : 2,
+        "details" : {
+            "1" : {
+                "port":"迪拜，阿拉伯聯合酋長國",
+                "arrive":"",
+                "depart":"1800"
+            },
+            "2" : {
+                "port":"海塞卜，阿曼",
+                "arrive":"0800",
+                "depart":"1700"
+            },
+            "3" : {
+                "port":"阿布扎比，阿拉伯聯合酋長國",
+                "arrive":"0800",
+                "depart":"1800"
+            },
+            "4" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "5" : {
+                "port":"馬斯喀特，阿曼",
+                "arrive":"0900",
+                "depart":""
+            },
+            "6" : {
+                "port":"馬斯喀特，阿曼",
+                "arrive":"",
+                "depart":"1600"
+            },
+            "7" : {
+                "port":"迪拜，阿拉伯聯合酋長國",
+                "arrive":"1100",
+                "depart":""
+            },
+            "8" : {
+                "port":"迪拜，阿拉伯聯合酋長國",
+                "arrive":"",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "12" : "12, 19, 26"
+            },
+			"2017" : {
+                "1" : "2, 9, 16, 23, 30",
+				"2" : "6, 20, 27",
+				"3" : "6, 13, 20, 27"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom float'><img src='../newimages/top-destinations/ac_pic_01.jpg' alt='' title=''/></div><div class='paddingBottom float'><div class='left paddingRight'><img src='../newimages/top-destinations/ac_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/ac_pic_03.jpg' alt='' title=''/></div></div><div></div>"
+       
+    },
+    "5-day-4-night-port-klang-and-phuket": {
+        "title" : "5日4夜 巴生港及普吉島之旅",
+        "cruise" : "海洋水手號",
+        "caption" : "",
+        "monthRowNum" : 3,
+        "monthColNum" : 2,
+        "details" : {
+            "1" : {
+                "port":"新加坡",
+                "arrive":"",
+                "depart":"1700"
+            },
+            "2" : {
+                "port":"吉隆坡（巴生港），馬來西亞",
+                "arrive":"0700",
+                "depart":"1500"
+            },
+            "3" : {
+                "port":"普吉島，泰國",
+                "arrive":"1030",
+                "depart":"2030"
+            },
+            "4" : {
+                "port":"海上航行",
+                "arrive":"",
+                "depart":""
+            },
+            "5" : {
+                "port":"新加坡",
+                "arrive":"0830",
+                "depart":""
+            }
+        },
+        "dates" : {
+            "2016" : {
+                "10" : "24, 31",
+				"11" : "7, 14, 28",
+				"12" : "12, 19"
+            },
+			"2017" : {
+                "1" : "2, 9, 27, 31",
+				"2" : "13, 20, 27",
+				"3" : "13, 20"
+            }
+        },
+        "portcaption" : 0,
+        "imageHTML" : "<div class='paddingBottom'><img src='../newimages/top-destinations/ala_pic_01.jpg' alt='' title=''/></div><div><div class='left paddingRight'><img src='../newimages/top-destinations/ala_pic_02.jpg' alt='' title=''/></div><div class='left'><img src='../newimages/top-destinations/ala_pic_03.jpg' alt='' title=''/></div></div><div style='clear:both;padding-top:20px'><img src='../newimages/top-destinations/ala_pic_04.jpg' alt='' title=''/></div>"
+       
+    }
+}

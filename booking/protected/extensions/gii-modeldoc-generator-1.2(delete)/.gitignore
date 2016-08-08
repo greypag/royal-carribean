@@ -1,0 +1,4 @@
+.idea
+codecept.phar
+composer.phar
+vendor/*

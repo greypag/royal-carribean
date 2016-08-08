@@ -1,0 +1,136 @@
+.left {
+	float: left;
+}
+.float {
+	overflow: hidden;
+}
+div#top-destination-banner {
+	height: 339px;
+}
+div.top-country-wrapper {
+	margin: 0 30px;
+	border-bottom: 1px solid #CCCCCC;
+}
+div.top-country-top {
+	padding-left: 3px;
+}
+div.top-country-title {
+	padding-top: 21px;
+	padding-bottom: 14px;
+	font-size: 24px;
+}
+div.top-country-caption {
+	color: #5D5D5D;
+	padding-bottom: 15px;
+}
+div.top-country-bottom-right {
+	padding-left: 20px;
+}
+div.top-country-wrapper span.top-country-blue-title {
+	color: #001052;
+}
+div.top-country-wrapper span.top-country-blue-title a:hover {
+	text-decoration: none;
+	color: #001052;
+}
+div.top-country-wrapper span.top-country-grey-title {
+	color: #989899;
+	padding-left: 10px;
+}
+div.top-country-date-wrapper div.top-country-data-row-2 {
+	padding-top: 13px;
+}
+div.top-country-bottom-left {
+	width: 451px;
+}
+div.top-country-schedule-header {
+	background-color: #001056;
+	font-weight: bold;
+	color: #ffffff;
+	height: 29px;
+	line-height: 29px;
+}
+div.top-country-schedule-day {
+	width: 79px;
+	padding-left: 15px;
+}
+div.top-country-schedule-port {
+	width: 194px;
+	padding-left: 4px;
+}
+div.top-country-schedule-arrive {
+	width: 64px;
+	text-align: center;
+}
+div.top-country-schedule-depart {
+	width: 95px;
+	text-align: center;
+}
+div.top-country-schedule-row {
+	padding: 7px 0;
+}
+div.top-country-schedule-row div.top-country-schedule-day {
+	color: #3F4C7F;
+}
+div.top-country-schedule-row div.top-country-schedule-port,
+div.top-country-schedule-row div.top-country-schedule-arrive,
+div.top-country-schedule-row div.top-country-schedule-depart {
+	color: #5D5D5D;
+}
+div.top-country-schedule-wrapper {
+	font-size: 12px;
+}
+div.top-country-date-wrapper {
+	padding-left: 13px;
+	padding-top: 20px;
+}
+div.top-country-date-title {
+	font-size: 22px;
+	color: #006CB7;
+	padding-bottom: 7px;
+}
+div.top-country-date-year {
+	color: #525252;
+	font-size: 18px;
+	width: 83px;
+}
+div.top-country-date-month {
+	color: #989899;
+	width: 355px;
+	font-size: 12px;
+}
+div.top-country-date-month-col-2 {
+	width: 50%;
+}
+div.top-country-date-month-col-3 {
+	width: 33.33%;
+}
+div.top-country-bottom-link {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	text-align: right;
+	font-size: 12px;
+	line-height: 32px;
+}
+div.top-country-date-item {
+	line-height: 30px;
+	height: 24px;
+}
+div.top-country-bottom-right div.paddingTop{
+	padding-top: 20px;
+}
+div.top-country-bottom-right div.paddingRight{
+	padding-right: 20px;
+}
+div.top-country-bottom-right div.paddingLeft{
+	padding-left: 20px;
+}
+div.top-country-bottom-right div.paddingBottom{
+	padding-bottom: 20px;
+}
+div.bottom-caption {
+	font-size: 12px;
+	color: #5D5D5D;
+	padding-bottom: 28px;
+	margin: 0 30px;
+}

@@ -1,0 +1,237 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from www.rcclchina.com.cn/mice/ by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 13 May 2014 10:13:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="Head1"><title>
+	商务会奖
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Load Style Information -->
+<link href="../css/base.css" rel="stylesheet" /><link href="../css/rcclchina.css" rel="stylesheet" type="text/css" /><link href="assets/mice.css" rel="stylesheet" />
+<style type="text/css">
+#flash_player { width: 590px; text-align: center; }
+</style>
+<!-- Load JavaScript Information -->
+<script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="../js/jquery-flash.js"></script>
+<script type="text/javascript" src="../js/swfobject.js"></script>
+<script type="text/javascript" src="../js/rccl.js"></script>
+<script type="text/javascript" src="../js/menu.js"></script>
+<script type="text/javascript" src="../js/ready.js"></script>
+<script type="text/javascript">
+current_col = 5;
+</script>
+</head>
+<body class="experience">
+<form method="post" action="#" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk4NTE0MDM0NWRkvtVtnA2b1DTyNn466UyJKUKI1gRc6RK5uuIhqPv3iNc=" />
+</div>
+
+	<script type="text/javascript">RCCLHeader();</script>
+	<div id="mice_wrapper">
+		<div id="main_wrapper">
+			<div class="seo_h1">
+				<h1>公司会议、大型会议和奖励旅游</h1>
+			</div>
+			<div id="mice_nav"><img src="images/nav_1.gif" width="575" height="48" border="0" usemap="#Map" /></div>
+			<map name="Map" id="Map">
+				<area shape="rect" coords="473,10,564,38" href="customize.html" />
+				<area shape="rect" coords="381,10,460,38" href="casestudy.html" />
+				<area shape="rect" coords="289,10,368,38" href="creative.html" />
+				<area shape="rect" coords="197,10,276,38" href="incentives.html" />
+				<area shape="rect" coords="104,10,186,38" href="business.html" />
+				<area shape="rect" coords="13,10,92,38" href="index-2.html" />
+			</map>
+			<div id="flash_player"></div>
+			<div class="mice_title" style="margin: 20px 0 10px 0;">MICE概述</div>
+			<div>面对传统酒店和度假圣地不断飙升的餐饮价格，同样的预算，选择什么样的方式能让您的员工和客户有个新颖而难忘的会奖体验呢？全球舰队规模最大的现代欧美游轮品牌——皇家加勒比国际游轮，无疑是您的不二首选！ <br />
+				<br />
+无论是严肃的会议、刺激的拓展，安静的沉思、还是胜利的狂欢， 这一片海都将赋予您全新的灵感和无限的创意！ </div>
+			<div style="margin-top: 40px; text-align: center;"><div id="flash_slideshow">&nbsp;</div></div>
+			<div style="margin-bottom: 40px;"><img src="images/home.jpg" width="570" height="500" border="0" usemap="#HomeMap" /></div>
+			<map name="HomeMap" id="HomeMap">
+				<area shape="rect" coords="476,380,563,398" href="creative.html" />
+				<area shape="rect" coords="476,251,563,269" href="incentives.html" />
+				<area shape="rect" coords="276,175,331,195" href="casestudy.html" />
+				<area shape="rect" coords="476,117,563,135" href="business.html" />
+			</map>
+		</div>
+		<div id="sidebar_wrapper">
+			
+<script type="text/javascript" language="javascript">
+    function search() {
+        var dr1 = document.getElementById('Search1_DropDownList1');
+        var dr2 = document.getElementById('Search1_DropDownList2');
+        var ship = document.getElementById('ship');
+
+        location = 'Result.aspx?month=' + escape(dr1.value) + '&ship=' + escape(ship.value) + '&port=' + escape(dr2.value);
+    }
+    function exec() {
+        var m = '';
+        var t = '0001年01月';
+        var p = '';
+        var s = '';
+        if (m != "" && t != "") {
+            Start_Select('s_time_value', 's_time', '', '0001年01月');
+        }
+        if (p != "") {
+            Start_Select('s_port_value', 'port', '', '');
+        }
+        if (s != "") {
+            Start_Select('s_ship_value', 'ship', '', '');
+        }
+    }
+    window.onload = exec;
+    function getPort(obj) {
+        $.ajax({
+            type: "POST",
+            url: "interface/getLineByIndex.aspx",
+            data: "port=" + obj.value,
+            cache: false,
+            dataType: "text",
+            success: function (data, textStatus) {
+                $("#ship").empty(); //清空下拉框
+                $(data).appendTo("#ship"); //添加下拉框的option
+            }
+        });
+    }
+
+    function s_time() {
+        var o = document.getElementById("s_time").style.display;
+        if (o == "none") {
+            $("#s_time").css("display", "block");
+            $("#port").css("display", "none");
+            $("#ship").css("display", "none");
+        } else {
+            $("#s_time").css("display", "none");
+        }
+    }
+    function s_port() {
+        var o = document.getElementById("port").style.display;
+        if (o == "none") {
+            $("#port").css("display", "block");
+            $("#s_time").css("display", "none");
+            $("#ship").css("display", "none");
+        } else {
+            $("#port").css("display", "none");
+        }
+    }
+    function s_ship() {
+        var o = document.getElementById("ship").style.display;
+        if (o == "none") {
+            $("#ship").css("display", "block");
+            $("#port").css("display", "none");
+            $("#s_time").css("display", "none");
+        } else {
+            $("#ship").css("display", "none");
+        }
+    }
+    function Start_Select(s_value_control, s_type, s_value, s_text) {
+        document.getElementById(s_value_control).value = s_value;
+        $("#" + s_type).css("display", "none");
+        $("#" + s_type + "1").html(s_text);
+    }
+    function search_line() {
+        var dr1 = document.getElementById('s_time_value');
+        var dr2 = document.getElementById('s_port_value');
+        var ship = document.getElementById('s_ship_value');
+        location.href = '/Result.aspx?month=' + escape(dr1.value) + '&ship=' + escape(ship.value) + '&port=' + escape(dr2.value);
+    }
+</script>
+<input type="hidden" id="s_time_value" />
+<input type="hidden" id="s_port_value" />
+<input type="hidden" id="s_ship_value" />
+<div class="page_right02" style="position: relative; z-index: 2;">
+    <div class="page_right03" style="z-index: 10; position: relative;">
+        <a href="javascript:;" onclick="s_time();" id="s_time1">请选择出发的时间</a>
+        <div id="s_time" style="position: absolute; display: none; z-index: 12; top: 25px;
+            left: 0px;" class="right07s">
+            <div class="right08s">
+                <ul>
+                    <li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','','请选择出发的时间')">请选择出发的时间</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1405','2014年5月')">2014年5月</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1406','2014年6月')">2014年6月</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1407','2014年7月')">2014年7月</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1408','2014年8月')">2014年8月</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1409','2014年9月')">2014年9月</a></li><li><a href="javascript:;" onclick="Start_Select('s_time_value','s_time','1410','2014年10月')">2014年10月</a></li></ul>
+            </div>
+            <div style="width: 216px; height: 9px; float: left;">
+                <img src="../newimages/r_80.png" /></div>
+        </div>
+    </div>
+    <div class="page_right03" style="z-index: 8; position: relative;">
+        <a href="javascript:;" onclick="s_port();" id="port1">请选择出发的港口</a>
+        <div id="port" style="position: absolute; display: none; z-index: 12; top: 25px;
+            left: 0px;" class="right07s">
+            <div class="right08s">
+                <ul>
+                    <li><a href="javascript:;" onclick="Start_Select('s_port_value','port','','请选择出发的港口')">请选择出发的港口</a></li><li><a href="javascript:;" onclick="Start_Select('s_port_value','port','上海','上海')">上海</a></li><li><a href="javascript:;" onclick="Start_Select('s_port_value','port','天津','天津')">天津</a></li><li><a href="javascript:;" onclick="Start_Select('s_port_value','port','香港','香港')">香港</a></li></ul>
+            </div>
+            <div style="width: 216px; height: 9px; float: left;">
+                <img src="../newimages/r_80.png" /></div>
+        </div>
+    </div>
+    <div class="page_right03">
+        <a href="javascript:;" onclick="s_ship();" id="ship1">请选择乘坐游轮</a>
+        <div id="ship" style="position: absolute; display: none; z-index: 12; top: 25px;
+            left: 0px;" class="right07s">
+            <div class="right08s">
+                <ul>
+                    <li><a href="javascript:;" onclick="Start_Select('s_ship_value','ship','','请选择乘坐游轮')">
+                        请选择乘坐游轮</a></li>
+                   
+                    
+                     <li><a href="javascript:;" onclick="Start_Select('s_ship_value','ship','MA','海洋水手号')">
+                            海洋水手号</a></li></ul>
+            </div>
+            <div style="width: 216px; height: 9px; float: left;">
+                <img src="../newimages/r_80.png" /></div>
+        </div>
+    </div>
+    <div class="page_right04">
+        <img src="../newimages/r_70.jpg" onclick="search_line();" style="cursor: pointer;" /></div>
+</div>
+<div style="width: 221px; height: 302px; float: left; margin: 22px 0 0 0;">
+    <img width="221" height="302" border="0" usemap="#Map2" src="../newimages/r_66.png">
+    <map id="Map2" name="Map2">
+        <area href="#" coords="61,87,157,173" shape="rect">
+        <area onclick="window.open('http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=118734&amp;jid=3568248520&amp;enterurl=http://localhost:4820/Dreams.aspx&amp;tm=1274867316053', 'chatbox105517', 'toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424');return false;"
+            href="javascript:;" coords="59,181,157,266" shape="rect">
+    </map>
+</div>
+
+			
+<div style="background: url(../images/grzx_10.gif) no-repeat; width: 240px; height: 200px;" id="campaignshow">
+    <div style="width: 180px; margin: 0px auto; padding: 10px 0px 0px 0px;">
+        <div style="color: #a5833c; font-family: Verdana; padding: 10px 0px 0px 0px" class="my400">
+            欢迎随时和我们联系<br />
+            电话：<b>400-8850-277</b><br />
+            <a href="mailto:400@rcclapac.com">400@rcclapac.com</a>
+        </div>
+    </div>
+</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">RCCLFooterSEO();</script>
+	
+
+</div>
+<script type="text/javascript" charset="UTF-8">
+    RCCLFooter();
+</script>
+
+
+
+</form>
+<script type="text/javascript"> 
+	var flashvars = {};
+	var params = {};
+	swfobject.embedSWF("video.swf", "flash_player", "480", "410", "9.0.0", false, flashvars, params);
+	
+	flashvars.config_file = "assets/home.xml";
+	swfobject.embedSWF("slideshow.swf", "flash_slideshow", "540", "370", "9.0.0", false, flashvars, params);
+</script>
+</body>
+
+<!-- Mirrored from www.rcclchina.com.cn/mice/ by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 13 May 2014 10:13:51 GMT -->
+</html>

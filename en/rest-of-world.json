@@ -1,0 +1,84 @@
+{
+    "fares":[
+        {
+            "title" : "8 Days 7 Nights Bahamas Cruise",
+            "submitTitle" : "&nbsp;",
+            "image" : "Bahamas_Anthem.jpg",
+            "file" : "../world/Bahamas_Anthem.pdf"
+        },
+        {
+            "title" : "8D7N Western Mediterranean Cruise",
+            "submitTitle" : "&nbsp;",
+            "image" : "Western Med_Harmony.jpg",
+            "file" : "../world/Western Med_Harmony.pdf"
+        }
+    ],
+    "agents":[
+        {
+            "image" : "travel_logo_01.gif",
+            "hotline" : "23157287",
+            "license" : "350273",
+            "url" : "http://www.ctshk.com/cruise"
+        },
+        {
+            "image" : "travel_logo_02.gif",
+            "hotline" : "36920888",
+            "license" : "350805",
+            "url" : "http://www.egltours.com/"
+        },
+        {
+            "image" : "travel_logo_03.gif",
+            "hotline" : "29286075",
+            "license" : "350070",
+            "url" : "http://www.hongthai.com/tc/home.html"
+        },
+        {
+            "image" : "travel_logo_04.gif",
+            "hotline" : "23161199",
+            "license" : "350296",
+            "url" : "http://www.lotus-tours.com.hk"
+        },
+        {
+            "image" : "travel_logo_05.gif",
+            "hotline" : "82002299",
+            "license" : "352742",
+            "url" : "http://www.hkmiramartravel.com"
+        },
+        {
+            "image" : "travel_logo_06.gif",
+            "hotline" : "25198088",
+            "license" : "350018",
+            "url" : "http://www.mst.com.hk/"
+        },
+        {
+            "image" : "travel_logo_07.gif",
+            "hotline" : "27222888",
+            "license" : "350196",
+            "url" : "http://www.sunflower.com.hk/"
+        },
+        {
+            "image" : "travel_logo_08.gif",
+            "hotline" : "31884538",
+            "license" : "353495",
+            "url" : "http://cruise.travelexpert.com.hk/"
+        },
+        {
+            "image" : "travel_logo_09.gif",
+            "hotline" : "23139877",
+            "license" : "350488",
+            "url" : "http://www.westminstertravel.com"
+        },
+        {
+            "image" : "travel_logo_10.gif",
+            "hotline" : "39136100",
+            "license" : "350731",
+            "url" : "http://www.wincastle.com.hk/"
+        },
+        {
+            "image" : "travel_logo_11.gif",
+            "hotline" : "29263838",
+            "license" : "350074",
+            "url" : "http://www.wingontravel.com"
+        }
+    ]
+}

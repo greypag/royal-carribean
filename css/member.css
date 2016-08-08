@@ -1,0 +1,134 @@
+
+.mem
+{
+    width: 916px;
+    margin: auto;
+    padding-top: 0px;
+}
+.meml{
+	width:405px;
+	padding-right:20px;
+	float:left;
+	}
+.meml1
+{
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.meml1f
+{
+    color: #3d90cf;
+    font-size: 20px;
+    padding-left: 2px;
+}
+.meml1 a
+{
+    color: #ff9c00;
+    text-decoration: underline;
+}
+.meml1 a:hover
+{
+    color: #ff9c00;
+    text-decoration: underline;
+}
+.meml2
+{
+    width: 916px;
+    height: 1px;
+    overflow: hidden;
+	margin-left:14px;
+    background-color: #d5d5d5;
+}
+.meml3
+{
+	padding-right:25px;
+    padding-top: 30px;
+	width:405px;
+	float:left;
+}
+.meml3one
+{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.meml3two
+{
+    padding-bottom: 6px;
+}
+.meml4
+{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.meml41
+{
+    font-size: 13px;
+    color: #0f175d;
+}
+.meml42
+{
+    padding-top: 20px;
+}
+.meml5
+{
+    padding-top: 6px;
+    padding-top: 20px;
+    padding-left: 114px;
+}
+.meml5 a
+{
+    color: #515050;
+    text-decoration: none;
+}
+.meml5 a:hover
+{
+    color: #515050;
+    text-decoration: underline;
+}
+.meml6
+{
+    padding-top: 20px;
+}
+.meml7
+{
+    padding-top: 88px;
+    padding-left: 640px;
+}
+.meml7m
+{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.memr
+{
+    float: left;
+    width: 248px;
+    height: 400px;
+    padding-top: 20px;
+    background-image: url(../images/member09.jpg);
+    background-repeat: no-repeat;
+}
+.memr1
+{
+    width: 218px;
+    margin: auto;
+}
+.hydl
+{
+    width: 570px;
+    margin: auto;
+}
+.memrig{
+	width:471px;
+	float:left;
+	color:#666;
+	padding-top:30px;
+	}
+.memrigbg{
+	width:436px;
+	background-image:url(../images/member19.jpg);
+	height:402px;
+	padding-left:35px;
+	padding-top:20px;
+	background-repeat:no-repeat;
+	}

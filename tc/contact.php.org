@@ -1,0 +1,60 @@
+<?php include 'pageHead.php'; ?>
+
+
+<link href="../css/about.css" rel="stylesheet" type="text/css" />
+<link href="../css/person.css" rel="stylesheet" type="text/css" />
+<link href="../css/deck.css" rel="stylesheet" type="text/css" />
+
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+
+<div style="height:92px; width:962px; margin:auto; position:relative">
+<?php include 'pageMenu.php'; ?>
+</div>
+
+<div class="page_contentbox" style='width:962px'>
+<div style="width:962px; float:left; position:relative; margin-top:-35px;background: #fff url(../newimages/banner/contact.jpg) no-repeat;">
+
+<div style="width: 962px;float: left;margin: 260px 0 0 0;background: 10px 168px no-repeat;">
+<div class="page_left">
+<div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
+<h3>聯絡我們</h3>
+
+<div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
+<form action="contact_us.php" method="post" name="frmContact" id="frmContact">
+
+<p>姓名<br />
+<label for="first-name"></label>
+  <input type="text" name="first-name" id="first-name"  class="contact"/>
+</p>
+<p>姓氏<br />
+<label for="last-name"></label>
+  <input type="text" name="last-name" id="last-name" class="contact"/></p>
+<p>聯絡電話<br />
+<label for="tel"></label>
+  <input type="text" name="tel" id="tel" class="contact"/></p>
+<p>電郵地址<br />
+<label for="email"></label>
+  <input type="text" name="email" id="email" class="contact"/></p>
+<p>留言<br />
+  <label for="message"></label>
+  <textarea name="message" id="message" cols="45" rows="5" class="contact"></textarea>
+</p>
+<p>
+<a href="javascript:;" onclick="frmContact.submit();"><img src="../newimages/img_but_send_tc.gif"/></a> <a href="javascript:;" onclick="frmContact.reset();"><img src="../newimages/img_but_clear_tc.gif"/></a></p>
+</form>
+
+</div>
+
+
+</div>
+</div>
+<?php include 'pageRight.php'; ?>
+</div>
+</div>
+</div>
+<?php include 'pageFoot.php'; ?>
+

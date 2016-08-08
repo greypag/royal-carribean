@@ -1,0 +1,181 @@
+#room-container {
+	position:absolute; display:none; padding:6px; border:solid 1px #ccc; background:#fff; top: 0px; left: 0px;
+}
+
+#icon-bar {
+	cursor: pointer;
+}
+#icon-e1 {
+font-family: Arial;
+font-weight: bold;
+background-color: #91a874;
+color: #FFFFFF;
+}
+#icon-e2 {
+font-family: Arial;
+font-weight: bold;
+background-color: #d81340;
+color: #FFFFFF;
+}
+#icon-e3 {
+	font-family: Arial;
+	font-weight: bold;
+	background-color: #A1A4DD;
+	color: #FFFFFF;
+}
+#icon-f{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#aa9933;
+	color:#FFFFFF;
+}
+
+#icon-g{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#cccc33;
+	color: #000000;
+}
+
+#icon-h{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#ee6655;
+	color: #FFFFFF;
+}
+
+#icon-i{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#FA9300;
+	color: #000000;
+}
+
+#icon-j{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#77bb44;
+	color: #FFFFFF;
+}
+
+#icon-k{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#dd8888;
+	color:#000000;
+}
+
+#icon-l{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#eebbcc;
+	color:#000000;
+}
+
+#icon-m{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#ffee55;
+	color:#000000;
+}
+
+#icon-n{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#88bbdd;
+	color:#000000;
+}
+
+#icon-q{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#DB9F00;
+	color:#FFFFFF;
+}
+
+#icon-d1{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#9066ce;
+	color: #FFFFFF;
+}
+
+#icon-d2{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#449977;
+	color: #FFFFFF;
+}
+#icon-d3{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#999;
+	color: #FFFFFF;
+}
+#icon-fo{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#469fb1;
+	color: #FFFFFF;
+}
+
+#icon-fs{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#22aa55;
+	color: #FFFFFF;
+}
+
+#icon-gs{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#ffcc22;
+	color: #000000;
+}
+
+#icon-js{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#0099aa;
+	color: #FFFFFF;
+}
+
+#icon-os{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#2299cc;
+	color: #FFFFFF;
+}
+
+#icon-rs{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#ee3366;
+	color: #FFFFFF;
+}
+
+#icon-p1{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#E0AEAD;
+	color: #000000;
+}
+#icon-p2{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#B2AA9E;
+	color: #000000;
+}
+
+#icon-pr{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#398497;
+	color: #FFFFFF;
+}
+#icon-pf{
+	font-family: Arial;
+	font-weight: bold;
+	background-color:#9E9EA8;
+	color: #000000;
+}

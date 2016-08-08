@@ -1,0 +1,175 @@
+{
+    "fares":[
+        {
+            "title" : "Okinawa, Fukuoka",
+            "submitTitle" : "10 July (9 days 8 nights)",
+            "image" : "thumbnail_01.jpg",
+            "file" : "Fare List VY0710 okinawa, fukuoka.pdf"
+        },
+        {
+            "title" : "Xiamen, Nagasaki, Okinawa",
+            "submitTitle" : "18 July (8 days 7 nights)",
+            "image" : "thumbnail_02.jpg",
+            "file" : "Fare List VY0718 xiamen, nagasaki, okinawa.pdf"
+        },
+        {
+            "title" : "Xiamen, Okinawa",
+            "submitTitle" : "25 July (6 days 5 nights)",
+            "image" : "thumbnail_03.jpg",
+            "file" : "Fare List VY0725 xiamen, okinawa.pdf"
+        },
+        {
+            "title" : "Best of Kaohsiung",
+            "submitTitle" : "30 July (4 days 3 nights)",
+            "image" : "thumbnail_04.jpg",
+            "file" : "Fare List VY0730 best of kaohsiung.pdf"
+        },
+        {
+            "title" : "Okinawa",
+            "submitTitle" : "2 August (6 days 5 nights)",
+            "image" : "thumbnail_22.jpg",
+            "file" : "Fare List VY0802 xiamen, okinawa.pdf"
+        },
+        {
+            "title" : "Sanya, Chan May",
+            "submitTitle" : "7 August (5 days 4 nights)",
+            "image" : "thumbnail_06.jpg",
+            "file" : "Fare List VY0807 sanya, chan may.pdf"
+        },
+        {
+            "title" : "Xiamen, Okinawa",
+            "submitTitle" : "11 August (6 days 5 nights)",
+            "image" : "thumbnail_07.jpg",
+            "file" : "Fare List VY0811 xiamen, okinawa.pdf"
+        },
+        {
+            "title" : "Best of Kaohsiung",
+            "submitTitle" : "16 August (4 days 3 nights)",
+            "image" : "thumbnail_08.jpg",
+            "file" : "Fare List VY0816 best of kaohsiung.pdf"
+        },
+        {
+            "title" : "Xiamen, Fukuoka, Nagasaki",
+            "submitTitle" : "19 August (8 days 7 nights)",
+            "image" : "thumbnail_09.jpg",
+            "file" : "Fare List VY0819 xiamen, fukuoka, nagasaki.pdf"
+        },
+        {
+            "title" : "Okinawa, Kobe, Nagasaki, Jeju",
+            "submitTitle" : "3 September (11 days 10 nights)",
+            "image" : "thumbnail_10.jpg",
+            "file" : "Fare List VY0903 okinawa, kobe, nagasaki, jeju.pdf"
+        },
+        {
+            "title" : "Xiamen, Okinawa",
+            "submitTitle" : "13 September (6 days 5 nights)",
+            "image" : "thumbnail_11.jpg",
+            "file" : "Fare List VY0913 xiamen, okinawa.pdf"
+        },
+         {
+            "title" : "Nha Trang, Chan May",
+            "submitTitle" : "18 September (6 days 5 nights)",
+            "image" : "thumbnail_14.jpg",
+            "file" : "Fare List VY0918 nah trang, chan may.pdf"
+        },
+         {
+            "title" : "Best of Kaohsiung",
+            "submitTitle" : "23 September (4 days 3 nights)",
+            "image" : "thumbnail_13.jpg",
+            "file" : "Fare List VY0923 best of kaohsiung.pdf"
+        },
+         {
+            "title" : "Xiamen, Okinawa",
+            "submitTitle" : "26 September (6 days 5 nights)",
+            "image" : "thumbnail_14.jpg",
+            "file" : "Fare List VY0926 xiamen, okinawa.pdf"
+        },
+         {
+            "title" : "Nha Trang, Chan May",
+            "submitTitle" : "1 October (5 days 4 nights)",
+            "image" : "thumbnail_15.jpg",
+            "file" : "Fare List VY1001 sanya, chan may.pdf"
+        },
+         {
+            "title" : "Xiamen, Okinawa",
+            "submitTitle" : "5 October (6 days 5 nights)",
+            "image" : "thumbnail_16.jpg",
+            "file" : "Fare List VY1005 xiamen, okinawa.pdf"
+        },
+        {
+            "title" : "Kaohsiung, Taipei",
+            "submitTitle" : "10 October (5 days 4 nights)",
+            "image" : "thumbnail_17.jpg",
+            "file" : "Fare List VY1010 kaohsiung, taipei.pdf"
+        }
+    ],
+    "agents":[
+        {
+            "image" : "travel_logo_01.gif",
+            "hotline" : "23157287",
+            "license" : "350273",
+            "url" : "http://www.ctshk.com/cruise"
+        },
+        {
+            "image" : "travel_logo_02.gif",
+            "hotline" : "36920888",
+            "license" : "350805",
+            "url" : "http://www.egltours.com/"
+        },
+        {
+            "image" : "travel_logo_03.gif",
+            "hotline" : "29286075",
+            "license" : "350070",
+            "url" : "http://www.hongthai.com/tc/home.html"
+        },
+        {
+            "image" : "travel_logo_04.gif",
+            "hotline" : "23161199",
+            "license" : "350296",
+            "url" : "http://www.lotus-tours.com.hk"
+        },
+        {
+            "image" : "travel_logo_05.gif",
+            "hotline" : "82002299",
+            "license" : "352742",
+            "url" : "http://www.hkmiramartravel.com"
+        },
+        {
+            "image" : "travel_logo_06.gif",
+            "hotline" : "25198088",
+            "license" : "350018",
+            "url" : "http://www.mst.com.hk/"
+        },
+        {
+            "image" : "travel_logo_07.gif",
+            "hotline" : "27222888",
+            "license" : "350196",
+            "url" : "http://www.sunflower.com.hk/"
+        },
+        {
+            "image" : "travel_logo_08.gif",
+            "hotline" : "31884538",
+            "license" : "353495",
+            "url" : "http://cruise.travelexpert.com.hk/"
+        },
+        {
+            "image" : "travel_logo_09.gif",
+            "hotline" : "23139877",
+            "license" : "350488",
+            "url" : "http://www.westminstertravel.com"
+        },
+        {
+            "image" : "travel_logo_10.gif",
+            "hotline" : "39136100",
+            "license" : "350731",
+            "url" : "http://www.wincastle.com.hk/"
+        },
+        {
+            "image" : "travel_logo_11.gif",
+            "hotline" : "29288882",
+            "license" : "350074",
+            "url" : "http://www.wingontravel.com"
+        }
+    ]
+
+}

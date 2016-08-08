@@ -1,0 +1,9 @@
+#mice_wrapper { position: relative; width: 865px; background: url(../images/kv.jpg) top no-repeat white; padding: 205px 10px 0px 15px; margin: 0 auto; clear: both; }
+#main_wrapper { width: 580px; background: url(../../images/common_06.png) top no-repeat; padding: 10px 15px 0 15px; float: left; }
+#sidebar_wrapper { width:240px; float: right; }
+#mice_nav { position: relative; width: 575px; margin: 0 auto; }
+
+.mice_title { color: #142466; font-size: 16px; font-weight: bold; }
+
+i { font-size: 14px; }
+

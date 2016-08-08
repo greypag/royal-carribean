@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Photo>
+		<S>assets/home/s/s1.jpg</S>
+		<L>assets/home/b/b1.jpg</L>
+	</Photo>
+	<Photo>
+		<S>assets/home/s/s2.jpg</S>
+		<L>assets/home/b/b2.jpg</L>
+	</Photo>
+	<Photo>
+		<S>assets/home/s/s3.jpg</S>
+		<L>assets/home/b/b3.jpg</L>
+	</Photo>
+	<Photo>
+		<S>assets/home/s/s4.jpg</S>
+		<L>assets/home/b/b4.jpg</L>
+	</Photo>
+	<Photo>
+		<S>assets/home/s/s5.jpg</S>
+		<L>assets/home/b/b5.jpg</L>
+	</Photo>
+	<Photo>
+		<S>assets/home/s/s6.jpg</S>
+		<L>assets/home/b/b6.jpg</L>
+	</Photo>
+</Root>

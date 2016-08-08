@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Photo>
+		<S>assets/s/s1.jpg</S>
+		<L>assets/b/b1.jpg</L>
+		<D>会议中心</D>
+		<T>可容纳20-80人，可用作教室、圆桌会议会场，适合销售简报、视频会议、在线研讨会议等各种活动
+免费提供各项专业设备
+可享受精致的茶歇服务</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s2.jpg</S>
+		<L>assets/b/b2.jpg</L>
+		<D>维京皇冠酒廊</D>
+		<T>容纳250人的维京皇冠酒廊适合举办鸡尾酒会、发布会、团队建设等活动
+一流的声光电设施
+位于游轮的最高层，四周玻璃凸窗设计，是360度远眺壮丽海景的最佳位置</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s3.jpg</S>
+		<L>assets/b/b3.jpg</L>
+		<D>启航酒廊</D>
+		<T>同时容纳550人的启航酒廊适合举办鸡尾酒会、发布会。团队建设等活动
+一流的声光电设施</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s4.jpg</S>
+		<L>assets/b/b4.jpg</L>
+		<D>娱乐大剧院</D>
+		<T>大型场地，可容纳760人；经过安排能够适合各种团体的要求
+专业舞台：可助您实现无限精彩创意
+声光电设备：国际领先的专业表演设备
+剧院拥有陆上酒店所不具备的专业舞台设备与声光电特效
+舞台两侧配有可播放视频的两个超大屏幕
+可悬挂横幅，尺寸为8m*45m(长*宽)</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s5.jpg</S>
+		<L>assets/b/b5.jpg</L>
+		<D>罗密欧与朱丽叶主餐厅</D>
+		<T>优雅的双层主餐厅，可容纳近900人，适合举办晚宴，仪式会场等活动
+免费提供精致的西式正餐</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s6.jpg</S>
+		<L>assets/b/b6.jpg</L>
+		<D>游泳池</D>
+		<T>位于9层甲板中央的主游泳池，适合举办各类创意性的商务活动，甲板Party与团队建设活动
+2个温水按摩池
+在天气允许的情况下，可提供泳池畔烧烤</T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s7.jpg</S>
+		<L>assets/b/b7.jpg</L>
+		<D>客房</D>
+		<T></T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s8.jpg</S>
+		<L>assets/b/b8.jpg</L>
+		<D>夜总会</D>
+		<T></T>
+	</Photo>
+	<Photo>
+		<S>assets/s/s9.jpg</S>
+		<L>assets/b/b9.jpg</L>
+		<D>攀岩</D>
+		<T></T>
+	</Photo>
+</Root>

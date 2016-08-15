@@ -54,6 +54,30 @@ Promotion is subject to terms and conditions, for any enquiries, please email to
 
 
 
+<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0905' ) !== false ) { ?>
+
+
+
+<h1 style="color:red">Choose from 2 Promotion Codes!</h1>
+
+<p>Promotion Code Offer 1: <b>BUTTERFLY</b><br>
+Add-on offer! Using promotion code and book Voyager of the Seas 5 Sept sailing, pair up with Voyager of the Seas 31 Aug sailing (VY0831) or 10 Sept sailing (VY0910) and pay as low as $2,308. Tour Xiamen, Okinawa, and Vietnam in one sailing!<br>
+<br>
+<b>Add-on VY0831/ VY0910 Promotion Details:</b><br>
+Interior Stateroom for $2,308<br>
+Ocean View Stateroom for $2,708<br>
+Balcony Stateroom for $3,308<br>
+Junior Suite for $4,008</p>
+
+<p><br>Promotion Code Offer 2: <b>OBC0716</b><br>
+Receive <b>US$100 onboard credit per stateroom</b> upon using this promotion code to book online.
+</p>
+
+<p style="font-size:.9em"><br>Onboard credit per stateroom which will be automatically credited into guest's account when boarded. 
+Promotion is subject to terms and conditions, for any enquiries, please email to <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> or call <a href='tel:+85231983200'>3198 3200</a>. Thank you!</p>
+
+
+
 <?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && 
   ( strpos( $_SERVER['HTTP_REFERER'], 'OV1029' ) !== false ||
     strpos( $_SERVER['HTTP_REFERER'], 'OV1105' ) !== false ||

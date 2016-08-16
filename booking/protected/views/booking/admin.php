@@ -158,23 +158,110 @@ $this->widget('ext.EExcelView', array(
             'value' => 'GxHtml::valueEx($data->promotionCode)',
             'filter' => GxHtml::listDataEx(PromotionCode::model()->findAllAttributes(null, true)),
         ),
-        /*
-          'internal_notes',
-          array(
-          'name'=>'itinerary_id',
-          'value'=>'GxHtml::valueEx($data->itinerary)',
-          'filter'=>GxHtml::listDataEx(Itinerary::model()->findAllAttributes(null, true)),
-          ),
-         */
-		 array(
-            'class' => 'CButtonColumn', 
+        array(
+            'name'=>'itinerary_id',
+            'value'=>'GxHtml::valueEx($data->itinerary)',
+            'filter'=>GxHtml::listDataEx(Itinerary::model()->findAllAttributes(null, true)),
+        ),
+        // array(
+        //     'name' => 'rt_id',
+        //     'value'=> '$data->room_type ? $data->room_type->rt_id: "-"' ,
+        // ),
+        // array(
+        //     'name' => 'rt_name',
+        //     'value'=> '$data->room_type ? $data->room_type->rt_name: "-"' ,
+        // ),
+        array(
+            'name' => 'rt_id',
+            'type' => 'raw',
+            'value' => function($data) {
+                return '<b>' . $data->room_type->rt_id . '</b>:<br/>' . $data->room_type->rt_name;
+            },
+            'filter' => GxHtml::listDataEx(RoomType::model()->findAll(), 'rt_id', array('rt_id', 'rt_name')),
+            'htmlOptions' => array('width' => '80px'),
+        ),
+        // array(
+        //     'name' => 'start_date',
+        //     'value' => '$data->itinerary->start_date',
+        // ),
+        // array(
+        //     'name' => 'end_date',
+        //     'value' => '$data->itinerary->end_date',
+        // ),
+        // array(
+        //     'name' => 'start_date',
+        //     'value' => '$data->itinerary ? Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["long_time"], $data->itinerary->start_date) : "-"',
+        // ),
+        // array(
+        //     'name' => 'end_date',
+        //     'value' => '$data->itinerary ? Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["long_time"], $data->itinerary->end_date) : "-"',
+        // ),
+        array(
+            'name' => 'start_date',
+            'value' => '$data->itinerary->start_date',
+            'filter' => $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model' => $model,
+                'attribute' => 'start_date',
+                // 'i18nScriptFile' => 'jquery.ui.datepicker-ja.js', (#2)
+                'htmlOptions' => array(
+                    'id' => 'datepicker_for_start_date',
+                    'size' => '10',
+                ),
+                'defaultOptions' => array(// (#3)
+                    'showOn' => 'focus',
+                    'dateFormat' => Yii::app()->params->dateFormat['display_long'],
+                    'showOtherMonths' => true,
+                    'selectOtherMonths' => true,
+                    'changeMonth' => true,
+                    'changeYear' => true,
+                //'showButtonPanel' => true,
+                )
+                    ), true), // (#4)
+        ),
+        array(
+            'name' => 'end_date',
+            'value' => '$data->itinerary->end_date',
+            'filter' => $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model' => $model,
+                'attribute' => 'end_date',
+                // 'i18nScriptFile' => 'jquery.ui.datepicker-ja.js', (#2)
+                'htmlOptions' => array(
+                    'id' => 'datepicker_for_end_date',
+                    'size' => '10',
+                ),
+                'defaultOptions' => array(// (#3)
+                    'showOn' => 'focus',
+                    'dateFormat' => Yii::app()->params->dateFormat['display_long'],
+                    'showOtherMonths' => true,
+                    'selectOtherMonths' => true,
+                    'changeMonth' => true,
+                    'changeYear' => true,
+                //'showButtonPanel' => true,
+                )
+                    ), true), // (#4)
+        ),
+        array(
+            'name' => 'port_of_departure',
+            'value'=> '$data->itinerary ? $data->itinerary->port_of_departure: "-"' ,
+        ),
+        array(
+            'name' => 'ports_of_calls',
+            'value'=> '$data->itinerary ? $data->itinerary->ports_of_calls: "-"' ,
+        ),
+        // array(
+        //     'name' => 'port_of_boarding',
+        //     'value'=> '$data->itinerary ? $data->itinerary->port_of_boarding: "-"' ,
+        // ),
+        array(
+            'name' => 'cruise_id',
+            'value'=> '$data->itinerary ? $data->itinerary->cruise_id: "-"' ,
+        ),
+        array(
+            'class' => 'CButtonColumn',
             'header' => 'Action',
             'template' => '{view}{update}',
 			),
     ),
-	
-       
-			
     //'itemsCssClass' => 'table table-striped',
     'template' => "{summary}\n{items}\n{exportbuttons}\n{pager}",
         //'htmlOptions' => array("class" => "report_grid_view report_grid_portlet_view")

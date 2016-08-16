@@ -175,7 +175,6 @@ class BookingController extends GxController {
         if (isset($_GET['Booking']))
             $model->setAttributes($_GET['Booking']);
 
-
         $this->render('admin', array(
             'model' => $model,
         ));
@@ -1063,21 +1062,23 @@ class BookingController extends GxController {
                 ->setKeywords("office 2007 openxml php")
                 ->setCategory("Test result file");
 
-
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, 1, 'OCCUPANCY');
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, 1, 'CATEGORY');
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, 1, 'CABIN');
-        $startCol = 2;
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, 1, 'Reservation ID');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, 1, 'OCCUPANCY');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, 1, 'Itinerary Code');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, 1, 'Stateroom Cat ID');
+        $startCol = 3;
         for ($i = 1; $i <= 4; $i++) {
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_LAST_NAME');
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_FIRST_NAME');
-            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_DINING');
-            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AIR');
-            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_CTZ');
+            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_email');
+            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_phone');
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_DOB');
-            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AGE');
-            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AGE_RANGE');
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_GENDER');
+            // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_DINING');
+            // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AIR');
+            // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_CTZ');
+            // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AGE');
+            // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_AGE_RANGE');
         }
 
 
@@ -1085,7 +1086,7 @@ class BookingController extends GxController {
         $allBooking = Booking::model()->findAll();
         $occupancy = array('S', 'D', 'T', 'Q');
         foreach ($allBooking as $bookingItem) {
-            $col = 2;
+            $col = 3;
 
             $allGuest = Guest::model()->findAll(
                     array(
@@ -1100,13 +1101,14 @@ class BookingController extends GxController {
                         )
                 );
 
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, $row, $bookingItem->reservation_id);
 				//mail('itang@bmgww.com', 'RCC', $itineraryRoomType[0]['rt']->rt_name);
                 $no_allGuest = count($allGuest) - 1;
 				if($no_allGuest >= 4){
 					$no_allGuest = 3;
 				}
-                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, $row, $occupancy[$no_allGuest]);
-                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, $bookingItem->itinerary_id);
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, $occupancy[$no_allGuest]);
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, $row, $bookingItem->itinerary_id);
 				//echo($itineraryRoomType[0]['rt']->rt_name);
 				//exit();
 				//CVarDumper::dumpAsString('testtest'.$itineraryRoomType[0]['rt']->rt_name, 10, false);
@@ -1116,13 +1118,13 @@ class BookingController extends GxController {
 				if (isset($itineraryRoomType[0])){
 					$cabin_id = $itineraryRoomType[0]['rt']->attributes['rt_id'];
 					$cabin_name = $itineraryRoomType[0]['rt']->attributes['rt_name'];
-				}else{
+				} else {
 					//CVarDumper::dump($itineraryRoomType, 10, false);
 					//exit();
 					$cabin_id = "";
 					$cabin_name = "";
 				}
-				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, $row, $cabin_id .' : '. $cabin_name);
+				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, $row, $cabin_id .' : '. $cabin_name);
 				//array_push($cabin_array, $cabin_id.' '.$cabin_name);
 				//echo ($cabin_id);
 				//echo ($cabin_name);
@@ -1134,13 +1136,11 @@ class BookingController extends GxController {
                     //CVarDumper::dump($row->last_name, 10, true);
                     $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->last_name);
                     $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->first_name);
-                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
-                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
-                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
+                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->email);
+                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->phone_no);
                     $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->date_of_birth);
-                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
-                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
                     $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, $item->gender);
+                    // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow( ++$col, $row, '');
                     /*
                       $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, $value);
                       $col++;

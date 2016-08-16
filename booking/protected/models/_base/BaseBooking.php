@@ -24,6 +24,15 @@
  */
 abstract class BaseBooking extends GxActiveRecord {
 
+    public $start_date;
+	public $end_date;
+	public $port_of_departure;
+	public $ports_of_calls;
+	public $port_of_boarding;
+	public $cruise_id;
+	public $rt_id;
+	public $rt_name;
+
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
@@ -44,13 +53,13 @@ abstract class BaseBooking extends GxActiveRecord {
         return array(
             array('booking_time, ip, no_of_guest, total_payment, booking_status, itinerary_id', 'required'),
             array('booking_time, no_of_guest', 'numerical', 'integerOnly' => true),
-			
+
 			array('total_payment', 'length', 'max'=>11),
             array('booking_status, itinerary_id', 'length', 'max' => 32),
             array('promotion_id', 'length', 'max' => 128),
             array('booking_id', 'length', 'max' => 255),
             array('ip', 'length', 'max' => 15),
-            array('booking_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
+            array('rt_id, rt_name, start_date,end_date, booking_id, port_of_departure, ports_of_calls,port_of_boarding,cruise_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -59,6 +68,8 @@ abstract class BaseBooking extends GxActiveRecord {
             //'guest' => array(self::HAS_MANY, 'Guest', 'guest_id'),
             'promotionCode' => array(self::BELONGS_TO, 'PromotionCode', 'promotion_id'),
             'itinerary' => array(self::BELONGS_TO, 'Itinerary', 'itinerary_id'),
+            'room_inventory' => array(self::BELONGS_TO, 'RoomInventory', '', 'foreignKey' => array('reservation_id'=>'reservation_code')),
+			'room_type'=>array(self::BELONGS_TO, 'RoomType', array('rt_id'=>'sys_rt_id'), 'through'=>'room_inventory')
         );
     }
 
@@ -77,8 +88,15 @@ abstract class BaseBooking extends GxActiveRecord {
             'booking_status' => Yii::t('app', 'Booking Status'),
             'internal_notes' => Yii::t('app', 'Internal Notes'),
             'promotion_id' => Yii::t('app', 'Promotion Description'),
-            'itinerary_id' => 'Itinerary ID',
             'reservation_id' => Yii::t('app', 'Reservation ID'),
+            'itinerary_id' => 'Itinerary Code',
+			'rt_id' => Yii::t('app', 'Stateroom Cat ID'),
+            'start_date' => Yii::t('app', 'Departure Date'),
+            'end_date' => Yii::t('app', 'Arrival Date'),
+            'port_of_departure' => Yii::t('app', 'Port Of Departure'),
+            'ports_of_calls' => Yii::t('app', 'Ports Of Calls'),
+            // 'port_of_boarding' => Yii::t('app', 'Port Of Boarding'),
+            'cruise_id' => Yii::t('app', 'Ship Code'),
             'promotionCode' => null,
             'itinerary' => null,
         );
@@ -87,26 +105,44 @@ abstract class BaseBooking extends GxActiveRecord {
     public function search() {
         $criteria = new CDbCriteria;
 
-        $criteria->compare('booking_id', $this->booking_id, true);
-        $criteria->compare('booking_time', $this->booking_time);
-        $criteria->compare('ip', $this->ip, true);
-        $criteria->compare('no_of_guest', $this->no_of_guest);
-        $criteria->compare('total_payment', $this->total_payment);
-        $criteria->compare('booking_status', $this->booking_status, true);
-        $criteria->compare('internal_notes', $this->internal_notes, true);
-        $criteria->compare('promotion_id', $this->promotion_id);
-        $criteria->compare('itinerary_id', $this->itinerary_id);
-        $criteria->compare('reservation_id', $this->reservation_id);
+        $criteria->compare('t.booking_id', $this->booking_id, true);
+        $criteria->compare('t.booking_time', $this->booking_time);
+        $criteria->compare('t.ip', $this->ip, true);
+        $criteria->compare('t.no_of_guest', $this->no_of_guest);
+        $criteria->compare('t.total_payment', $this->total_payment);
+        $criteria->compare('t.booking_status', $this->booking_status, true);
+        $criteria->compare('t.internal_notes', $this->internal_notes, true);
+        $criteria->compare('t.promotion_id', $this->promotion_id);
+        $criteria->compare('t.itinerary_id', $this->itinerary_id);
+        $criteria->compare('t.reservation_id', $this->reservation_id);
 
-        return new CActiveDataProvider($this, array(
+        // $criteria->together = true;
+		$criteria->with = array( 'itinerary','room_inventory','room_type' );
+		$criteria->compare('itinerary.start_date', $this->start_date);
+		$criteria->compare('itinerary.end_date', $this->end_date);
+		$criteria->compare('itinerary.port_of_departure', $this->port_of_departure);
+		$criteria->compare('itinerary.ports_of_calls', $this->ports_of_calls);
+		$criteria->compare('itinerary.cruise_id', $this->cruise_id);
+
+		$criteria->compare('room_type.rt_id', $this->rt_id);
+		$criteria->compare('room_type.rt_name', $this->rt_name);
+
+        $dataProvider =new CActiveDataProvider($this, array(
             'criteria' => $criteria,
             'pagination' => array(
                 'pageSize' => Yii::app()->user->getState('pageSize', Yii::app()->params['CGridViewPagination']['defaultPageSize']),
             ),
             'sort' => array(
-                'defaultOrder' => 'booking_time DESC'
+                'defaultOrder' => 'booking_time DESC',
+                'attributes'=>array(
+		            'attributes' => array(
+				        '*', 'start_date', 'end_date', 'port_of_departure', 'ports_of_calls', 'port_of_boarding', 'cruise_id', 'rt_id', 'rt_name',
+				    ),
+		        ),
             )
         ));
+
+		return $dataProvider;
     }
 
 

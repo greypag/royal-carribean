@@ -59,7 +59,7 @@ abstract class BaseBooking extends GxActiveRecord {
             array('promotion_id', 'length', 'max' => 128),
             array('booking_id', 'length', 'max' => 255),
             array('ip', 'length', 'max' => 15),
-            array('rt_id, rt_name, start_date,end_date, booking_id, port_of_departure, ports_of_calls,port_of_boarding,cruise_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
+            array('rt_id, rt_name, start_date, end_date, booking_id, port_of_departure, ports_of_calls,port_of_boarding,cruise_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -68,7 +68,7 @@ abstract class BaseBooking extends GxActiveRecord {
             //'guest' => array(self::HAS_MANY, 'Guest', 'guest_id'),
             'promotionCode' => array(self::BELONGS_TO, 'PromotionCode', 'promotion_id'),
             'itinerary' => array(self::BELONGS_TO, 'Itinerary', 'itinerary_id'),
-            'room_inventory' => array(self::BELONGS_TO, 'RoomInventory', '', 'foreignKey' => array('reservation_id'=>'reservation_code')),
+			'room_inventory' => array(self::BELONGS_TO, 'RoomInventory', '', 'foreignKey' => array('reservation_id'=>'reservation_code')),
 			'room_type'=>array(self::BELONGS_TO, 'RoomType', array('rt_id'=>'sys_rt_id'), 'through'=>'room_inventory')
         );
     }
@@ -89,7 +89,7 @@ abstract class BaseBooking extends GxActiveRecord {
             'internal_notes' => Yii::t('app', 'Internal Notes'),
             'promotion_id' => Yii::t('app', 'Promotion Description'),
             'reservation_id' => Yii::t('app', 'Reservation ID'),
-            'itinerary_id' => 'Itinerary Code',
+			'itinerary_id' => 'Itinerary Code',
 			'rt_id' => Yii::t('app', 'Stateroom Cat ID'),
             'start_date' => Yii::t('app', 'Departure Date'),
             'end_date' => Yii::t('app', 'Arrival Date'),
@@ -141,7 +141,6 @@ abstract class BaseBooking extends GxActiveRecord {
 		        ),
             )
         ));
-
 		return $dataProvider;
     }
 

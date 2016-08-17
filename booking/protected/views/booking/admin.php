@@ -135,7 +135,6 @@ $this->widget('ext.EExcelView', array(
     'columns' => array(
         //'ref_code',
         'booking_id',
-        //'booking_time',
         array(
             'name' => 'booking_time',
             'value' => 'Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["long_time"], $data->booking_time)',
@@ -175,7 +174,7 @@ $this->widget('ext.EExcelView', array(
             'name' => 'rt_id',
             'type' => 'raw',
             'value' => function($data) {
-                return '<b>' . $data->room_type->rt_id . '</b>:<br/>' . $data->room_type->rt_name;
+                return '<b>' . ( $data->room_type ? $data->room_type->rt_id : '-' )  . '</b>:<br/>' . ( $data->room_type ? $data->room_type->rt_name : '-' );
             },
             'filter' => GxHtml::listDataEx(RoomType::model()->findAll(), 'rt_id', array('rt_id', 'rt_name')),
             'htmlOptions' => array('width' => '80px'),
@@ -198,7 +197,7 @@ $this->widget('ext.EExcelView', array(
         // ),
         array(
             'name' => 'start_date',
-            'value' => '$data->itinerary->start_date',
+            'value' => '$data->itinerary ? $data->itinerary->start_date : "-"',
             'filter' => $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model' => $model,
                 'attribute' => 'start_date',
@@ -220,7 +219,7 @@ $this->widget('ext.EExcelView', array(
         ),
         array(
             'name' => 'end_date',
-            'value' => '$data->itinerary->end_date',
+            'value' => '$data->itinerary ? $data->itinerary->end_date : "-"',
             'filter' => $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model' => $model,
                 'attribute' => 'end_date',

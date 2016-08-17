@@ -1083,7 +1083,9 @@ class BookingController extends GxController {
 
 
         $row = 2; // 1-based index
-        $allBooking = Booking::model()->findAll();
+        $allBooking = Booking::model()->findAll(
+            array('order'=>'booking_id DESC')
+        );
         $occupancy = array('S', 'D', 'T', 'Q');
         foreach ($allBooking as $bookingItem) {
             $col = 3;
@@ -1119,10 +1121,10 @@ class BookingController extends GxController {
 					$cabin_id = $itineraryRoomType[0]['rt']->attributes['rt_id'];
 					$cabin_name = $itineraryRoomType[0]['rt']->attributes['rt_name'];
 				} else {
-					//CVarDumper::dump($itineraryRoomType, 10, false);
-					//exit();
-					$cabin_id = "";
-					$cabin_name = "";
+					// CVarDumper::dump($itineraryRoomType, 10, false);
+					// exit();
+					$cabin_id = "-";
+					$cabin_name = "-";
 				}
 				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, $row, $cabin_id .' : '. $cabin_name);
 				//array_push($cabin_array, $cabin_id.' '.$cabin_name);
@@ -1148,6 +1150,7 @@ class BookingController extends GxController {
                      */
                 }
                 $row++;
+                // $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(29, $row, $bookingItem->booking_time);
             }
             //CVarDumper::dump($bookingItem->booking_id, 10, true);
         }

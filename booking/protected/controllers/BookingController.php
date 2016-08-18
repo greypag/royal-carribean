@@ -1063,9 +1063,10 @@ class BookingController extends GxController {
                 ->setCategory("Test result file");
 
         $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, 1, 'Reservation ID');
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, 1, 'OCCUPANCY');
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, 1, 'Itinerary Code');
-        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, 1, 'Stateroom Cat ID');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, 1, 'Booking Time');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, 1, 'OCCUPANCY');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, 1, 'Itinerary Code');
+        $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(4, 1, 'Stateroom Cat ID');
         $startCol = 3;
         for ($i = 1; $i <= 4; $i++) {
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(++$startCol, 1, 'GUEST_' . $i . '_LAST_NAME');
@@ -1084,7 +1085,7 @@ class BookingController extends GxController {
 
         $row = 2; // 1-based index
         $allBooking = Booking::model()->findAll(
-            array('order'=>'booking_id DESC')
+            array('order'=>'booking_time DESC')
         );
         $occupancy = array('S', 'D', 'T', 'Q');
         foreach ($allBooking as $bookingItem) {
@@ -1109,8 +1110,9 @@ class BookingController extends GxController {
 				if($no_allGuest >= 4){
 					$no_allGuest = 3;
 				}
-                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, $occupancy[$no_allGuest]);
-                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, $row, $bookingItem->itinerary_id);
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, date('d/m/Y h:m:s', $bookingItem->booking_time) );
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, $row, $occupancy[$no_allGuest]);
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, $row, $bookingItem->itinerary_id);
 				//echo($itineraryRoomType[0]['rt']->rt_name);
 				//exit();
 				//CVarDumper::dumpAsString('testtest'.$itineraryRoomType[0]['rt']->rt_name, 10, false);
@@ -1126,7 +1128,7 @@ class BookingController extends GxController {
 					$cabin_id = "-";
 					$cabin_name = "-";
 				}
-				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, $row, $cabin_id .' : '. $cabin_name);
+				$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(4, $row, $cabin_id .' : '. $cabin_name);
 				//array_push($cabin_array, $cabin_id.' '.$cabin_name);
 				//echo ($cabin_id);
 				//echo ($cabin_name);

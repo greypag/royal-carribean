@@ -121,7 +121,7 @@ function tab(id) {
 		      </tr>
 			  <tr>
 			    <td style="padding-left:10px;" width="26%" align="left" valign="top" bgcolor="#EEEEEE">服務時間</td>
-			    <td style="padding-left:10px;" align="left" valign="top" bgcolor="#EEEEEE">於周六、日及假期，早上11時 – 晚上7時提供服務 </td>
+			    <td style="padding-left:10px;" align="left" valign="top" bgcolor="#EEEEEE">於週一至週五, 早上11時 – 晚上4時；<br>於周六、日及假期，早上11時 – 晚上7時提供服務 </td>
 		      </tr>
 			  <tr>
 			    <td style="padding-left:10px;" width="26%" align="left" valign="top">收費</td>

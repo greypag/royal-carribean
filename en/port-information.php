@@ -88,7 +88,7 @@ function tab(id) {
 	</tr>
 	<tr>
 		<td style="padding-left:10px;" width="26%" align="left" valign="top">Bus</td>
-		<td style="padding-left:10px;" align="left" valign="top">KMB bus route 5R provides Saturday, Sunday, and holiday service between the cruise terminal, Ngau Tau Kok and Kwun Tong MTR station from 11am-7pm with a fare charged at $6.7. The headway of the bus route service will be approximately 30 minutes. Click here for more details.</td>
+		<td style="padding-left:10px;" align="left" valign="top">KMB bus route 5R provides weekday service between the cruise terminal, Ngau Tau Kok and Kwun Tong MTR station from 11am-4pm. Saturday, Sunday, and holiday service from 11am-7pm with a fare charged at $6.7. The headway of the bus route service will be approximately 30 minutes. <a style='color:#2E5FA7' href='http://www.kmb.hk/en/services/search.html?busno=5R'>Click here for more details</a>.</td>
 	</tr>
 	<tr>
 		<td style="padding-left:10px;" width="26%" align="left" valign="top" bgcolor="#EEEEEE">Ferry</td>

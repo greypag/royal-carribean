@@ -56,6 +56,9 @@ $(document).ready(function ($) {
 				<div class="flexslider">
                   <ul class="slides">
                       <li>
+                         <a href="http://www.royalcaribbean.com.hk/tc/promotions.php"><img u="image" src="../images/RCI_Caribbean_Autumn_Promotion_Website_Banner.jpg" /></a>
+                      </li>
+                      <li>
                          <a href="../pdf/promotions/Royal Caribbean Summer 2016.pdf"><img u="image" src="../images/ACF_Banner_zh.jpg" /></a>
                       </li>
                       <li>

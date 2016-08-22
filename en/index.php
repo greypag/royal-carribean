@@ -56,9 +56,6 @@ $(document).ready(function ($) {
 				<div class="flexslider">
                   <ul class="slides">
                       <li>
-                         <a href="promotions.php"><img u="image" src="../images/WebBanner_eng_op.jpg" /></a>
-                      </li>
-                      <li>
                          <a href="../pdf/promotions/Royal Caribbean Summer 2016.pdf"><img u="image" src="../images/ACF_Banner_en.jpg" /></a>
                       </li>
                       <li>

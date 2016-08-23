@@ -73,6 +73,28 @@ a:hover { text-decoration: underline; }
 
 
 
+<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0915' ) !== false ) { ?>
+
+
+
+<h1 style="color:red">優惠代碼 2 選 1 !</h1>
+
+<p>優惠代碼 1: <b>BUTTERFLY</b><br>
+網上預訂海洋航行者號 9 月 15 日出發之航次及用此優惠代碼，即可以低至 $2,308 購買海洋航行者號 9 月 10 日出發之航次 (VY0910)，一個旅程玩盡沖繩及越南!</p>
+
+<p><b>優惠詳情:</b><br>
+以 $2,308 購買 VY910 之內艙房<br>
+以 $2,708 購買 VY910 之海景房<br>
+以 $3,308 購買 VY910 之陽台房<br>
+以 $4,008 購買 VY910 之標準套房</p>
+
+<p><br>優惠代碼2: <b>OBC0716</b><br>
+網上預訂此航程及用此優惠代碼即獲<b><u>每房美金 100 元船上消費額</u></b>。</p>
+
+<p style="font-size:.9em"><br>船上消費額會於旅客登船後自動存入旅客之帳戶。優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
+
+
+
 <?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && 
   ( strpos( $_SERVER['HTTP_REFERER'], 'OV1029' ) !== false ||
     strpos( $_SERVER['HTTP_REFERER'], 'OV1105' ) !== false ||

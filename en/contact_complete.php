@@ -42,7 +42,7 @@ if (isset($_POST)) {
     $body .= "Email:". $email ."\r\n" ;
     $body .= "Tel:". $tel ."\r\n" ;
     $body .= "Message:\r\n". $message ."\r\n" ;
-    $headers = 'From: sales@royalcaribbean.com.hk'. '\r\n';
+    $headers = "From: sales@royalcaribbean.com.hk\r\n";
     //$headers .= 'Bcc: rwong@bmgww.com' . '\r\n';
     if ( mail($to, $subject, $body, $headers) )
        echo "Thank you! Our customer service officer will contact you shortly.";

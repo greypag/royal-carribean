@@ -1,27 +1,4 @@
 <?php include 'pageHead.php'; ?>
-<?php
-if (isset($_POST)) {
-  /*$firstName = $_POST['first-name'];
-  $lastName = $_POST['last-name'];*/
-  $name = $_POST['name'];
-  $tel = $_POST['tel'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
-  $to = "sales@royalcaribbean.com.hk";
-  //$to = "wleung@bmgww.com";
-  if($name && $email ){
-    $subject = "意見來自". $name ;
-    $body = "姓名:". $name ."\r\n" ;
-    //$body .= "姓氏:". $lastName ."\r\n" ;
-    $body .= "電郵地址:". $email ."\r\n" ;
-    $body .= "聯絡電話:". $tel ."\r\n" ;
-    $body .= "留言:\r\n". $message ."\r\n" ;
-    $headers = 'From: sales@royalcaribbean.com.hk'. '\r\n';
-    //$headers .= 'Bcc: rwong@bmgww.com' . '\r\n';
-    mail($to, $subject, $body, $headers);
-  }
-}
-?>
 
 <link href="../css/about.css" rel="stylesheet" type="text/css" />
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
@@ -46,7 +23,34 @@ if (isset($_POST)) {
 <div style="position:relative; float:left; width:640px; left:30px;min-height:400px;">
   <h3 style="margin-left:-8px;width:640px;"></h3>
     <p>
-    謝謝！我們的客戶服務主任會盡快與您聯絡。<br/><br/>
+<?php
+if (isset($_POST)) {
+  /*$firstName = $_POST['first-name'];
+  $lastName = $_POST['last-name'];*/
+  $name = $_POST['name'];
+  $tel = $_POST['tel'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $to = "sales@royalcaribbean.com.hk";
+  //$to = "wleung@bmgww.com";
+  //$to = "ivan@ophubsolutions.com";
+  if($name && $email ){
+    $subject = "意見來自". $name ;
+    $body = "姓名:". $name ."\r\n" ;
+    //$body .= "姓氏:". $lastName ."\r\n" ;
+    $body .= "電郵地址:". $email ."\r\n" ;
+    $body .= "聯絡電話:". $tel ."\r\n" ;
+    $body .= "留言:\r\n". $message ."\r\n" ;
+    $headers = 'From: sales@royalcaribbean.com.hk'. '\r\n';
+    //$headers .= 'Bcc: rwong@bmgww.com' . '\r\n';
+    if ( mail($to, $subject, $body, $headers) )
+       echo "謝謝！我們的客戶服務主任會盡快與您聯絡。";
+    else
+       echo "抱歉系統故障。請用電郵或致電我們。";
+  }
+}
+?>
+    <br/><br/>
     如要繼續瀏覽，請按<a href="index.php" style="text-decoration: underline !important;">這裡</a>。
   </p>
 </div>

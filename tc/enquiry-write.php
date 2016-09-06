@@ -21,7 +21,7 @@ if (isset($_POST) && count($_POST) > 0){
 
   // Email message starts
   $email_from_name = "Royal Caribbean Hong Kong";
-  $email_from_email = "sales@royalcaribbean.com.hk";
+  $email_from_email = "enquiry@royalcaribbean.com.hk";
   $subject = '快速預訂 from Royal Caribbean Hong Kong site';
 
   $message = 'Enquiry details: <br/><br/>';
@@ -49,7 +49,7 @@ if (isset($_POST) && count($_POST) > 0){
   $message .= '<br/>Sent Date: '.date("Y-m-d H:i:s")."<br/>";
 
 
-  $to = "sales@royalcaribbean.com.hk";
+  $to = "enquiry@royalcaribbean.com.hk, ivan@ophubsolutions.com";
   //$to = "wleung@bmgww.com";
 
   $headers = "From: ".$email_from_name." <".strip_tags($email_from_email).">"."\r\n";

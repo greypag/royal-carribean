@@ -140,9 +140,9 @@ $monthText = array(
 <div style="margin-top: 5px;"><span style="color: #0073bb"><b>您想何時出發？</b></span></div>
 <select name="year" id="year">
   <option value="">年</option>
-  <?php for($i = 2014; $i <= 2016; $i++) {?>
-    <option value="<?php echo $i?>"><?php echo $i?></option>
-  <?php } ?>
+  <option value="<?php echo date("Y")?>"><?php echo date("Y")?></option>
+  <option value="<?php echo date("Y", strtotime('+1 year'))?>"><?php echo date("Y", strtotime('+1 year'))?></option>
+  <option value="<?php echo date("Y", strtotime('+2 year'))?>"><?php echo date("Y", strtotime('+2 year'))?></option>
 </select>
 <select name="month" id="month">
   <option value="">月</option>

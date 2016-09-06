@@ -28,7 +28,7 @@ if (isset($_POST) && count($_POST) > 0){
   $temp_q3_array = array();
 
   // EDM message starts
-  $imagepath = "http://royalcaribbean-hongkong.com/_staging0/newimages/edm/";
+  $imagepath = "http://royalcaribbean.com.hk/newimages/edm/";
   $email_from_name = "Royal Caribbean Hong Kong";
   $email_from_email = "enquiry@royalcaribbean.com.hk";
   $subject = 'Get Royal Deals';
@@ -84,7 +84,8 @@ if (isset($_POST) && count($_POST) > 0){
   $message .= '</html>';
 
   //$to = strip_tags($_POST["email"]);
-  $to = $email_from_email;
+  //$to = $email_from_email;
+  $to = "enquiry@royalcaribbean.com.hk, ivan@ophubsolutions.com";
   $headers = "From: ".$email_from_name." <".strip_tags($email_from_email).">"."\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";

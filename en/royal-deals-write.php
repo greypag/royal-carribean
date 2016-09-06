@@ -37,7 +37,7 @@ if (isset($_POST) && count($_POST) > 0){
   $message .= '<body>';
   $message .= '<table style="width: 700px;margin: 0 auto;font-family: arial;" cellpadding="0" cellspacing="0">';
   //$message .= '<tr>';
-  //$message .= '<td colspan="3" style="font-size: 12px;padding-left: 14px;"><a href="http://www.royalcaribbean-hongkong.com" style="color: #0b64be;">Browser View</a> | <a href="http://www.royalcaribbean-hongkong.com" style="color: #0b64be;">Mobile View</a></td>';
+  //$message .= '<td colspan="3" style="font-size: 12px;padding-left: 14px;"><a href="http://royalcaribbean.com.hk/" style="color: #0b64be;">Browser View</a> | <a href="http://royalcaribbean.com.hk/" style="color: #0b64be;">Mobile View</a></td>';
   //$message .= '</tr>';
   $message .= '<tr>';
   $message .= '<td colspan="3" height="755px" style="background: url('.$imagepath.'RCI_Welcome_EM_HongKong_full.jpg); text-align: center;font-size: 16px;color: #1d1d41;vertical-align: middle;">';
@@ -46,30 +46,30 @@ if (isset($_POST) && count($_POST) > 0){
   $message .= 'Where butterfiles turn into daredevils.<br/>';
   $message .= 'And the horizon never ends.<br/><br/>';
   $message .= '<strong>EXPECT MORE WOW:</strong><br/>';
-  $message .= '<a href="http://www.royalcaribbean-hongkong.com/en/food.php" style="text-decoration: underline;color: #1d1d41;">Dining</a>&nbsp;&#8226;&nbsp;<a href="http://www.royalcaribbean-hongkong.com/en/entertainment.php" style="text-decoration: underline;color: #1d1d41;">Entertainment</a>&nbsp;&#8226;&nbsp;<a href="http://www.royalcaribbean-hongkong.com/en/sports.php" style="text-decoration: underline;color: #1d1d41;">Activities</a><br/><br/>';
-  $message .= '<a href="http://www.royalcaribbean-hongkong.com"><img src="'.$imagepath.'but_start_planning_now.png" title="" alt=""/></a>';
+  $message .= '<a href="http://royalcaribbean.com.hk/en/food.php" style="text-decoration: underline;color: #1d1d41;">Dining</a>&nbsp;&#8226;&nbsp;<a href="http://royalcaribbean.com.hk/en/entertainment.php" style="text-decoration: underline;color: #1d1d41;">Entertainment</a>&nbsp;&#8226;&nbsp;<a href="http://royalcaribbean.com.hk/en/sports.php" style="text-decoration: underline;color: #1d1d41;">Activities</a><br/><br/>';
+  $message .= '<a href="http://royalcaribbean.com.hk/"><img src="'.$imagepath.'but_start_planning_now.gif" title="" alt=""/></a>';
   $message .= '</td>';
   $message .= '</tr>';
   $message .= '<tr>';
   $message .= '<td colspan="3" style="background: #0044A7; height: 45px;text-align: center;font-size: 16px;color: #1d1d41;vertical-align: middle;color: #FFFFFF;border-bottom: 3px solid #ffffff;">';
-  $message .= 'It\'s time to elevate the idea of cruising.&nbsp;&nbsp;<a href="http://www.royalcaribbean-hongkong.com"><img src="'.$imagepath.'but_start_now.png" title="" alt="" style="vertical-align:middle"/></a>';
+  $message .= 'It\'s time to elevate the idea of cruising.&nbsp;&nbsp;<a href="http://royalcaribbean.com.hk/"><img src="'.$imagepath.'but_start_now.gif" title="" alt="" style="vertical-align:middle"/></a>';
   $message .= '</td>';
   $message .= '</tr>';
   $message .= '<tr>';
   $message .= '<td style="background: url('.$imagepath.'line.gif) no-repeat #080D45 center right;color: #ffffff;text-align: center;vertical-align: middle;height: 97px;font-size: 14px;text-transform: uppercase;width: 239px;">';
   $message .= 'Call us<br/>';
   $message .= '(852) 3189-3200<br/>';
-  $message .= '<a href="http://www.royalcaribbean-hongkong.com"><img src="'.$imagepath.'but_start_planning_now2.png" title="" alt="" style="padding-top: 7px;"/></a>';
+  $message .= '<a href="http://royalcaribbean.com.hk/"><img src="'.$imagepath.'but_start_planning_now.gif" title="" alt="" style="padding-top: 7px;"/></a>';
   $message .= '</td>';
   $message .= '<td style="background: url('.$imagepath.'line.gif) no-repeat #080D45 center right;color: #ffffff;text-align: center;vertical-align: middle;height: 97px;font-size: 14px;text-transform: uppercase;width: 225px;">';
   $message .= 'Enquire now<br/>';
   $message .= '<span style="text-decoration: underline;font-size: 11px;">What would you like to know?</span><br/>';
-  $message .= '<a href="http://www.royalcaribbean-hongkong.com/en/royal-deals.php"><img src="'.$imagepath.'but_enquire_now.png" title="" alt="" style="padding-top: 7px;"/></a>';
+  $message .= '<a href="http://royalcaribbean.com.hk/en/royal-deals.php"><img src="'.$imagepath.'but_enquire_now.gif" title="" alt="" style="padding-top: 7px;"/></a>';
   $message .= '</td>';
   $message .= '<td style="background: #080D45;color: #ffffff;text-align: center;vertical-align: middle;height: 97px;font-size: 14px;text-transform: uppercase;">';
   $message .= 'Forward<br/>';
   $message .= 'To a friend<br/>';
-  $message .= '<a href="mailto:Enter%20an%20email"><img src="'.$imagepath.'but_email_now.png" title="" alt="" style="padding-top: 7px;"/></a>';
+  $message .= '<a href="mailto:Enter%20an%20email"><img src="'.$imagepath.'but_email_now.gif" title="" alt="" style="padding-top: 7px;"/></a>';
   $message .= '</td>';
   $message .= '</tr>';
   $message .= '<tr>';
@@ -146,7 +146,6 @@ if (isset($_POST) && count($_POST) > 0){
   if (isset($_POST["next-travel-mate"]) && count($temp_q3_array) > 0){
     $sql_query .= "q3 = '".mysqli_real_escape_string($db_connect, implode(",",$temp_q3_array))."', ";
   }
-
 
   // write to db
   $sql_query .= "submittedDate = '".date("Y-m-d H:i:s")."' ,";

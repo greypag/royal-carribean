@@ -88,7 +88,8 @@ form select {
 <script type="text/javascript">
 var captchastring = '';
 function getCaptcha() {
-    var chars = "0Aa1Bb2Cc3Dd4Ee5Ff6Gg7Hh8Ii9Jj0Kk1Ll2Mm3Nn4Oo5Pp6Qq7Rr8Ss9Tt0Uu1Vv2Ww3Xx4Yy5Zz";
+    //var chars = "0Aa1Bb2Cc3Dd4Ee5Ff6Gg7Hh8Ii9Jj0Kk1Ll2Mm3Nn4Oo5Pp6Qq7Rr8Ss9Tt0Uu1Vv2Ww3Xx4Yy5Zz";
+    var chars = "AaBb2Cc3Dd4Ee5Ff6Gg7Hh89JjKk2Mm3Nn45Pp6Qq7Rr8Ss9TtUuVv2Ww3Xx4Yy5Zz";
     var string_length = 5;
 
     for (var i=0; i<string_length; i++) {

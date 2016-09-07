@@ -166,29 +166,29 @@ form select {
 <br/>
 <b>您的郵輪假期喜好</b><br/><br/>
 <span style="color: #0073bb"><b>您有沒有乘搭郵輪的經驗?</b></span><br/>
-<div class="radio-wrap float"><label><input type="radio" name="experience" value="Yes" class="left" required><div class="choice-item left">我已乘搭過皇家加勒比遊輪</div></label></div>
-<div class="radio-wrap float"><label><input type="radio" name="experience" value="Oth" class="left" required><div class="choice-item left">我已乘搭過郵輪，但不是皇家加勒比遊輪</div></label></div>
-<div class="radio-wrap float"><label><input type="radio" name="experience" value="No"  class="left" required><div class="choice-item left">我從沒乘搭過郵輪</div></label></div>
+<div class="radio-wrap float"><label><input type="radio" name="experience" value="Yes" class="left"><div class="choice-item left">我已乘搭過皇家加勒比遊輪</div></label></div>
+<div class="radio-wrap float"><label><input type="radio" name="experience" value="Other" class="left"><div class="choice-item left">我已乘搭過郵輪，但不是皇家加勒比遊輪</div></label></div>
+<div class="radio-wrap float"><label><input type="radio" name="experience" value="None"  class="left"><div class="choice-item left">我從沒乘搭過郵輪</div></label></div>
 <br/>
 <span style="color: #0073bb"><b>您未來的旅遊行程會想到那一個地方?</b></span><br/>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="中國"     value="1" class="left"><div class="choice-item left">中國    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="韓國"     value="1" class="left"><div class="choice-item left">韓國    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="日本"     value="1" class="left"><div class="choice-item left">日本    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="新加坡"   value="1" class="left"><div class="choice-item left">新加坡  </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="台灣"     value="1" class="left"><div class="choice-item left">台灣    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="越南"     value="1" class="left"><div class="choice-item left">越南    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="北歐"     value="1" class="left"><div class="choice-item left">北歐    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="地中海"   value="1" class="left"><div class="choice-item left">地中海  </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="加勒比海" value="1" class="left"><div class="choice-item left">加勒比海</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="阿拉斯加" value="1" class="left"><div class="choice-item left">阿拉斯加</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="其他"     value="1" class="left"><div class="choice-item left">其他    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="China" class="left"><div class="choice-item left">中國    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Korea" class="left"><div class="choice-item left">韓國    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Japan" class="left"><div class="choice-item left">日本    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Singapore" class="left"><div class="choice-item left">新加坡  </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Taiwan" class="left"><div class="choice-item left">台灣    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Vietnam" class="left"><div class="choice-item left">越南    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Northern Europe" class="left"><div class="choice-item left">北歐    </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Mediterranean" class="left"><div class="choice-item left">地中海  </div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Caribbean" class="left"><div class="choice-item left">加勒比海</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Alaska" class="left"><div class="choice-item left">阿拉斯加</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Others" class="left"><div class="choice-item left">其他    </div></label></div>
 <br/>
 <span style="color: #0073bb"><b>您下次的同行旅伴是誰?</b></span><br/>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="配偶" value="1" class="left"><div class="choice-item left">配偶/伴侶</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="父母" value="1" class="left"><div class="choice-item left">父母</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="子女" value="1" class="left"><div class="choice-item left">子女</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="朋友" value="1" class="left"><div class="choice-item left">朋友</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="親人" value="1" class="left"><div class="choice-item left">親人</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Spouse"    class="left"><div class="choice-item left">配偶/伴侶</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Parents"   class="left"><div class="choice-item left">父母</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Children"  class="left"><div class="choice-item left">子女</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Friends"   class="left"><div class="choice-item left">朋友</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Relatives" class="left"><div class="choice-item left">親人</div></label></div>
 <br/>
 <br/>
 <div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
@@ -214,7 +214,7 @@ function check( event ) {
       event.preventDefault();
       return alert( "日期錯誤" );
    }
-   if ( ! grecaptcha.getResponse() ) {
+   if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
       event.preventDefault();
       document.querySelector('.g-recaptcha').scrollIntoView();
       return alert( "請勾選'我不是自動程式'。" );

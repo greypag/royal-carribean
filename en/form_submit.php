@@ -71,12 +71,12 @@ function save_form ( ) {
       $res->free();
 
       // Form input
-      $data = array();
-      $insert = '';
+      $data = array('lang'=>$lang);
+      $insert = "'en'";
       foreach ( $fields as $field ) {
          $key = $field->name;
          if ( empty( $_POST[ $key ] ) ) continue;
-         if ( $insert ) $insert .= ',';
+         $insert .= ',';
          switch ( $field->type ) {
             case MYSQLI_TYPE_BIT:
                $data[ $key ] = 'Yes';
@@ -149,6 +149,7 @@ function save_form ( ) {
          unset( $data['dob_day'] );
       }
       $label = array(
+         'lang' => '語言',
          'title' => '稱',
          'firstname' => '名',
          'lastname' => '姓',
@@ -197,6 +198,7 @@ CREATE TABLE `www_form_submit` (
   `id` int(10) UNSIGNED NOT NULL,
   `form` char(8) CHARACTER SET ascii NOT NULL,
   `from_ip` varchar(45) CHARACTER SET ascii NOT NULL,
+  `lang` varchar(2) CHARACTER SET ascii NOT NULL,
   `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` char(3) CHARACTER SET ascii DEFAULT NULL,
   `fullname` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,

@@ -40,24 +40,26 @@ function save_form ( ) {
    $err1 = "資料庫故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接電郵或致電我們。"; // Email failure
    $err3 = "驗證錯誤。<br>請勿重覆投寄，並請返回上一步勺選\"我不是自動程式\"。<br>如無此項，請啓用 JavaScript。";
-   $nodata = "資料不正確。請清除瀏覽器快取，然後返回上一步重試。";
+   $err_data = "資料不正確。請清除瀏覽器快取，然後返回上一步重試。";
 
    // Captcha checking
-   if ( empty( $_POST['g-recaptcha-response'] ) )
-      return $err3;
-   $context = stream_context_create( array( 'http' => array(
-        'method'  => 'POST',
-        'header'  => 'Content-type: application/x-www-form-urlencoded',
-        'content' => http_build_query( array(
-           'secret' => $recaptcha_secret,
-           'response' => $_POST['g-recaptcha-response'],
-           'remoteip' => $_SERVER['REMOTE_ADDR'],
-         ) )
-      ) ) );
-   $result = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify', false, $context );
-   $result = json_decode( $result );
-   if ( ! $result || ! $result->success )
-      return $err3;
+   if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
+      if ( empty( $_POST['g-recaptcha-response'] ) )
+         return $err3;
+      $context = stream_context_create( array( 'http' => array(
+         'method'  => 'POST',
+         'header'  => 'Content-type: application/x-www-form-urlencoded',
+         'content' => http_build_query( array(
+            'secret' => $recaptcha_secret,
+            'response' => $_POST['g-recaptcha-response'],
+            'remoteip' => $_SERVER['REMOTE_ADDR'],
+            ) )
+         ) ) );
+      $result = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify', false, $context );
+      $result = json_decode( $result );
+      if ( ! $result || ! $result->success )
+         return $err3;
+   }
 
    try {
       mysqli_report( MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT );
@@ -84,7 +86,11 @@ function save_form ( ) {
             case MYSQLI_TYPE_SHORT:
                $insert .= $data[ $key ] = (int) $_POST[ $key ];
                break;
+            case MYSQLI_TYPE_VAR_STRING:
+               if ( is_array( $_POST[ $key ] ) )
+                  $_POST[ $key ] = implode( ",", $_POST[ $key ] );
             default:
+               if ( !is_string( $_POST[ $key ] ) ) return $err_data;
                $insert .= "'".$mysqli->escape_string( $data[ $key ] = $_POST[ $key ] )."'";
                break;
          }
@@ -106,20 +112,20 @@ function save_form ( ) {
             $email = $email_enquiry;
             break;
          default:
-            return $nodata;
+            return $err_data;
       }
       if ( ! filter_var( @$data['email'], FILTER_VALIDATE_EMAIL ) )
-         return $nodata;
+         return $err_data;
       if ( ! empty( $data['id'] ) || ! empty( $data['from_ip'] ) || ! empty( $data['submit_time'] ) )
-         return $nodata;
+         return $err_data;
       if ( empty( $data['fullname'] ) && ( empty( $data['firstname'] ) || empty( $data['lastname'] ) ) )
-         return $nodata;
+         return $err_data;
       if ( isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
          if ( empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
-            return $nodata;
+            return $err_data;
          $dob = mktime( 0, 0, 0, $data['dob_month'], $data['dob_day'], 2016 );
          if ( $data['dob_month'] !== (int)date( 'n', $dob ) )
-            return $nodata;
+            return $err_data;
       }
       $title .= ": $data[firstname] $data[lastname]";
 
@@ -150,29 +156,31 @@ function save_form ( ) {
          'email' => '電郵',
          'dob' => '生日',
          'experience' => '郵輪經驗',
+         'planning' => '未來想去',
+         'companion' => '下次同行',
       );
 
       // Send email
-     $headers = "MIME-Version: 1.0\r\n";
-     $headers .= "From: $email_name <$email>\r\n";
-     if ( $cc )
-        $headers .= "Cc: $cc\r\n";
-     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+      $headers = "MIME-Version: 1.0\r\n";
+      $headers .= "From: $email_name <$email>\r\n";
+      if ( $cc )
+         $headers .= "Cc: $cc\r\n";
+      $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-     $message = '<!DOCTYPE html><html><body>';
-     $message .= '<h1>'.htmlspecialchars( $title ).'</h1><table>';
-     foreach ( $data as $field => $input ) {
-        $message .= '<tr><th>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
-        $message .= '<td>'.htmlspecialchars( $input );
-     }
-     $message .= '</table></body></html>';
+      $message = '<!DOCTYPE html><html><body>';
+      $message .= '<h1>'.htmlspecialchars( $title ).'</h1><table>';
+      foreach ( $data as $field => $input ) {
+         $message .= '<tr><th>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
+         $message .= '<td>'.htmlspecialchars( $input );
+      }
+      $message .= '</table></body></html>';
 
-     if ( mail( $email, $title, $message, $headers ) ) {
-       $mysqli->commit();
-       echo $thankyou;
-     } else {
-       echo $err2;
-     }
+      if ( mail( $email, $title, $message, $headers ) ) {
+         $mysqli->commit();
+         echo $thankyou;
+      } else {
+         echo $err2;
+      }
 
    } catch ( Exception $ex ) {
       echo $err1;
@@ -181,6 +189,40 @@ function save_form ( ) {
 
 echo save_form();
 
+/*
+
+DROP TABLE IF EXISTS `www_form_submit`;
+
+CREATE TABLE `www_form_submit` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `form` char(8) CHARACTER SET ascii NOT NULL,
+  `from_ip` varchar(45) CHARACTER SET ascii NOT NULL,
+  `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `title` char(3) CHARACTER SET ascii DEFAULT NULL,
+  `fullname` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `firstname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lastname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `depart_year` smallint(4) UNSIGNED DEFAULT NULL,
+  `depart_month` tinyint(2) UNSIGNED DEFAULT NULL,
+  `adult` smallint(5) UNSIGNED DEFAULT NULL,
+  `children` smallint(5) UNSIGNED DEFAULT NULL,
+  `dob_month` tinyint(2) UNSIGNED DEFAULT NULL,
+  `dob_day` tinyint(2) UNSIGNED DEFAULT NULL,
+  `mobile` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `experience` char(5) CHARACTER SET ascii NULL,
+  `planning` varchar(200) CHARACTER SET ascii DEFAULT NULL,
+  `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+ALTER TABLE `www_form_submit`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `submit_time` (`submit_time`);
+
+ALTER TABLE `www_form_submit`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+*/
 ?>
 </div>
 

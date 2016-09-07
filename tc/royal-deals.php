@@ -84,7 +84,6 @@ form select {
   height: 36px;
 }
 </style>
-<script src="../js/date.js"></script>
 <script src='https://www.google.com/recaptcha/api.js?hl=zh-HK'></script>
 </head>
 <body style="background: url(../newimages/bodyBG.jpg) top center fixed;
@@ -108,17 +107,17 @@ form select {
 <h3>立即登記</h3>
 <div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
 <div id="intro_wrap">
-<div id="royal-deals-intro">立即登記皇家加勒比遊輪至WOW訊息，以獲取最新優惠及郵輪訊息。</div>
+  <div id="royal-deals-intro">立即登記皇家加勒比遊輪至WOW訊息，以獲取最新優惠及郵輪訊息。</div>
   <ul>
     <li>最後召集郵輪優惠</li>
     <li>第一手限時優惠通知</li>
     <li>取得至WOW新訊息: 最新目的地, 新船及航线等等</li>
   </ul>
-  <br/>
+  <br>
   <!--<a href="../pdf/Fare_list_sample.pdf"><img src="../newimages/WoW_news_tc.gif" alt="" title=""/></a>-->
-  <br/><br/>
+  <br><br>
 </div>
-*必須提供<br/><br/>
+*必須提供<br><br>
 <form action="form_submit.php" method="post" onsubmit="check(event)">
   <input type="hidden" name="form" value="RegRoyal">
 <div class="float">
@@ -158,50 +157,50 @@ form select {
   </select>
 </p>
 <p><label>手機:<br>
-   <input type="tel" name="mobile" class="contact"/></label>
+  <input type="tel" name="mobile" class="contact"></label>
 </p>
 <p><label>*電子郵箱: <br>
   <input type="email" name="email" class="contact" required></label>
 </p>
-<br/>
-<b>您的郵輪假期喜好</b><br/><br/>
-<span style="color: #0073bb"><b>您有沒有乘搭郵輪的經驗?</b></span><br/>
+<br>
+<b>您的郵輪假期喜好</b><br><br>
+<span style="color: #0073bb"><b>您有沒有乘搭郵輪的經驗?</b></span><br>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="Yes" class="left"><div class="choice-item left">我已乘搭過皇家加勒比遊輪</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="Other" class="left"><div class="choice-item left">我已乘搭過郵輪，但不是皇家加勒比遊輪</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="None"  class="left"><div class="choice-item left">我從沒乘搭過郵輪</div></label></div>
-<br/>
-<span style="color: #0073bb"><b>您未來的旅遊行程會想到那一個地方?</b></span><br/>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="China" class="left"><div class="choice-item left">中國    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Korea" class="left"><div class="choice-item left">韓國    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Japan" class="left"><div class="choice-item left">日本    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Singapore" class="left"><div class="choice-item left">新加坡  </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Taiwan" class="left"><div class="choice-item left">台灣    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Vietnam" class="left"><div class="choice-item left">越南    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Northern Europe" class="left"><div class="choice-item left">北歐    </div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Mediterranean" class="left"><div class="choice-item left">地中海  </div></label></div>
+<br>
+<span style="color: #0073bb"><b>您未來的旅遊行程會想到那一個地方?</b></span><br>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="China" class="left"><div class="choice-item left">中國</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Korea" class="left"><div class="choice-item left">韓國</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Japan" class="left"><div class="choice-item left">日本</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Singapore" class="left"><div class="choice-item left">新加坡</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Taiwan" class="left"><div class="choice-item left">台灣</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Vietnam" class="left"><div class="choice-item left">越南</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Northern Europe" class="left"><div class="choice-item left">北歐</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Mediterranean" class="left"><div class="choice-item left">地中海</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Caribbean" class="left"><div class="choice-item left">加勒比海</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Alaska" class="left"><div class="choice-item left">阿拉斯加</div></label></div>
-<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Others" class="left"><div class="choice-item left">其他    </div></label></div>
-<br/>
-<span style="color: #0073bb"><b>您下次的同行旅伴是誰?</b></span><br/>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Others" class="left"><div class="choice-item left">其他</div></label></div>
+<br>
+<span style="color: #0073bb"><b>您下次的同行旅伴是誰?</b></span><br>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Spouse"    class="left"><div class="choice-item left">配偶/伴侶</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Parents"   class="left"><div class="choice-item left">父母</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Children"  class="left"><div class="choice-item left">子女</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Friends"   class="left"><div class="choice-item left">朋友</div></label></div>
 <div class="checkbox-wrap float"><label><input type="checkbox" name="companion[]" value="Relatives" class="left"><div class="choice-item left">親人</div></label></div>
-<br/>
-<br/>
+<br>
+<br>
 <div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
-<br/>
+<br>
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
-    <b>收集個人資料聲明:</b><br/>
+    <b>收集個人資料聲明:</b><br>
     我們重視閣下的私隱權,並竭力維護閣下個人資料得到保密。我們將收集到的個人資料,均依據香港法例&lt;個人資料(私隱)條例&gt;規定處理。
     </span>
 </div>
-<br/>
+<br>
 <p> <input type="image" src="../newimages/img_but_send_tc.gif"/>
-<br/><br/><br/>
+<br><br><br>
 </p>
 
 <script>
@@ -217,7 +216,7 @@ function check( event ) {
    if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
       event.preventDefault();
       document.querySelector('.g-recaptcha').scrollIntoView();
-      return alert( "請勾選'我不是自動程式'。" );
+      return alert( '請勾選"我不是自動程式"。' );
    }
 }
 

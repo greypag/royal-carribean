@@ -8,18 +8,18 @@
 <div style="height:92px; width:962px; margin:auto; position:relative">
 <?php include 'pageMenu.php'; ?>
 <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;">
-   <a href="index.php">首頁</a> &gt; 表格
+   <a href="index.php">Home</a> &gt; Form
 </div>
 </div>
 
 <div class="page_contentbox" style='width:962px'>
-<div style="width:962px; float:left; position:relative; background: #fff url(../newimages/enquiry/banner-enquiry-tc.jpg) no-repeat;">
+<div style="width:962px; float:left; position:relative; background: #fff url(../newimages/enquiry/banner-enquiry-en.jpg) no-repeat;">
 
 <div style="margin-top:250px;" class="inner">
 <div class="page_left">
 <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
 
-<h3><!--處理中。--></h3>
+<h3><!--Processing--></h3>
 <div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
 <?php
 
@@ -36,11 +36,11 @@ function save_form ( ) {
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'ivan@ophubsolutions.com';
-   $lang = '中文';
-   $err1 = "資料庫故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Exception, usually database error
-   $err2 = "系統故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Email failure
-   $err3 = "驗證錯誤。<br>請勿重覆投寄，並請返回上一步勺選\"我不是自動程式\"。<br>如無此項，請啓用 JavaScript。";
-   $err_data = "資料不正確。請清除瀏覽器快取，然後返回上一步重試。";
+   $lang = '英文';
+   $err1 = "Database error. Please directly <a href='contact.php'>email or phone us</a>."; // Exception, usually database error
+   $err2 = "System error. Please directly <a href='contact.php'>email or phone us</a>."; // Email failure
+   $err3 = "Captcha error.<br>Please do not re-submit, and please go back to check \"I'm not a robot\".<br>If the checkbox is missing, please enable JavaScript.";
+   $err_data = "Incorrect data. Please delete browser cache, go back, and try again.";
 
    // Captcha checking
    if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
@@ -99,15 +99,15 @@ function save_form ( ) {
       // Validation
       switch ( @$data['form'] ) {
          case 'Enquiry':
-            $title = '查詢';
+            $title = 'Enquiry';
             $email = $email_sales;
             break;
          case 'FastBook':
-            $title = '快速預訂';
+            $title = 'Book Now';
             $email = $email_sales;
             break;
          case 'RegRoyal':
-            $title = '登記 皇家禮遇';
+            $title = 'Register Royal Deals';
             $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
             $email = $email_enquiry;
             break;
@@ -149,7 +149,7 @@ function save_form ( ) {
          unset( $data['dob_day'] );
       }
       $label = array(
-         'title' => '稱謂',
+         'title' => '稱',
          'firstname' => '名',
          'lastname' => '姓',
          'mobile' => '手機',

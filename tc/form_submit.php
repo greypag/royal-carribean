@@ -35,7 +35,7 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com, mng@rcclapac.com';
+   $cc = 'ivan@ophubsolutions.com, mng@rcclapac.com';
    $lang = '中文';
    $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Email failure
@@ -91,7 +91,8 @@ function save_form ( ) {
                   $_POST[ $key ] = implode( ",", array_map( 'trim', $_POST[ $key ] ) );
             default:
                if ( !is_string( $_POST[ $key ] ) ) return $err_data;
-               $insert .= "'".$mysqli->escape_string( $data[ $key ] = trim( $_POST[ $key ] ) )."'";
+               $txt = $data[ $key ] = trim( $_POST[ $key ] );
+               $insert .= "'".$mysqli->escape_string( $txt )."'";
                break;
          }
       }
@@ -116,10 +117,11 @@ function save_form ( ) {
          $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
       }
       switch ( @$data['form'] ) {
-         case 'Enquiry':
-            $title = "查詢: $data[firstname] $data[lastname]";
-            $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
-            $email = $email_sales;
+         case 'Contact':
+            if ( empty( $data['mobile'] ) ) return $err_data;
+            $title = "聯絡: $data[lastname] $data[firstname] $data[mobile]";
+            $thankyou = '<script>location.href="contact_complete.php";</script>';
+            $email = $email_enquiry;
             break;
          case 'FastBook':
             $title = "快速預訂: $data[lastname] $data[firstname]";
@@ -175,6 +177,7 @@ function save_form ( ) {
          'experience' => '郵輪經驗',
          'planning' => '想去',
          'companion' => '同行',
+         'remarks' => '留言',
       );
 
       // Send email
@@ -187,8 +190,8 @@ function save_form ( ) {
       $message = '<!DOCTYPE html><html><body>';
       $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
       foreach ( $data as $field => $input ) {
-         $message .= '<tr><th>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
-         $message .= '<td>'.htmlspecialchars( $input );
+         $message .= '<tr><th valign=top>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
+         $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }
       $message .= '</table></body></html>';
 
@@ -229,7 +232,8 @@ CREATE TABLE `www_form_submit` (
   `email` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `experience` char(5) CHARACTER SET ascii NULL,
   `planning` varchar(200) CHARACTER SET ascii DEFAULT NULL,
-  `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL
+  `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL,
+  `remarks` text CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 ALTER TABLE `www_form_submit`

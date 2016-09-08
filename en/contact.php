@@ -14,7 +14,7 @@
   margin: 0;
 }
 </style>
-<script src='https://www.google.com/recaptcha/api.js?hl=zh-HK'></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 </head>
 <body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
   -webkit-background-size: cover;

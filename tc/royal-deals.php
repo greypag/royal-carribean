@@ -165,7 +165,7 @@ form select {
 <br>
 <b>您的郵輪假期喜好</b><br><br>
 <span style="color: #0073bb"><b>您有沒有乘搭郵輪的經驗?</b></span><br>
-<div class="radio-wrap float"><label><input type="radio" name="experience" value="Yes" class="left"><div class="choice-item left">我已乘搭過皇家加勒比遊輪</div></label></div>
+<div class="radio-wrap float"><label><input type="radio" name="experience" value="RCI" class="left"><div class="choice-item left">我已乘搭過皇家加勒比遊輪</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="Other" class="left"><div class="choice-item left">我已乘搭過郵輪，但不是皇家加勒比遊輪</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="None"  class="left"><div class="choice-item left">我從沒乘搭過郵輪</div></label></div>
 <br>

@@ -31,7 +31,7 @@ if (isset($_POST)) {
   $tel = $_POST['tel'];
   $email = $_POST['email'];
   $message = $_POST['message'];
-  $to = "enquiry@royalcaribbean.com.hk, ivan@ophubsolutions.com";
+  $to = "sales@royalcaribbean.com.hk, ivan@ophubsolutions.com";
   //$to = "wleung@bmgww.com";
   //$to = "ivan@ophubsolutions.com";
   if($name && $email ){
@@ -41,7 +41,7 @@ if (isset($_POST)) {
     $body .= "電郵地址:". $email ."\r\n" ;
     $body .= "聯絡電話:". $tel ."\r\n" ;
     $body .= "留言:\r\n". $message ."\r\n" ;
-    $headers = "From: enquiry@royalcaribbean.com.hk\r\n";
+    $headers = "From: sales@royalcaribbean.com.hk\r\n";
     //$headers .= 'Bcc: rwong@bmgww.com' . '\r\n';
     if ( mail($to, $subject, $body, $headers) )
        echo "謝謝！我們的客戶服務主任會盡快與您聯絡。";

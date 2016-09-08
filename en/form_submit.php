@@ -40,7 +40,7 @@ function save_form ( ) {
    $err1 = "Database error. Please directly <a href='contact.php'>email or phone us</a>."; // Exception, usually database error
    $err2 = "System error. Please directly <a href='contact.php'>email or phone us</a>."; // Email failure
    $err3 = "Captcha error.<br>Please do not re-submit, and please go back to check \"I'm not a robot\".<br>If the checkbox is missing, please enable JavaScript.";
-   $err_data = "Incorrect data. Please delete browser cache, go back, and try again.";
+   $err_data = "Incorrect data. Please delete browser cache, go back, make sure info is correct, and try again.";
 
    // Captcha checking
    if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
@@ -118,7 +118,7 @@ function save_form ( ) {
          return $err_data;
       if ( ! empty( $data['id'] ) || ! empty( $data['from_ip'] ) || ! empty( $data['submit_time'] ) )
          return $err_data;
-      if ( empty( $data['fullname'] ) && ( empty( $data['firstname'] ) || empty( $data['lastname'] ) ) )
+      if ( empty( $data['firstname'] ) || empty( $data['lastname'] ) )
          return $err_data;
       if ( isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
          if ( empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
@@ -201,7 +201,6 @@ CREATE TABLE `www_form_submit` (
   `lang` varchar(2) CHARACTER SET ascii NOT NULL,
   `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` char(3) CHARACTER SET ascii DEFAULT NULL,
-  `fullname` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `firstname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `lastname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `depart_year` smallint(4) UNSIGNED DEFAULT NULL,

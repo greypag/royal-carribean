@@ -155,8 +155,8 @@ $monthText = array(
 <br><br>
 <span style="color: #0073bb"><b>您與多少人同行？</b></span><br />
 <div class="float" style="margin-top: 5px;" id="pax">
-  <div style="margin-right: 5px;margin-bottom: 5px;"><input type="number" name="adult" class="contact" min="0"> 大 </div>
-  <div><input type="number" name="children" class="contact" min="0"> 小 (11歲或以下)</div>
+  <div style="margin-right: 5px;margin-bottom: 5px;"><label><input type="number" name="adult" class="contact" min="0"> 大 </label></div>
+  <div><label><input type="number" name="children" class="contact" min="0"> 小 (11歲或以下)</label></div>
 </div>
 <br>
 <div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
@@ -178,9 +178,11 @@ function check( event ) {
    var month = ~~document.querySelector('#depart_month').value-1;
    var year = ~~document.querySelector('#depart_year').value;
    var today = new Date();
-   if ( year === today.getYear() && month < today.getMonth() ) {
-      event.preventDefault();
-      return alert( "日期錯誤" );
+   if ( month >= 0 || year > 0 ) {
+      if ( ( year === today.getYear()+1900 && month <= today.getMonth()+1 ) || month < 0 || year <= 0 ) {
+         event.preventDefault();
+         return alert( "日期錯誤" );
+      }
    }
    if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
       event.preventDefault();

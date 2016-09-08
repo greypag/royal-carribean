@@ -37,8 +37,8 @@ function save_form ( ) {
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com';
    $lang = '中文';
-   $err1 = "資料庫故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Exception, usually database error
-   $err2 = "系統故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Email failure
+   $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error
+   $err2 = "系統故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Email failure
    $err3 = "驗證錯誤。<br>請勿重覆投寄，並請返回上一步勺選\"我不是自動程式\"。<br>如無此項，請啓用 JavaScript。";
    $err_data = "資料不正確。請清除瀏覽器快取，返回上一步，確保資料正確然後重試。";
 

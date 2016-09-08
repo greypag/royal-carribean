@@ -1,6 +1,5 @@
 <?php $thispage = "enquiry";?>
 <?php include 'pageHead.php'; ?>
-<script src="../js/date.js"></script>
 <link href="../css/date.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .left {
@@ -70,6 +69,8 @@
   width: 100px;
 }
 </style>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+</head>
 <body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -90,70 +91,92 @@
 <div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
 <div id="intro_wrap">
   <div id="royal-deals-intro">Please fill in the following form, our customer service officer will contact you shortly.</div>
-  <br/>
+  <br>
 </div>
-* Required Information<br/>
-<form action="enquiry-write.php" method="post" name="frmContact" id="frmContact">
-<p>*Name: <br />
-<label for="name"></label>
-  <input type="text" name="name" id="name"  class="contact"/>
+* Required Information<br>
+<form action="form_submit.php" method="post" onsubmit="check(event)">
+  <input type="hidden" name="form" value="FastBook">
+<label><p>*Firstname: <br>
+  <input type="text" name="firstname" class="contact" required></label>
 </p>
-<p>*Mobile:<br />
-<label for="mobile"></label>
-   <input type="text" name="mobile" id="mobile" class="contact"/>
+<label><p>*Lastname: <br>
+  <input type="text" name="lastname" class="contact" required></label>
 </p>
-<p>*Email: <br />
-  <label for="email"></label>
-  <input type="text" name="email" id="email" class="contact"/>
+<label><p>*Mobile:<br>
+   <input type="tel" name="mobile" id="mobile" class="contact" required></label>
 </p>
-<br/>
-<span style="color: #0073bb"><b>Your Preferred Sailing:</b></span><br/>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="0" class="left"><div class="choice-item left">China</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="1" class="left"><div class="choice-item left">Korea</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="2" class="left"><div class="choice-item left">Japan</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="3" class="left"><div class="choice-item left">Singapore</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="4" class="left"><div class="choice-item left">Taiwan</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="5" class="left"><div class="choice-item left">Vietnam</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="6" class="left"><div class="choice-item left">Northern Europe</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="7" class="left"><div class="choice-item left">Mediterranean</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="8" class="left"><div class="choice-item left">Caribbean</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="9" class="left"><div class="choice-item left">Alaska</div></div>
-<div class="checkbox-wrap float"><input type="checkbox" name="next-dest[]" value="10" class="left"><div class="choice-item left">Others</div></div>
+<label><p>*Email: <br>
+  <input type="email" name="email" id="email" class="contact" required></label>
+</p>
+<br>
+<span style="color: #0073bb"><b>Your Preferred Sailing:</b></span><br>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="China" class="left"><div class="choice-item left">China</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Korea" class="left"><div class="choice-item left">Korea</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Japan" class="left"><div class="choice-item left">Japan</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Singapore" class="left"><div class="choice-item left">Singapore</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Taiwan" class="left"><div class="choice-item left">Taiwan</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Vietnam" class="left"><div class="choice-item left">Vietnam</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Northern Europe" class="left"><div class="choice-item left">Northern Europe</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Mediterranean" class="left"><div class="choice-item left">Mediterranean</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Caribbean" class="left"><div class="choice-item left">Caribbean</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Alaska" class="left"><div class="choice-item left">Alaska</div></label></div>
+<div class="checkbox-wrap float"><label><input type="checkbox" name="planning[]" value="Others" class="left"><div class="choice-item left">Others</div></label></div>
 #Multiple answers
-<br/><br/>
+<br><br>
 <div style="margin-top: 5px;"><span style="color: #0073bb"><b>Your Preferred Departure Date:</b></span></div>
-<select name="year" id="year">
+<select name="depart_year" id="depart_year">
   <option value="">Year</option>
   <option value="<?php echo date("Y")?>"><?php echo date("Y")?></option>
   <option value="<?php echo date("Y", strtotime('+1 year'))?>"><?php echo date("Y", strtotime('+1 year'))?></option>
   <option value="<?php echo date("Y", strtotime('+2 year'))?>"><?php echo date("Y", strtotime('+2 year'))?></option>
 </select>
-<select name="month" id="month">
+<select name="depart_month" id="depart_month">
   <option value="">Month</option>
-  <?php for($i = 1; $i <= 12; $i++) { 
-    $ori = $i;
-    $i = strlen($i) < 2 ? "0{$i}" : $i; ?>
-    <option value="<?php echo $i; ?>"><?php echo strtoupper(date('M', mktime(0, 0, 0, $ori, 1))); ?></option>
+  <?php for($i = 1; $i <= 12; $i++) { ?>
+    <option value="<?php echo $i; ?>"><?php echo strtoupper(date('M', mktime(0, 0, 0, $i, 1))); ?></option>
   <?php } ?>
 </select>
-<br/><br/>
-<span style="color: #0073bb"><b>How many pax will you travel with?</b></span><br />
+<br><br>
+<span style="color: #0073bb"><b>How many pax will you travel with?</b></span><br>
 <div class="float" style="margin-top: 5px;" id="pax">
-  <div style="margin-right: 5px;margin-bottom: 5px;"><input type="text" name="adults" id="adults" class="contact"/> Adults </div>
-  <div><input type="text" name="children" id="children" class="contact"/> Children (age 11 or below)</div>
+  <div style="margin-right: 5px;margin-bottom: 5px;"><label><input type="number" name="adult" class="contact" min="0"> Adults </label></div>
+  <div><label><input type="number" name="children" class="contact" min="0"> Children (age 11 or below)</label></div>
 </div>
-<br/>
-
+<br>
+<div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
+<br>
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
-    <b>Personal Information Collection Statement:</b><br/>
+    <b>Personal Information Collection Statement:</b><br>
     We shall keep your personal data confidential at all times. All personal data collected will be in accordance with the Personal Data (Privacy) Ordinance under the law of Hong Kong.
     </span>
 </div>
-<br/>
-<p> <a href="javascript:;" onclick="submitForm();"><img src="../newimages/img_but_send_en.gif"/></a>
-<br/><br/><br/>
+<br>
+<p> <input type="image" src="../newimages/img_but_send_en.gif"/>
+<br><br><br>
 </p>
+
+<script>
+
+function check( event ) {
+   var month = ~~document.querySelector('#depart_month').value-1;
+   var year = ~~document.querySelector('#depart_year').value;
+   var today = new Date();
+   if ( month >= 0 || year > 0 ) {
+      if ( ( year === today.getYear()+1900 && month <= today.getMonth()+1 ) || month < 0 || year <= 0 ) {
+         event.preventDefault();
+         return alert( "Wrong date" );
+      }
+   }
+   if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
+      event.preventDefault();
+      document.querySelector('.g-recaptcha').scrollIntoView();
+      return alert( 'Please chec "I\'m not a robot."' );
+   }
+}
+
+</script>
+
 </form>
 
 </div>
@@ -166,104 +189,3 @@
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-<script>
-
-function submitForm() {
-  var isValid = true;
-  $('#mobile, #year, #month').removeAttr('style');
-  /*if ($('#first-name').val()===''){
-    isValid = false;
-    $('#first-name').css('border-color', 'red');
-  }else{
-    $('#first-name').removeAttr('style');
-  }
-
-  if ($('#last-name').val()===''){
-     isValid = false;
-    $('#last-name').css('border-color', 'red');
-  }else{
-    $('#last-name').removeAttr('style');
-  }*/
-
-  if ($('#name').val()===''){
-     isValid = false;
-    $('#name').css('border-color', 'red');
-  }else{
-    $('#name').removeAttr('style');
-  }
-
-  if ($('#email').val()===''){
-    isValid = false;
-    $('#email').css('border-color', 'red');
-  }else{
-    if (validateField("email", $('#email').val())){
-      $('#email').removeAttr('style');
-    }else{
-      isValid = false;
-      $('#email').css('border-color', 'red');
-    }
-  }
-  
-  if ($('#mobile').val()==''){
-      isValid = false;
-      $('#mobile').css('border-color', 'red');
-  }else{
-     if (!validateField("mobile", $('#mobile').val())){
-        isValid = false;
-        $('#mobile').css('border-color', 'red');
-     }
-  }
-  if (($('#year').val() == "" && $('#month').val() != "") || ($('#month').val() == "" && $('#year').val() != "")){
-    if ($('#year').val() ==''){
-      isValid = false;
-      $('#year').css('border-color', 'red');
-    }
-    if ($('#month').val() ==''){
-      isValid = false;
-      $('#month').css('border-color', 'red');
-    }
-
-  }
-  if ($('#adults').val() != ""){
-    if (isNaN($('#adults').val())){
-      isValid = false;
-      $('#adults').css('border-color', 'red');
-    }else{
-      $('#adults').removeAttr('style');
-    }
-  }
-
-  if ($('#children').val() != ""){
-    if (isNaN($('#children').val())){
-      isValid = false;
-      $('#children').css('border-color', 'red');
-    }else{
-      $('#children').removeAttr('style');
-    }
-  }
-/*
-  if($("#privacy").is(':checked')){
-    $("#privacytext").css("color", "#000");
-  }else{
-    isValid = false;
-    $("#privacytext").css("color", "red");
-  }
-*/
-  if ( isValid){
-    frmContact.submit();
-  }else{
-    $("html, body").animate({ scrollTop: $(".page_left01").offset().top});
-  }
-};
-
-function validateField(type, value) {
-  if (type == "email"){
-    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  }else if (type == "mobile"){
-    var pattern = /[0-9 -()+]+$/;
-  }else if (type == "birthday"){
-    var pattern = /^((0\d)|(1[012]))\/(([012]\d)|3[01])$/;
-  }
-  return pattern.test(value);
-}
-</script>

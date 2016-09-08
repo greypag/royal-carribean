@@ -36,7 +36,7 @@ function save_form ( ) {
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'ivan@ophubsolutions.com';
-   $lang = '英文';
+   $lang = 'English';
    $err1 = "Database error. Please directly <a href='contact.php'>email or phone us</a>."; // Exception, usually database error
    $err2 = "System error. Please directly <a href='contact.php'>email or phone us</a>."; // Email failure
    $err3 = "Captcha error.<br>Please do not re-submit, and please go back to check \"I'm not a robot\".<br>If the checkbox is missing, please enable JavaScript.";
@@ -149,16 +149,16 @@ function save_form ( ) {
          unset( $data['dob_day'] );
       }
       $label = array(
-         'lang' => '語言',
-         'title' => '稱',
-         'firstname' => '名',
-         'lastname' => '姓',
-         'mobile' => '手機',
-         'email' => '電郵',
-         'dob' => '生日',
-         'experience' => '郵輪經驗',
-         'planning' => '未來想去',
-         'companion' => '下次同行',
+         'lang' => 'Language',
+         'title' => 'Title',
+         'firstname' => 'Firstname',
+         'lastname' => 'Lastname',
+         'mobile' => 'Mobile',
+         'email' => 'Email',
+         'dob' => 'Birthday',
+         'experience' => 'Cruised Before?',
+         'planning' => 'Preference',
+         'companion' => 'Companion',
       );
 
       // Send email
@@ -169,7 +169,7 @@ function save_form ( ) {
       $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
       $message = '<!DOCTYPE html><html><body>';
-      $message .= '<h1>'.htmlspecialchars( $title ).'</h1><table>';
+      $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
       foreach ( $data as $field => $input ) {
          $message .= '<tr><th>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
          $message .= '<td>'.htmlspecialchars( $input );

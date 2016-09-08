@@ -169,7 +169,7 @@ function save_form ( ) {
       $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
       $message = '<!DOCTYPE html><html><body>';
-      $message .= '<h1>'.htmlspecialchars( $title ).'</h1><table>';
+      $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
       foreach ( $data as $field => $input ) {
          $message .= '<tr><th>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
          $message .= '<td>'.htmlspecialchars( $input );

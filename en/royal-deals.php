@@ -148,7 +148,7 @@ form select {
 <br>
 <b>Your Cruising Preferences</b><br><br>
 <span style="color: #0073bb"><b>What's your cruise history?</b></span><br>
-<div class="radio-wrap float"><label><input type="radio" name="experience" value="Yes" class="left"><div class="choice-item left">I've cruised with Royal Caribbean</div></label></div>
+<div class="radio-wrap float"><label><input type="radio" name="experience" value="RCI" class="left"><div class="choice-item left">I've cruised with Royal Caribbean</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="Other" class="left"><div class="choice-item left">I've cruised but not with Royal Caribbean</div></label></div>
 <div class="radio-wrap float"><label><input type="radio" name="experience" value="None" class="left"><div class="choice-item left">I've never cruised</div></label></div>
 <br>

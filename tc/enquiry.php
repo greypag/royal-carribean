@@ -113,10 +113,10 @@ $monthText = array(
 <form action="form_submit.php" method="post" onsubmit="check(event)">
   <input type="hidden" name="form" value="FastBook">
 <label><p>*姓:<br>
-  <input type="text" name="lastname" class="contact" required></label>
+  <input type="text" name="lastname" class="contact" autocomplete="family-name" required autofocus></label>
 </p>
 <label><p>*名: <br>
-  <input type="text" name="firstname" class="contact" required></label>
+  <input type="text" name="firstname" class="contact" autocomplete="given-name" required></label>
 </p>
 <label><p>*手機 :<br />
    <input type="tel" name="mobile" id="mobile" class="contact" required></label>

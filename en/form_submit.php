@@ -35,10 +35,10 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'ivan@ophubsolutions.com';
+   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com';
    $lang = 'English';
-   $err1 = "Database error. Please directly <a href='contact.php'>email or phone us</a>."; // Exception, usually database error
-   $err2 = "System error. Please directly <a href='contact.php'>email or phone us</a>."; // Email failure
+   $err1 = "Database error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Exception, usually database error
+   $err2 = "System error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Email failure
    $err3 = "Captcha error.<br>Please do not re-submit, and please go back to check \"I'm not a robot\".<br>If the checkbox is missing, please enable JavaScript.";
    $err_data = "Incorrect data. Please delete browser cache, go back, make sure info is correct, and try again.";
 
@@ -84,36 +84,19 @@ function save_form ( ) {
                break;
             case MYSQLI_TYPE_TINY:
             case MYSQLI_TYPE_SHORT:
-               $insert .= $data[ $key ] = (int) $_POST[ $key ];
+               $insert .= $data[ $key ] = abs( (int) $_POST[ $key ] );
                break;
             case MYSQLI_TYPE_VAR_STRING:
                if ( is_array( $_POST[ $key ] ) )
-                  $_POST[ $key ] = implode( ",", $_POST[ $key ] );
+                  $_POST[ $key ] = implode( ",", array_map( 'trim', $_POST[ $key ] ) );
             default:
                if ( !is_string( $_POST[ $key ] ) ) return $err_data;
-               $insert .= "'".$mysqli->escape_string( $data[ $key ] = $_POST[ $key ] )."'";
+               $insert .= "'".$mysqli->escape_string( $data[ $key ] = trim( $_POST[ $key ] ) )."'";
                break;
          }
       }
 
       // Validation
-      switch ( @$data['form'] ) {
-         case 'Enquiry':
-            $title = 'Enquiry';
-            $email = $email_sales;
-            break;
-         case 'FastBook':
-            $title = 'Book Now';
-            $email = $email_sales;
-            break;
-         case 'RegRoyal':
-            $title = 'Register Royal Deals';
-            $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
-            $email = $email_enquiry;
-            break;
-         default:
-            return $err_data;
-      }
       if ( ! filter_var( @$data['email'], FILTER_VALIDATE_EMAIL ) )
          return $err_data;
       if ( ! empty( $data['id'] ) || ! empty( $data['from_ip'] ) || ! empty( $data['submit_time'] ) )
@@ -127,7 +110,32 @@ function save_form ( ) {
          if ( $data['dob_month'] !== (int)date( 'n', $dob ) )
             return $err_data;
       }
-      $title .= ": $data[firstname] $data[lastname]";
+      if ( isset( $data['depart_year'] ) || isset( $data['depart_month'] ) ) {
+         if ( empty( $data['depart_year'] ) || empty( $data['depart_month'] ) )
+            return $err_data;
+         $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
+      }
+      switch ( @$data['form'] ) {
+         case 'Enquiry':
+            $title = "Enquiry: $data[firstname] $data[lastname]";
+            $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
+            $email = $email_sales;
+            break;
+         case 'FastBook':
+            $title = "Reservation: ";
+            if ( isset( $data['depart_year'] ) )
+               $title .= ": $data[depart_year] - $data[depart_month]";
+            $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
+            $email = $email_sales;
+            break;
+         case 'RegRoyal':
+            $title = "Register Royal Deals: $data[firstname] $data[lastname]";
+            $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
+            $email = $email_enquiry;
+            break;
+         default:
+            return $err_data;
+      }
 
       // Fill in fixed data and insert
       $data['from_ip'] = $_SERVER['REMOTE_ADDR'];
@@ -148,6 +156,11 @@ function save_form ( ) {
          unset( $data['dob_month'] );
          unset( $data['dob_day'] );
       }
+      if ( isset( $data['depart_year'] ) ) {
+         $data['depart'] = date( 'Y M', $depart );
+         unset( $data['depart_month'] );
+         unset( $data['depart_year'] );
+      }
       $label = array(
          'lang' => 'Language',
          'title' => 'Title',
@@ -156,6 +169,9 @@ function save_form ( ) {
          'mobile' => 'Mobile',
          'email' => 'Email',
          'dob' => 'Birthday',
+         'depart' => 'Birthday',
+         'adult' => 'Adult',
+         'children' => 'Children',
          'experience' => 'Cruised Before?',
          'planning' => 'Preference',
          'companion' => 'Companion',

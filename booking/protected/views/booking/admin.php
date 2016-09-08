@@ -137,7 +137,11 @@ $this->widget('ext.EExcelView', array(
         'booking_id',
         array(
             'name' => 'booking_time',
-            'value' => 'Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["long_time"], $data->booking_time)',
+            'value' => 'Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["long"], $data->booking_time)',
+        ),
+        array(
+            'name' => 'booking_time',
+            'value' => 'Yii::app()->getDateFormatter()->format(Yii::app()->params->dateFormat["time"], $data->booking_time)',
         ),
         'ip',
         'no_of_guest',

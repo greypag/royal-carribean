@@ -59,7 +59,7 @@ abstract class BaseBooking extends GxActiveRecord {
             array('promotion_id', 'length', 'max' => 128),
             array('booking_id', 'length', 'max' => 255),
             array('ip', 'length', 'max' => 15),
-            array('rt_id, rt_name, start_date, end_date, booking_id, port_of_departure, ports_of_calls,port_of_boarding,cruise_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
+            array('rt_id, rt_name, start_date, end_date, booking_id, port_of_departure, ports_of_calls, port_of_boarding, cruise_id, booking_time, ip, no_of_guest, total_payment, booking_status, internal_notes, promotion_id, itinerary_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -81,6 +81,7 @@ abstract class BaseBooking extends GxActiveRecord {
     public function attributeLabels() {
         return array(
             'booking_id' => Yii::t('app', 'Booking ID'),
+            // 'booking_date' => Yii::t('app', 'Booking Date'),
             'booking_time' => Yii::t('app', 'Booking Time'),
             'ip' => Yii::t('app', 'IP Address'),
             'no_of_guest' => Yii::t('app', 'No. of Guests'),
@@ -106,6 +107,7 @@ abstract class BaseBooking extends GxActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('t.booking_id', $this->booking_id, true);
+        // $criteria->compare('t.booking_time', $this->booking_date);
         $criteria->compare('t.booking_time', $this->booking_time);
         $criteria->compare('t.ip', $this->ip, true);
         $criteria->compare('t.no_of_guest', $this->no_of_guest);

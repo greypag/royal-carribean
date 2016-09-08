@@ -96,16 +96,16 @@
 * Required Information<br>
 <form action="form_submit.php" method="post" onsubmit="check(event)">
   <input type="hidden" name="form" value="FastBook">
-<label><p>*Firstname: <br>
-  <input type="text" name="firstname" class="contact" required></label>
+<p><label>*Firstname: <br>
+  <input type="text" name="firstname" class="contact" autocomplete="given-name" required autofocus></label>
 </p>
-<label><p>*Lastname: <br>
-  <input type="text" name="lastname" class="contact" required></label>
+<p><label>*Lastname: <br>
+  <input type="text" name="lastname" class="contact" autocomplete="family-name" required></label>
 </p>
-<label><p>*Mobile:<br>
+<p><label>*Mobile:<br>
    <input type="tel" name="mobile" id="mobile" class="contact" required></label>
 </p>
-<label><p>*Email: <br>
+<p><label>*Email: <br>
   <input type="email" name="email" id="email" class="contact" required></label>
 </p>
 <br>

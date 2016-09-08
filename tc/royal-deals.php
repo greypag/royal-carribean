@@ -132,11 +132,11 @@ form select {
   </div>
   <div class="left" style="padding-right: 4px;">
     <label>*姓:<br>
-      <input type="text" name="lastname" class="contact" required></label>
+      <input type="text" name="lastname" class="contact" autocomplete="given-name" required autofocus></label>
   </div>
   <div class="left">
     <label>*名: <br>
-      <input type="text" name="firstname" class="contact" required></label>
+      <input type="text" name="firstname" class="contact" autocomplete="family-name" required></label>
   </div>
 </div>
 <p>*出生日期:<br>

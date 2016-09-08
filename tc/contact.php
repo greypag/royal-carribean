@@ -38,21 +38,20 @@
 <div><br>* 必須提供</div>
 <form action="form_submit.php" method="post" onsubmit="check(event)">
   <input type="hidden" name="form" value="Contact">
-<label><p>*姓:<br>
+<p><label>*姓:<br>
   <input type="text" name="lastname" class="contact" autocomplete="family-name" required autofocus></label>
 </p>
-<label><p>*名: <br>
+<p><label>*名: <br>
   <input type="text" name="firstname" class="contact" autocomplete="given-name" required></label>
 </p>
-<label><p>*聯絡電話<br />
+<p><label>*聯絡電話<br />
   <input type="tel" name="mobile" class="contact" required></label>
 </p>
-<label><p>*電郵地址<br />
+<p><label>*電郵地址<br />
   <input type="email" name="email" class="contact" required></label>
 </p>
-<p>*留言<br />
-  <label for="message"></label>
-  <textarea name="remarks" cols="45" rows="5" class="contact" required></textarea>
+<p><label>*留言<br />
+  <textarea name="remarks" cols="45" rows="5" class="contact" required></textarea></label>
 </p>
 <div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
 <br>

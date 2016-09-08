@@ -35,12 +35,12 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'ivan@ophubsolutions.com';
+   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com';
    $lang = '中文';
    $err1 = "資料庫故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接<a href='contact.php'>電郵或致電我們</a>。"; // Email failure
    $err3 = "驗證錯誤。<br>請勿重覆投寄，並請返回上一步勺選\"我不是自動程式\"。<br>如無此項，請啓用 JavaScript。";
-   $err_data = "資料不正確。請清除瀏覽器快取，然後返回上一步重試。";
+   $err_data = "資料不正確。請清除瀏覽器快取，返回上一步，確保資料正確然後重試。";
 
    // Captcha checking
    if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
@@ -84,41 +84,24 @@ function save_form ( ) {
                break;
             case MYSQLI_TYPE_TINY:
             case MYSQLI_TYPE_SHORT:
-               $insert .= $data[ $key ] = (int) $_POST[ $key ];
+               $insert .= $data[ $key ] = abs( (int) $_POST[ $key ] );
                break;
             case MYSQLI_TYPE_VAR_STRING:
                if ( is_array( $_POST[ $key ] ) )
-                  $_POST[ $key ] = implode( ",", $_POST[ $key ] );
+                  $_POST[ $key ] = implode( ",", array_map( 'trim', $_POST[ $key ] ) );
             default:
                if ( !is_string( $_POST[ $key ] ) ) return $err_data;
-               $insert .= "'".$mysqli->escape_string( $data[ $key ] = $_POST[ $key ] )."'";
+               $insert .= "'".$mysqli->escape_string( $data[ $key ] = trim( $_POST[ $key ] ) )."'";
                break;
          }
       }
 
       // Validation
-      switch ( @$data['form'] ) {
-         case 'Enquiry':
-            $title = '查詢';
-            $email = $email_sales;
-            break;
-         case 'FastBook':
-            $title = '快速預訂';
-            $email = $email_sales;
-            break;
-         case 'RegRoyal':
-            $title = '登記 皇家禮遇';
-            $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
-            $email = $email_enquiry;
-            break;
-         default:
-            return $err_data;
-      }
       if ( ! filter_var( @$data['email'], FILTER_VALIDATE_EMAIL ) )
          return $err_data;
       if ( ! empty( $data['id'] ) || ! empty( $data['from_ip'] ) || ! empty( $data['submit_time'] ) )
          return $err_data;
-      if ( empty( $data['fullname'] ) && ( empty( $data['firstname'] ) || empty( $data['lastname'] ) ) )
+      if ( empty( $data['firstname'] ) || empty( $data['lastname'] ) )
          return $err_data;
       if ( isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
          if ( empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
@@ -127,7 +110,32 @@ function save_form ( ) {
          if ( $data['dob_month'] !== (int)date( 'n', $dob ) )
             return $err_data;
       }
-      $title .= ": $data[firstname] $data[lastname]";
+      if ( isset( $data['depart_year'] ) || isset( $data['depart_month'] ) ) {
+         if ( empty( $data['depart_year'] ) || empty( $data['depart_month'] ) )
+            return $err_data;
+         $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
+      }
+      switch ( @$data['form'] ) {
+         case 'Enquiry':
+            $title = "查詢: $data[firstname] $data[lastname]";
+            $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
+            $email = $email_sales;
+            break;
+         case 'FastBook':
+            $title = "快速預訂";
+            if ( isset( $data['depart_year'] ) )
+               $title .= ": $data[depart_year] - $data[depart_month]";
+            $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
+            $email = $email_sales;
+            break;
+         case 'RegRoyal':
+            $title = "登記 皇家禮遇: $data[firstname] $data[lastname]";
+            $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
+            $email = $email_enquiry;
+            break;
+         default:
+            return $err_data;
+      }
 
       // Fill in fixed data and insert
       $data['from_ip'] = $_SERVER['REMOTE_ADDR'];
@@ -148,6 +156,11 @@ function save_form ( ) {
          unset( $data['dob_month'] );
          unset( $data['dob_day'] );
       }
+      if ( isset( $data['depart_year'] ) ) {
+         $data['depart'] = date( 'Y M', $depart );
+         unset( $data['depart_month'] );
+         unset( $data['depart_year'] );
+      }
       $label = array(
          'lang' => '語言',
          'title' => '稱謂',
@@ -156,6 +169,9 @@ function save_form ( ) {
          'mobile' => '手機',
          'email' => '電郵',
          'dob' => '生日',
+         'depart' => '出發',
+         'adult' => '成人',
+         'children' => '小童',
          'experience' => '郵輪經驗',
          'planning' => '未來想去',
          'companion' => '下次同行',
@@ -201,7 +217,6 @@ CREATE TABLE `www_form_submit` (
   `lang` varchar(2) CHARACTER SET ascii NOT NULL,
   `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` char(3) CHARACTER SET ascii DEFAULT NULL,
-  `fullname` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `firstname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `lastname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `depart_year` smallint(4) UNSIGNED DEFAULT NULL,

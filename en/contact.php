@@ -14,6 +14,8 @@
   margin: 0;
 }
 </style>
+<script src='https://www.google.com/recaptcha/api.js?hl=zh-HK'></script>
+</head>
 <body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -33,23 +35,26 @@
 <h3>Contact Us</h3>
 
 <div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
-<div><br/>* Required Information</div>
-<form action="contact_complete.php" method="post" name="frmContact" id="frmContact" enctype="multipart/form-data">
-<p>*Name: <br />
-<label for="first-name"></label>
-  <input type="text" name="name" id="name"  class="contact"/>
+<div><br>* Required Information</div>
+<form action="form_submit.php" method="post" onsubmit="check(event)">
+  <input type="hidden" name="form" value="Contact">
+<p><label>*Firstname: <br>
+  <input type="text" name="firstname" class="contact" autocomplete="given-name" required autofocus></label>
 </p>
-<p>*Tel: <br />
-<label for="tel"></label>
-  <input type="text" name="tel" id="tel" class="contact"/></p>
-<p>*Email: <br />
-<label for="email"></label>
-  <input type="text" name="email" id="email" class="contact"/></p>
-<p>*Message:<br />
-  <label for="message"></label>
-  <textarea name="message" id="message" cols="45" rows="5" class="contact"></textarea>
+<p><label>*Lastname:<br>
+  <input type="text" name="lastname" class="contact" autocomplete="family-name" required></label>
 </p>
-<br/>
+<p><label>*Tel: <br />
+  <input type="text" name="mobile" id="mobile" class="contact" required></label>
+</p>
+<p><label>*Email: <br />
+  <input type="text" name="email" id="email" class="contact" required></label>
+</p>
+<p><label>*Message:<br />
+  <textarea name="remarks" id="remarks" cols="45" rows="5" class="contact" required></textarea></label>
+</p>
+<div class="g-recaptcha" data-sitekey="6LfTbykTAAAAAHFSMY8rlrpnhMPcLopcO5rROeBB"></div>
+<br>
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
     <b style="height: auto;">Personal Information Collection Statement:</b>
@@ -57,9 +62,21 @@
     </span>
 </div>
 
-<br/>
-<p> <a href="javascript:;" onclick="submitForm();"><img src="../newimages/img_but_send_en.gif"/></a> <a href="javascript:;" onclick="frmContact.reset();"><img src="../newimages/img_but_clear_en.gif"/></a>
-</p>
+<br>
+<p> <input type="image" src="../newimages/img_but_send_en.gif"></p>
+
+<script>
+
+function check( event ) {
+   if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
+      event.preventDefault();
+      document.querySelector('.g-recaptcha').scrollIntoView();
+      return alert( 'Please chec "I\'m not a robot."' );
+   }
+}
+
+</script>
+
 </form>
 
 </div>
@@ -72,69 +89,3 @@
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-<script>
-function submitForm() {
-  var isValid = true;
-  
-  if ($('#name').val()===''){
-    isValid = false;
-    $('#name').css('border-color', 'red');
-  }else{
-    $('#name').removeAttr('style');
-  }
-
-
-  if ($('#tel').val()===''){
-    isValid = false;
-    $('#tel').css('border-color', 'red');
-  }else{
-    if (validateField("mobile", $('#tel').val())){
-      $('#tel').removeAttr('style');
-    }else{
-      isValid = false;
-      $('#tel').css('border-color', 'red');
-    }
-  }
-
-
-  if ($('#email').val()===''){
-    isValid = false;
-    $('#email').css('border-color', 'red');
-  }else{
-    if (validateField("email", $('#email').val())){
-      $('#email').removeAttr('style');
-    }else{
-      isValid = false;
-      $('#email').css('border-color', 'red');
-    }
-  }
-
-  if ($('#message').val()===''){
-     isValid = false;
-    $('#message').css('border','2px inset red');
-  }else{
-    $('#message').removeAttr('style');
-  }
-/*
-  if($("#privacy").is(':checked')){
-    $("#privacytext").css("color", "#000");
-  }else{
-    isValid = false;
-    $("#privacytext").css("color", "red");
-  }
-*/
-  if ( isValid){
-    frmContact.submit();
-  }
-};
-function validateField(type, value) {
-  if (type == "email"){
-    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  }else if (type == "mobile"){
-    var pattern = /[0-9 -()+]+$/;
-  }else if (type == "birthday"){
-    var pattern = /^((0\d)|(1[012]))\/(([012]\d)|3[01])$/;
-  }
-  return pattern.test(value);
-}
-</script>

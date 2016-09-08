@@ -35,7 +35,7 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com';
+   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com, mng@rcclapac.com';
    $lang = 'English';
    $err1 = "Database error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Exception, usually database error
    $err2 = "System error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Email failure
@@ -122,9 +122,9 @@ function save_form ( ) {
             $email = $email_sales;
             break;
          case 'FastBook':
-            $title = "Reservation: ";
+            $title = "Reservation: $data[firstname] $data[lastname]";
             if ( isset( $data['depart_year'] ) )
-               $title .= ": $data[depart_year] - $data[depart_month]";
+               $title .= " $data[depart_month]/$data[depart_year]";
             $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
             $email = $email_sales;
             break;

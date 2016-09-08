@@ -35,7 +35,7 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com';
+   $cc = 'david@ophubsolutions.com, ivan@ophubsolutions.com, mng@rcclapac.com';
    $lang = '中文';
    $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Email failure
@@ -122,14 +122,14 @@ function save_form ( ) {
             $email = $email_sales;
             break;
          case 'FastBook':
-            $title = "快速預訂";
+            $title = "快速預訂: $data[lastname] $data[firstname]";
             if ( isset( $data['depart_year'] ) )
-               $title .= ": $data[depart_year] - $data[depart_month]";
+               $title .= " $data[depart_month]/$data[depart_year]";
             $thankyou = '<script>location.href="enquiry-thankyou.php";</script>';
             $email = $email_sales;
             break;
          case 'RegRoyal':
-            $title = "登記 皇家禮遇: $data[firstname] $data[lastname]";
+            $title = "登記 皇家禮遇: $data[lastname] $data[firstname]";
             $thankyou = '<script>location.href="royal-deals-thankyou.php";</script>';
             $email = $email_enquiry;
             break;
@@ -173,8 +173,8 @@ function save_form ( ) {
          'adult' => '成人',
          'children' => '小童',
          'experience' => '郵輪經驗',
-         'planning' => '未來想去',
-         'companion' => '下次同行',
+         'planning' => '想去',
+         'companion' => '同行',
       );
 
       // Send email

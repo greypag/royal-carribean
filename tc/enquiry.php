@@ -179,7 +179,7 @@ function check( event ) {
    var year = ~~document.querySelector('#depart_year').value;
    var today = new Date();
    if ( month >= 0 || year > 0 ) {
-      if ( ( year === today.getYear()+1900 && month <= today.getMonth()+1 ) || month < 0 || year <= 0 ) {
+      if ( ( year === today.getYear()+1900 && month < today.getMonth() ) || month < 0 || year <= 0 ) {
          event.preventDefault();
          return alert( "日期錯誤" );
       }

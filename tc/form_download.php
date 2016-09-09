@@ -81,16 +81,16 @@ function show_form () {
       $res->free();
 ?>
       <p>表格<br>
-      <label><input type='checkbox' name='form[]' value='Contact'  checked> 聯絡我們</label><br>
-      <label><input type='checkbox' name='form[]' value='FastBook' checked> 快速預訂</label><br>
-      <label><input type='checkbox' name='form[]' value='RegRoyal' checked> 皇家登記</label><br>
+      <label><input type='radio' name='form' value='Contact'  required> 聯絡我們</label><br>
+      <label><input type='radio' name='form' value='FastBook' > 快速預訂</label><br>
+      <label><input type='radio' name='form' value='RegRoyal' > 皇家登記</label><br>
       </p>
 
       <p>分隔符<br>
       <label><input type='radio' name='delimiter' value=',' checked> 逗號</label> &nbsp;
       <label><input type='radio' name='delimiter' value=';'> 分號</label> &nbsp;
       <label><input type='radio' name='delimiter' value='&#9;'> 制表符</label><br>
-      Excel 的表格分隔符<a href='http://my-fish-it.blogspot.hk/2013/05/ss-office-2010-excel-csv.html'><u>因視窗設定而異</u></a>。如果資料擠在一起，請選擇其他分隔符。<br>
+      Excel 的表格分隔符<a href='http://my-fish-it.blogspot.hk/2013/05/ss-office-2010-excel-csv.html'><u>因視窗設定而異</u></a>。如果資料擠在一起，請試用其他分隔符。<br>
       非 Excel 用途（例如 Google Docs）請使用逗號。
       </p>
 
@@ -116,10 +116,10 @@ function export () {
    if ( !check_login() ) die();
    try {
       $mysqli = connect();
+      $form = "'".$mysqli->escape_string( $_POST['form'] )."'";
       $years = '0';
-      $forms = "''";
       foreach ( $_POST['year'] as $yr ) $years .= ",".(int)$yr;
-      foreach ( $_POST['form'] as $fr ) $forms .= ",'".$mysqli->escape_string( $fr )."'";
+      $delimiter = empty( $_POST['delimiter'] ) ? "\t" : $_POST['delimiter'];
       $label = array(
          'form' => '表格',
          'from_ip' => '電腦地址',
@@ -141,14 +141,26 @@ function export () {
          'companion' => '同行',
          'remarks' => '留言',
       );
-      $delimiter = empty( $_POST['delimiter'] ) ? "\t" : $_POST['delimiter'];
+      switch ( $form ) {
+         case "'Contact'":
+            $fields = array( 'from_ip', 'submit_time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'remarks' );
+            break;
+         case "'FastBook'":
+            $fields = array( 'from_ip', 'submit_time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'planning', 'depart_year', 'depart_month', 'adult', 'children' );
+            break;
+         case "'RegRoyal'":
+            $fields = array( 'from_ip', 'submit_time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
+            break;
+         default:
+            $fields = array_keys( $label );
+      }
 
-      $res = $mysqli->query( "SELECT * FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form IN ($forms) ORDER BY submit_time DESC" );
+      $res = $mysqli->query( "SELECT * FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form = $form ORDER BY submit_time DESC" );
       $f = tmpfile();
-      fputcsv( $f, array_values( $label ), $delimiter );
+      fputcsv( $f, array_values( array_intersect_key( $label, array_flip( $fields ) ) ), $delimiter );
       while ( $row = $res->fetch_assoc() ) {
          $data = array();
-         foreach ( $label as $key => $title )
+         foreach ( $fields as $key )
             $data[] = $row[$key];
          fputcsv( $f, $data, $delimiter );
       }

@@ -83,6 +83,26 @@ function show_form () {
       <label><input type='checkbox' name='form[]' value='FastBook' checked> 快速預訂</label><br>
       <label><input type='checkbox' name='form[]' value='RegRoyal' checked> 皇家登記</label><br>
       </p>
+
+      <p>分隔符<br>
+      <label><input type='radio' name='delimiter' value=',' checked> 逗號</label> &nbsp;
+      <label><input type='radio' name='delimiter' value=';'> 分號</label> &nbsp;
+      <label><input type='radio' name='delimiter' value='&#9;'> 制表符</label><br>
+      Excel 的表格分隔符<a href='http://my-fish-it.blogspot.hk/2013/05/ss-office-2010-excel-csv.html'><u>因視窗設定而異</u></a>。如果資料擠在一起，請選擇其他分隔符。<br>
+      非 Excel 用途（例如 Google Docs）請使用逗號。
+      </p>
+
+      <script>( function() {
+         var inputs = [].slice.call( document.querySelectorAll( 'input[name=delimiter]' ) );
+         inputs.forEach( function( input ) {
+            input.addEventListener( 'click', function() {
+               localStorage.setItem( 'Excel_Delimiter', input.value );
+            });
+            if ( input.value === localStorage.getItem( 'Excel_Delimiter' ) )
+               input.checked = true;
+         } );
+      })()</script>
+
       <p> <input type="submit" value="提取"> </p>
 <?php
    } catch ( Exception $ex ) {
@@ -119,15 +139,16 @@ function export () {
          'companion' => '同行',
          'remarks' => '留言',
       );
+      $delimiter = empty( $_POST['delimiter'] ) ? "\t" : $_POST['delimiter'];
 
       $res = $mysqli->query( "SELECT * FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form IN ($forms) ORDER BY submit_time DESC" );
       $f = tmpfile();
-      fputcsv( $f, array_values( $label ), ";" );
+      fputcsv( $f, array_values( $label ), $delimiter );
       while ( $row = $res->fetch_assoc() ) {
          $data = array();
          foreach ( $label as $key => $title )
             $data[] = $row[$key];
-         fputcsv( $f, $data, ";" );
+         fputcsv( $f, $data, $delimiter );
       }
 
       header("Content-type: text/csv");

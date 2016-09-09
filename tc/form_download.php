@@ -73,9 +73,11 @@ function show_form () {
       <form method="POST">
       <p>年分<br>
 <?php
-      $res = $mysqli->query( "SELECT DISTINCT YEAR( submit_time ) FROM www_form_submit ORDER BY YEAR( submit_time )" );
-      while ($row = $res->fetch_row())
-         echo "<label><input type='checkbox' name='year[]' value='$row[0]' checked> $row[0]</label><br>";
+      $res = $mysqli->query( "SELECT DISTINCT YEAR( submit_time ) FROM www_form_submit ORDER BY YEAR( submit_time ) DESC" );
+      while ($row = $res->fetch_row()) {
+         $checked = $row[0] === date("Y") ? 'checked' : '';
+         echo "<label><input type='checkbox' name='year[]' value='$row[0]' $checked> $row[0]</label><br>";
+      }
       $res->free();
 ?>
       <p>表格<br>

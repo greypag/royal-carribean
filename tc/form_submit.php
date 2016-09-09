@@ -35,7 +35,7 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'ivan@ophubsolutions.com, mng@rcclapac.com';
+   $cc = 'mng@rcclapac.com';
    $lang = '中文';
    $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Email failure

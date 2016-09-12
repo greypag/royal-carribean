@@ -158,11 +158,18 @@ function export () {
       $res = $mysqli->query( "SELECT * FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form = $form ORDER BY submit_time DESC" );
       $f = tmpfile();
       fputcsv( $f, array_values( array_intersect_key( $label, array_flip( $fields ) ) ), $delimiter );
+      //fseek( $f, -1, SEEK_END );
+      //fwrite( $f, "\r\n" );
       while ( $row = $res->fetch_assoc() ) {
          $data = array();
-         foreach ( $fields as $key )
-            $data[] = $row[$key];
+         foreach ( $fields as $key ) {
+            $val = $row[$key];
+            if ( $key === 'mobile' ) $val .= "\t";
+            $data[] = strtr( $val, "\r\n", "  " );
+         }
          fputcsv( $f, $data, $delimiter );
+         //fseek( $f, -1, SEEK_END );
+         //fwrite( $f, "\r\n" );
       }
 
       header("Content-type: text/csv");
@@ -173,6 +180,10 @@ function export () {
 //      echo "sep=,\n"; // Tell Excel this is *comma* separated csv for God's sake - but not compatible with BOM!!!
 //      echo chr(255).chr(254).mb_convert_encoding( "sep=,\n$txt", 'UTF-16LE', 'UTF-8'); // UTF-16 does not work either
       $txt = stream_get_contents( $f );
+      fclose( $f );
+
+      $txt = str_replace( "\\'", "'", $txt );
+      $txt = str_replace( "\\\"", '""', $txt );
       echo $txt;
 
    } catch ( Exception $ex ) {

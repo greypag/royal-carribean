@@ -123,7 +123,8 @@ function export () {
       $label = array(
          'form' => '表格',
          'from_ip' => '電腦地址',
-         'submit_time' => '時間',
+         'date' => '日期',
+         'time' => '時間',
          'lang' => '語言',
          'title' => '稱謂',
          'firstname' => '名',
@@ -143,21 +144,23 @@ function export () {
       );
       switch ( $form ) {
          case "'Contact'":
-            $fields = array( 'from_ip', 'submit_time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'remarks' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'remarks' );
             break;
          case "'FastBook'":
-            $fields = array( 'from_ip', 'submit_time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'planning', 'depart_year', 'depart_month', 'adult', 'children' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'planning', 'depart_year', 'depart_month', 'adult', 'children' );
             break;
          case "'RegRoyal'":
-            $fields = array( 'from_ip', 'submit_time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
             break;
          default:
             $fields = array_keys( $label );
       }
 
-      $res = $mysqli->query( "SELECT * FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form = $form ORDER BY submit_time DESC" );
+      $res = $mysqli->query( "SELECT *, DATE( submit_time ) AS date, TIME( submit_time ) AS time FROM www_form_submit WHERE YEAR( submit_time ) IN ($years) AND form = $form ORDER BY submit_time DESC" );
       $f = tmpfile();
-      fputcsv( $f, array_values( array_intersect_key( $label, array_flip( $fields ) ) ), $delimiter );
+      $headers = array();
+      foreach ( $fields as $field ) $headers[] = $label[$field];
+      fputcsv( $f, $headers, $delimiter );
       //fseek( $f, -1, SEEK_END );
       //fwrite( $f, "\r\n" );
       while ( $row = $res->fetch_assoc() ) {
@@ -174,7 +177,7 @@ function export () {
 
       header("Content-type: text/csv");
       header("Cache-Control: no-store, no-cache");
-      header('Content-Disposition: attachment; filename="rci_form_data.csv"');
+      header('Content-Disposition: attachment; filename="rci_'.substr( $form, 1, -1 ).'.csv"');
       fseek( $f, 0 );
       echo "\xEF\xBB\xBF"; // UTF-8 BOM
 //      echo "sep=,\n"; // Tell Excel this is *comma* separated csv for God's sake - but not compatible with BOM!!!

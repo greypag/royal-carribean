@@ -104,10 +104,10 @@ function save_form ( ) {
          return $err_data;
       if ( empty( $data['firstname'] ) || empty( $data['lastname'] ) )
          return $err_data;
-      if ( isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
-         if ( empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
+      if ( isset( $data['dob_year'] ) || isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
+         if ( empty( $data['dob_year'] ) || empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
             return $err_data;
-         $dob = mktime( 0, 0, 0, $data['dob_month'], $data['dob_day'], 2016 );
+         $dob = mktime( 0, 0, 0, $data['dob_month'], $data['dob_day'], $data['dob_year'] );
          if ( $data['dob_month'] !== (int)date( 'n', $dob ) )
             return $err_data;
       }
@@ -153,8 +153,9 @@ function save_form ( ) {
       // Format email
       unset( $data['form'] );
       unset( $data['from_ip'] );
-      if ( isset( $data['dob_month'] ) ) {
-         $data['dob'] = date( 'M d', $dob );
+      if ( isset( $data['dob_year'] ) ) {
+         $data['dob'] = date( 'Y M d', $dob );
+         unset( $data['dob_year'] );
          unset( $data['dob_month'] );
          unset( $data['dob_day'] );
       }
@@ -226,6 +227,7 @@ CREATE TABLE `www_form_submit` (
   `depart_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `adult` smallint(5) UNSIGNED DEFAULT NULL,
   `children` smallint(5) UNSIGNED DEFAULT NULL,
+  `dob_year` tinyint(2) UNSIGNED DEFAULT NULL,
   `dob_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `dob_day` tinyint(2) UNSIGNED DEFAULT NULL,
   `mobile` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,

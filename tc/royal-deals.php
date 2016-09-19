@@ -140,20 +140,26 @@ form select {
   </div>
 </div>
 <p>*出生日期:<br>
+  <select id="dob_year" name="dob_year" required>
+    <option value="">年</option>
+    <?php for($i = date('Y')-2, $j = date('Y')-120; $i >= $j; $i--) {
+      echo "<option value='$i'>$i</option>";
+    } ?>
+  </select>
   <select id="dob_day" name="dob_day" required>
     <option value="">日</option>
-    <?php for($i = 1; $i <= 9; $i++) { ?>
-      <option value="<?php echo $i; ?>">0<?php echo $i; ?></option>
-    <?php } ?>
-    <?php for($i = 10; $i <= 31; $i++) { ?>
-      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-    <?php } ?>
+    <?php for($i = 1; $i <= 9; $i++) {
+      echo "<option value='$i'>0$i</option>";
+    } ?>
+    <?php for($i = 10; $i <= 31; $i++) {
+      echo "<option value='$i'>$i</option>";
+    } ?>
   </select>
   <select id="dob_month" name="dob_month" required>
     <option value="">月</option>
-    <?php for($i = 1; $i <= 12; $i++) { ?>
-      <option value="<?php echo $i; ?>"><?php echo $monthText[$i]; ?>月</option>
-    <?php } ?>
+    <?php for($i = 1; $i <= 12; $i++) {
+      echo "<option value='$i'>$monthText[$i]月</option>";
+    } ?>
   </select>
 </p>
 <p><label>手機:<br>
@@ -206,9 +212,10 @@ form select {
 <script>
 
 function check( event ) {
+   var year = ~~document.querySelector('#dob_year').value;
    var month = ~~document.querySelector('#dob_month').value-1;
    var day = ~~document.querySelector('#dob_day').value;
-   var date = new Date( 2016, month, day );
+   var date = new Date( year, month, day );
    if ( date.getMonth() !== month || date.getDate() !== day ) {
       event.preventDefault();
       return alert( "日期錯誤" );

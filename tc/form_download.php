@@ -131,6 +131,7 @@ function export () {
          'lastname' => '姓',
          'mobile' => '手機',
          'email' => '電郵',
+         'dob_year' => '出生年',
          'dob_month' => '出生月',
          'dob_day' => '出生日',
          'depart_year' => '出發年',
@@ -150,7 +151,7 @@ function export () {
             $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'planning', 'depart_year', 'depart_month', 'adult', 'children' );
             break;
          case "'RegRoyal'":
-            $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_year', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
             break;
          default:
             $fields = array_keys( $label );

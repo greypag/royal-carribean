@@ -31,7 +31,7 @@ if (isset($_POST)) {
   $tel = $_POST['tel'];
   $email = $_POST['email'];
   $message = $_POST['message'];
-  $to = "enquiry@royalcaribbean.com.hk, ivan@ophubsolutions.com";
+  $to = "enquiry@royalcaribbean.com.hk";
   //$to = "wleung@bmgww.com";
   //$to = "ivan@ophubsolutions.com";
   if($name && $email ){

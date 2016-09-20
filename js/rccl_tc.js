@@ -23,7 +23,7 @@ function getAbsOffsetLeft(obj) {
     return x;
 }
 
-$import("js/s_code.js", "js");
+$import("../js/s_code.js", "js");
 function getCookie(objName) {//获取指定名称的cookie的值
     var arrStr = document.cookie.split("; ");
     for (var i = 0; i < arrStr.length; i++) {

@@ -49,7 +49,7 @@ if (isset($_POST) && count($_POST) > 0){
   $message .= '<br/>Sent Date: '.date("Y-m-d H:i:s")."<br/>";
 
 
-  $to = "enquiry@royalcaribbean.com.hk, ivan@ophubsolutions.com";
+  $to = "enquiry@royalcaribbean.com.hk";
   //$to = "wleung@bmgww.com";
 
   $headers = "From: ".$email_from_name." <".strip_tags($email_from_email).">"."\r\n";

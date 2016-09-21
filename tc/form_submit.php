@@ -36,14 +36,25 @@ function save_form ( ) {
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'mng@rcclapac.com';
-   $lang = '中文';
+   $email_debug = "ivan@ophubsolutions.com";
+   $cc_debug = '';
+
+   $lang = 'zh';
    $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error
    $err2 = "系統故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Email failure
    $err3 = "驗證錯誤。<br>請勿重覆投寄，並請返回上一步勺選\"我不是自動程式\"。<br>如無此項，請啓用 JavaScript。";
    $err_data = "資料不正確。請清除瀏覽器快取，返回上一步，確保資料正確然後重試。";
+   $debug = $_SERVER['HTTP_HOST'] === 'localhost' || strpos( $_SERVER['HTTP_HOST'], '.ophubsolutions.com' );
 
    // Captcha checking
-   if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
+   if ( $debug ) {
+      $db_user = 'rcidev';
+      $db_name = 'rcidev_db1';
+      $db_password = 'R!c@123456';
+      $email_sales = $email_enquiry = $email_debug;
+      $cc = $cc_debug;
+   } else {
+      $cc = '';
       if ( empty( $_POST['g-recaptcha-response'] ) )
          return $err3;
       $context = stream_context_create( array( 'http' => array(
@@ -71,16 +82,22 @@ function save_form ( ) {
       $res->free();
 
       // Form input
-      $data = array('lang'=>$lang);
-      $insert = "'zh'";
+      if ( empty( $_POST['lang'] ) ) $_POST['lang'] = $lang;
+      $insert = '';
       foreach ( $fields as $field ) {
          $key = $field->name;
-         if ( empty( $_POST[ $key ] ) ) continue;
-         $insert .= ',';
+         if ( !array_key_exists( $key, $_POST ) ) continue;
+         if ( $insert )
+            $insert .= ',';
          switch ( $field->type ) {
             case MYSQLI_TYPE_BIT:
-               $data[ $key ] = 'Yes';
-               $insert .= '1';
+               if ( $_POST[$key] ) {
+                  $data[ $key ] = 'Yes';
+                  $insert .= '1';
+               } else {
+                  $data[ $key ] = 'No';
+                  $insert .= '0';
+               }
                break;
             case MYSQLI_TYPE_TINY:
             case MYSQLI_TYPE_SHORT:
@@ -116,7 +133,14 @@ function save_form ( ) {
             return $err_data;
          $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
       }
+      var_export( $data );
       switch ( @$data['form'] ) {
+         case 'Brochure':
+            if ( empty( $data['country'] ) ) return $err_data;
+            $title = "預訂小冊子: $data[lastname] $data[firstname] $data[country]";
+            $thankyou = '<script>location.href="international-sailing-itinerary-thankyou.php";</script>';
+            $email = $email_enquiry;
+            break;
          case 'Contact':
             if ( empty( $data['mobile'] ) ) return $err_data;
             $title = "聯絡: $data[lastname] $data[firstname] $data[mobile]";
@@ -147,6 +171,7 @@ function save_form ( ) {
               . implode( '`,`', array_map( array( $mysqli, 'escape_string' ), array_keys( $data ) ) )
               . '`) VALUES (' . $insert . ')';
 
+//      echo $insert;
       $mysqli->autocommit( false );
       $res = $mysqli->query( $insert );
 
@@ -171,13 +196,23 @@ function save_form ( ) {
          'lastname' => '姓',
          'mobile' => '手機',
          'email' => '電郵',
+         'address1' => '地址1',
+         'address2' => '地址2',
+         'city' => '城市',
+         'country' => '國家',
          'dob' => '生日',
+         'crown' => '皇冠',
          'depart' => '出發',
          'adult' => '成人',
          'children' => '小童',
          'experience' => '郵輪經驗',
+         'book_exp' => '預訂經驗',
          'planning' => '想去',
          'companion' => '同行',
+         'next_cruise' => '下次預期',
+         'long_vacation' => '長旅行',
+         'activity' => '活動',
+         'opt-in' => '最新資訊',
          'remarks' => '留言',
       );
 
@@ -198,13 +233,15 @@ function save_form ( ) {
 
       if ( mail( $email, $title, $message, $headers ) ) {
          $mysqli->commit();
-         echo $thankyou;
+         return $thankyou;
       } else {
-         echo $err2;
+         return $err2;
       }
 
    } catch ( Exception $ex ) {
-      echo $err1;
+      if ( $debug )
+         echo $mysqli->error;
+      return $err1;
    }
 }
 
@@ -218,24 +255,33 @@ CREATE TABLE `www_form_submit` (
   `id` int(10) UNSIGNED NOT NULL,
   `form` char(8) CHARACTER SET ascii NOT NULL,
   `from_ip` varchar(45) CHARACTER SET ascii NOT NULL,
-  `lang` varchar(2) CHARACTER SET ascii NOT NULL,
+  `lang` char(2) CHARACTER SET ascii NOT NULL,
   `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` char(3) CHARACTER SET ascii DEFAULT NULL,
   `firstname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `lastname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address1` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address2` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `city` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `country` varchar(100) CHARACTER SET ascii DEFAULT NULL,
   `depart_year` smallint(4) UNSIGNED DEFAULT NULL,
   `depart_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `adult` smallint(5) UNSIGNED DEFAULT NULL,
   `children` smallint(5) UNSIGNED DEFAULT NULL,
-  `dob_year` tinyint(2) UNSIGNED DEFAULT NULL,
+  `dob_year` smallint(4) UNSIGNED DEFAULT NULL,
   `dob_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `dob_day` tinyint(2) UNSIGNED DEFAULT NULL,
   `mobile` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `experience` char(5) CHARACTER SET ascii NULL,
+  `experience` char(5) CHARACTER SET ascii DEFAULT NULL,
   `planning` varchar(200) CHARACTER SET ascii DEFAULT NULL,
   `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL,
-  `remarks` text CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+  `next_cruise` varchar(12) CHARACTER SET ascii DEFAULT NULL,
+  `book_exp` bit(1) DEFAULT NULL,
+  `crown` bit(1) DEFAULT NULL,
+  `long_vacation` bit(1) DEFAULT NULL,
+  `opt-in` bit(1) DEFAULT NULL,
+  `remarks` text CHARACTER SET utf8 COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 ALTER TABLE `www_form_submit`

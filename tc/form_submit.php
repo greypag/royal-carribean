@@ -133,7 +133,6 @@ function save_form ( ) {
             return $err_data;
          $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
       }
-      var_export( $data );
       switch ( @$data['form'] ) {
          case 'Brochure':
             if ( empty( $data['country'] ) ) return $err_data;
@@ -274,7 +273,7 @@ CREATE TABLE `www_form_submit` (
   `mobile` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `experience` char(5) CHARACTER SET ascii DEFAULT NULL,
-  `planning` varchar(200) CHARACTER SET ascii DEFAULT NULL,
+  `planning` varchar(300) CHARACTER SET ascii DEFAULT NULL,
   `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL,
   `next_cruise` varchar(12) CHARACTER SET ascii DEFAULT NULL,
   `book_exp` bit(1) DEFAULT NULL,

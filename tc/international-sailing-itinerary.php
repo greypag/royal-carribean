@@ -108,10 +108,10 @@ span.feedback-failed {
   background-size: cover;">
 
 	<div style='height:92px; width:962px; margin:auto; position:relative' >
-	<?php include 'pageMenu.php'; ?>
+		<?php include 'pageMenu.php'; ?>
 
-	<div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">首頁</a> &gt; 航線行程 &gt; <a href="rccl_xjp.php">國際航線行程</a>
-	</div>
+		<div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">首頁</a> &gt; 航線行程 &gt; <a href="rccl_xjp.php">國際航線行程</a>
+		</div>
 	</div>
 
 	<div class="page_contentbox" style='width:962px'>
@@ -182,7 +182,7 @@ span.feedback-failed {
 						<td ><input type="text" name="address2" id="address2" size="15"></td>
 					</tr>
 					<tr>
-						<td align="right"><label for="city">* 城市:  </label></td>
+						<td align="right"><label for="city">* 城市: </label></td>
 						<td ><input type="text" name="city" id="city" size="15" required></td>
 					</tr>
 					<tr>

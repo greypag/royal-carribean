@@ -193,25 +193,25 @@ function save_form ( ) {
          'title' => '稱謂',
          'firstname' => '名',
          'lastname' => '姓',
-         'mobile' => '手機',
-         'email' => '電郵',
          'address1' => '地址1',
          'address2' => '地址2',
          'city' => '城市',
          'country' => '國家',
+         'mobile' => '手機',
+         'email' => '電郵',
+         'opt-in' => '最新資訊',
          'dob' => '生日',
-         'crown' => '皇冠',
          'depart' => '出發',
          'adult' => '成人',
          'children' => '小童',
-         'experience' => '郵輪經驗',
-         'book_exp' => '預訂經驗',
          'planning' => '想去',
+         'book_exp' => '預訂經驗',
+         'experience' => '郵輪經驗',
+         'crown' => '皇冠',
          'companion' => '同行',
          'next_cruise' => '下次預期',
          'long_vacation' => '長旅行',
          'activity' => '活動',
-         'opt-in' => '最新資訊',
          'remarks' => '留言',
       );
 
@@ -225,6 +225,7 @@ function save_form ( ) {
       $message = '<!DOCTYPE html><html><body>';
       $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
       foreach ( $data as $field => $input ) {
+         if ( $field === 'lang' ) $input = $field === 'en' ? '英文' : '中文';
          $message .= '<tr><th valign=top>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }

@@ -193,25 +193,25 @@ function save_form ( ) {
          'title' => 'Title',
          'firstname' => 'Firstname',
          'lastname' => 'Lastname',
-         'mobile' => 'Mobile',
-         'email' => 'Email',
          'address1' => 'Address1',
          'address2' => 'Adderss2',
          'city' => 'City',
          'country' => 'Country',
+         'mobile' => 'Mobile',
+         'email' => 'Email',
+         'opt-in' => 'Want News',
          'dob' => 'Birthday',
-         'crown' => 'Crown Anchor',
          'depart' => 'Birthday',
          'adult' => 'Adult',
          'children' => 'Children',
-         'experience' => 'Cruised Experience',
-         'book_exp' => 'Booking Experience',
          'planning' => 'Preference',
+         'book_exp' => 'Booking Experience',
+         'experience' => 'Cruised Experience',
+         'crown' => 'Crown Anchor',
          'companion' => 'Companion',
          'next_cruise' => 'Next Plan',
          'long_vacation' => 'Long Vacation',
          'activity' => 'Activity',
-         'opt-in' => 'Want News',
          'remarks' => 'Message',
       );
 
@@ -225,6 +225,7 @@ function save_form ( ) {
       $message = '<!DOCTYPE html><html><body>';
       $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
       foreach ( $data as $field => $input ) {
+         if ( $field === 'lang' ) $input = $field === 'en' ? 'English' : 'Chinese';
          $message .= '<tr><th valign=top>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }

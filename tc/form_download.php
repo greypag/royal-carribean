@@ -172,7 +172,7 @@ function export () {
             $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_year', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
             break;
          case "'Brochure'":
-            $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'address1', 'address2', 'country', 'city', 'mobile', 'email', 'planning', 'book_exp', 'experience', 'crown', 'next_cruise', 'long_vacation', 'activity' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'address1', 'address2', 'country', 'city', 'mobile', 'email', 'opt-in', 'planning', 'book_exp', 'experience', 'crown', 'next_cruise', 'long_vacation', 'activity' );
             break;
          default:
             $fields = array_keys( $label );

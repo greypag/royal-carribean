@@ -308,7 +308,7 @@ span.feedback-failed {
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
-									<td><label><input type="checkbox" name="next_cruise[]" value="<= 3 months"> 未來3 個月內</label></td>
+									<td><label><input type="checkbox" name="next_cruise[]" value="&lt; 3 months"> 未來3 個月內</label></td>
 									<td><label><input type="checkbox" name="next_cruise[]" value="4-6 months"> 未來4 - 6 個月內</label></td>
 								</tr>
 								<tr>
@@ -316,7 +316,7 @@ span.feedback-failed {
 									<td><label><input type="checkbox" name="next_cruise[]" value="10-12 months"> 未來10 - 12 個月內</label></td>
 								</tr>
 								<tr>
-									<td><label><input type="checkbox" name="next_cruise[]" value=">= 12 months"> 12 個月後或以上</label></td>
+									<td><label><input type="checkbox" name="next_cruise[]" value="&gt; 12 months"> 12 個月後或以上</label></td>
 								</tr>
 							</table>
 							</td>

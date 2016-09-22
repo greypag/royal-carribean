@@ -135,8 +135,8 @@ function save_form ( ) {
       }
       switch ( @$data['form'] ) {
          case 'Brochure':
-            if ( empty( $data['country'] ) ) return $err_data;
-            $title = "預訂小冊子: $data[lastname] $data[firstname] $data[country]";
+            if ( empty( $data['country'] ) || empty( $data['city'] ) ) return $err_data;
+            $title = "預訂小冊子: $data[lastname] $data[firstname] - $data[city]";
             $thankyou = '<script>location.href="international-sailing-itinerary-thankyou.php";</script>';
             $email = $email_enquiry;
             break;

@@ -37,7 +37,7 @@ function save_form ( ) {
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'mng@rcclapac.com';
    $email_debug = "ivan@ophubsolutions.com";
-   $cc_debug = '';
+   $cc_debug = 'scarlett@ophubsolutions.com,mng@rcclapac.com';
 
    $lang = 'zh';
    $err1 = "資料庫故障。請直接<a href='contact.php'><u>電郵或致電我們</u></a>。"; // Exception, usually database error

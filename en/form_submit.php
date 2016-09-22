@@ -224,9 +224,11 @@ function save_form ( ) {
 
       $message = '<!DOCTYPE html><html><body>';
       $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
-      foreach ( $data as $field => $input ) {
-         if ( $field === 'lang' ) $input = $field === 'en' ? 'English' : 'Chinese';
-         $message .= '<tr><th valign=top>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
+      foreach ( $label as $field => $txt ) {
+         if ( ! array_key_exists( $field, $data ) ) continue;
+         $input = $data[$field];
+         if ( $field === 'lang' ) $input = $input === 'en' ? '英文' : '中文';
+         $message .= '<tr><th valign=top>'.htmlspecialchars( $txt );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }
       $message .= '</table></body></html>';

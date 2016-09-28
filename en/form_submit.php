@@ -199,7 +199,7 @@ function save_form ( ) {
          'country' => 'Country',
          'mobile' => 'Mobile',
          'email' => 'Email',
-         'opt-in' => 'Want News',
+         'opt-in' => 'Want Latest News',
          'dob' => 'Birthday',
          'depart' => 'Birthday',
          'adult' => 'Adult',

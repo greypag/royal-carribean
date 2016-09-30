@@ -124,11 +124,11 @@ span.feedback-failed {
 
 		<div style="position:relative; float:left; width:640px; left:30px;min-height:800px;">
 			<p>
-			<span class="brdefydq">率先感受你下個非凡旅程</span>
+			<span class="brdefydq">率先瀏覽 2017 年國際航線行程小冊子，計劃您的非凡旅程！</span>
 			</p><p>
-			規劃您的假期? 沒有什麼比翻閱我們新的小冊子更容易。無論是短途旅程或悠長假期定能滿足您的各種體驗。就現在開始，登上皇家加勒比國際遊輪， 遊遍地球的每一個角落，展開您的非凡旅程。
+			皇家加勒比國際遊輪，多達 270 條航線，無論是短途旅程或悠長假期都能滿足您的各種喜好。
 			</p><p>
-			想現在翻閱我們新的小冊子*？請點擊我們下面的電子手冊鏈接或填寫以下表格，以便我們可以郵寄給您。
+			請點擊以下電子手冊連結或填寫表格，以便我們將精美小冊子書本裝郵寄給您。
 			</br>
 			*小冊子將為英文版本
 			</p>
@@ -138,7 +138,7 @@ span.feedback-failed {
 					<td style="width:50%;vertical-align:middle;text-align:center">
 						<img src="../newimages/usa_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
 						<div style="display:inline-block;text-align:left;">
-						瀏覽我們2017 – 2018 電子小冊子:
+						立即瀏覽 2017 – 2018 電子小冊子:
 						</br>
 						<a href="http://viewer.zmags.com/publication/8820e33d" target="_blank" style="color:#0073BB;">加勒比海</a>
 						</br>
@@ -268,7 +268,7 @@ span.feedback-failed {
 							</table>
 						</td>
 						<tr>
-							<td>您曾訂購皇家加勒比的遊輪旅程嗎？</td>
+							<td>您現在有預訂皇家加勒比的遊輪假期嗎？</td>
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
@@ -279,15 +279,15 @@ span.feedback-failed {
 							</td>
 						</tr>
 						<tr>
-							<td>請選出您的郵輪假期經驗: </td>
+							<td>你曾否乘搭郵輪？</td>
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
-									<td><label><input type="radio" name="experience" value="None"> 沒有經驗</label></td>
-									<td><label><input type="radio" name="experience" value="Other"> 曾搭乘其他品牌的郵輪</label></td>
+									<td><label><input type="radio" name="experience" value="None"> 沒有</label></td>
+									<td><label><input type="radio" name="experience" value="Other"> 曾乘搭其他品牌的郵輪，但沒有乘搭皇家加勒比</label></td>
 								</tr>
 								<tr>
-									<td><label><input type="radio" name="experience" value="RCI"> 曾搭乘皇家加勒比遊輪</label></td>
+									<td><label><input type="radio" name="experience" value="RCI"> 曾乘搭皇家加勒比</label></td>
 								</tr>
 							</table>
 							</td>
@@ -322,7 +322,7 @@ span.feedback-failed {
 							</td>
 						</tr>
 						<tr>
-							<td>您時間上允許參加 45 天或以下的旅程嗎？</td>
+							<td>您時間上允許參加 45 天或以下出發的旅程嗎？</td>
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
@@ -333,7 +333,7 @@ span.feedback-failed {
 							</td>
 						</tr>
 						<tr>
-							<td>旅行中，哪一項活動您最為重視？（可選擇多個答案） </td>
+							<td>當您選擇旅遊行程時，下列哪一項活動您最為重視？（可選擇多個答案） </td>
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
@@ -348,7 +348,7 @@ span.feedback-failed {
 							</td>
 						</tr>
 						<tr>
-							<td>你希望以哪一種語言收取皇家加勒比給您的資訊？</td>
+							<td>你希望以哪一種語言收取皇家加勒比的資訊？</td>
 							<td>
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>

@@ -147,7 +147,7 @@ function export () {
          'adult' => '成人',
          'children' => '小童',
          'planning' => '想去的地方',
-         'book_exp' => 'RCI預訂經驗',
+         'book_exp' => '有否預訂RCI',
          'experience' => '郵輪經驗',
          'crown' => '皇冠金錨會員',
          'companion' => '預期的同行者',

@@ -1,4 +1,4 @@
-<?php include 'pageHead.php'; ?>
+﻿<?php include 'pageHead.php'; ?>
 <!--popup message box-->
 <!-- Add fancyBox main JS and CSS files -->
 <script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
@@ -57,9 +57,6 @@ $(document).ready(function ($) {
                   <ul class="slides">
                       <li>
                          <a href="promotions.php"><img u="image" src="../images/RCI_Caribbean_Autumn_Promotion_Website_Banner_Eng.jpg" /></a>
-                      </li>
-                      <li>
-                         <a href="../pdf/promotions/Royal Caribbean Summer 2016.pdf"><img u="image" src="../images/ACF_Banner_en.jpg" /></a>
                       </li>
                       <li>
                            <a href="result.php"><img u="image"  src="../images/BannerOne-en.jpg" /></a>

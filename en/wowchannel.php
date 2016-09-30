@@ -31,6 +31,11 @@
 
 <p>&nbsp;</p>
 
+<!-- Anthem of the Seas -->
+<iframe width="620" height="349" src="//www.youtube.com/embed/i-iogimmBnU" frameborder="0" frameborder="0" allowfullscreen></iframe>
+
+<p>&nbsp;</p>
+
 <!-- TV ads 2016-06 -->
 <iframe width="620" height="349" src="//www.youtube.com/embed/SxfmKOEB0pU?rel=0" frameborder="0" allowfullscreen></iframe>
 

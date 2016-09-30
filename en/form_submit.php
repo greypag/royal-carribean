@@ -36,14 +36,25 @@ function save_form ( ) {
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
    $cc = 'mng@rcclapac.com';
-   $lang = 'English';
+   $email_debug = "ivan@ophubsolutions.com";
+   $cc_debug = 'scarlett@ophubsolutions.com,mng@rcclapac.com';
+
+   $lang = 'en';
    $err1 = "Database error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Exception, usually database error
    $err2 = "System error. Please <a href='contact.php'><u>email or phone us</u></a> directly."; // Email failure
    $err3 = "Captcha error.<br>Please do not re-submit, and please go back to check \"I'm not a robot\".<br>If the checkbox is missing, please enable JavaScript.";
    $err_data = "Incorrect data. Please delete browser cache, go back, make sure info is correct, and try again.";
+   $debug = $_SERVER['HTTP_HOST'] === 'localhost' || strpos( $_SERVER['HTTP_HOST'], '.ophubsolutions.com' );
 
    // Captcha checking
-   if ( $_SERVER['HTTP_HOST'] !== 'localhost' ) {
+   if ( $debug ) {
+      $db_user = 'rcidev';
+      $db_name = 'rcidev_db1';
+      $db_password = 'R!c@123456';
+      $email_sales = $email_enquiry = $email_debug;
+      $cc = $cc_debug;
+   } else {
+      $cc = '';
       if ( empty( $_POST['g-recaptcha-response'] ) )
          return $err3;
       $context = stream_context_create( array( 'http' => array(
@@ -71,16 +82,22 @@ function save_form ( ) {
       $res->free();
 
       // Form input
-      $data = array('lang'=>$lang);
-      $insert = "'en'";
+      if ( empty( $_POST['lang'] ) ) $_POST['lang'] = $lang;
+      $insert = '';
       foreach ( $fields as $field ) {
          $key = $field->name;
-         if ( empty( $_POST[ $key ] ) ) continue;
-         $insert .= ',';
+         if ( !array_key_exists( $key, $_POST ) ) continue;
+         if ( $insert )
+            $insert .= ',';
          switch ( $field->type ) {
             case MYSQLI_TYPE_BIT:
-               $data[ $key ] = 'Yes';
-               $insert .= '1';
+               if ( $_POST[$key] ) {
+                  $data[ $key ] = 'Yes';
+                  $insert .= '1';
+               } else {
+                  $data[ $key ] = 'No';
+                  $insert .= '0';
+               }
                break;
             case MYSQLI_TYPE_TINY:
             case MYSQLI_TYPE_SHORT:
@@ -104,10 +121,10 @@ function save_form ( ) {
          return $err_data;
       if ( empty( $data['firstname'] ) || empty( $data['lastname'] ) )
          return $err_data;
-      if ( isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
-         if ( empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
+      if ( isset( $data['dob_year'] ) || isset( $data['dob_month'] ) || isset( $data['dob_day'] ) ) {
+         if ( empty( $data['dob_year'] ) || empty( $data['dob_month'] ) || empty( $data['dob_day'] ) )
             return $err_data;
-         $dob = mktime( 0, 0, 0, $data['dob_month'], $data['dob_day'], 2016 );
+         $dob = mktime( 0, 0, 0, $data['dob_month'], $data['dob_day'], $data['dob_year'] );
          if ( $data['dob_month'] !== (int)date( 'n', $dob ) )
             return $err_data;
       }
@@ -117,6 +134,12 @@ function save_form ( ) {
          $depart = mktime( 0, 0, 0, $data['depart_month'], 1, $data['depart_year'] );
       }
       switch ( @$data['form'] ) {
+         case 'Brochure':
+            if ( empty( $data['country'] ) ) return $err_data;
+            $title = "Brochure Request: $data[lastname] $data[firstname] - $data[city]";
+            $thankyou = '<script>location.href="international-sailing-itinerary-thankyou.php";</script>';
+            $email = $email_enquiry;
+            break;
          case 'Contact':
             if ( empty( $data['mobile'] ) ) return $err_data;
             $title = "Contact: $data[lastname] $data[firstname]";
@@ -147,14 +170,16 @@ function save_form ( ) {
               . implode( '`,`', array_map( array( $mysqli, 'escape_string' ), array_keys( $data ) ) )
               . '`) VALUES (' . $insert . ')';
 
+//      echo $insert;
       $mysqli->autocommit( false );
       $res = $mysqli->query( $insert );
 
       // Format email
       unset( $data['form'] );
       unset( $data['from_ip'] );
-      if ( isset( $data['dob_month'] ) ) {
-         $data['dob'] = date( 'M d', $dob );
+      if ( isset( $data['dob_year'] ) ) {
+         $data['dob'] = date( 'Y M d', $dob );
+         unset( $data['dob_year'] );
          unset( $data['dob_month'] );
          unset( $data['dob_day'] );
       }
@@ -168,15 +193,25 @@ function save_form ( ) {
          'title' => 'Title',
          'firstname' => 'Firstname',
          'lastname' => 'Lastname',
+         'address1' => 'Address1',
+         'address2' => 'Adderss2',
+         'city' => 'City',
+         'country' => 'Country',
          'mobile' => 'Mobile',
          'email' => 'Email',
+         'opt-in' => 'Want Latest News',
          'dob' => 'Birthday',
          'depart' => 'Birthday',
          'adult' => 'Adult',
          'children' => 'Children',
-         'experience' => 'Cruised Before?',
          'planning' => 'Preference',
+         'book_exp' => 'Booking Experience',
+         'experience' => 'Cruised Experience',
+         'crown' => 'Crown Anchor',
          'companion' => 'Companion',
+         'next_cruise' => 'Next Plan',
+         'long_vacation' => 'Long Vacation',
+         'activity' => 'Activity',
          'remarks' => 'Message',
       );
 
@@ -189,21 +224,26 @@ function save_form ( ) {
 
       $message = '<!DOCTYPE html><html><body>';
       $message .= '<h3>'.htmlspecialchars( $title ).'</h3><table>';
-      foreach ( $data as $field => $input ) {
-         $message .= '<tr><th valign=top>'.htmlspecialchars( isset( $label[$field] ) ? $label[$field] : $field );
+      foreach ( $label as $field => $txt ) {
+         if ( ! array_key_exists( $field, $data ) ) continue;
+         $input = $data[$field];
+         if ( $field === 'lang' ) $input = $input === 'en' ? '英文' : '中文';
+         $message .= '<tr><th valign=top align=right>'.htmlspecialchars( $txt );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }
       $message .= '</table></body></html>';
 
       if ( mail( $email, $title, $message, $headers ) ) {
          $mysqli->commit();
-         echo $thankyou;
+         return $thankyou;
       } else {
-         echo $err2;
+         return $err2;
       }
 
    } catch ( Exception $ex ) {
-      echo $err1;
+      if ( $debug )
+         echo $mysqli->error;
+      return $err1;
    }
 }
 
@@ -217,23 +257,33 @@ CREATE TABLE `www_form_submit` (
   `id` int(10) UNSIGNED NOT NULL,
   `form` char(8) CHARACTER SET ascii NOT NULL,
   `from_ip` varchar(45) CHARACTER SET ascii NOT NULL,
-  `lang` varchar(2) CHARACTER SET ascii NOT NULL,
+  `lang` char(2) CHARACTER SET ascii NOT NULL,
   `submit_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` char(3) CHARACTER SET ascii DEFAULT NULL,
   `firstname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `lastname` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address1` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address2` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `city` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `country` varchar(100) CHARACTER SET ascii DEFAULT NULL,
   `depart_year` smallint(4) UNSIGNED DEFAULT NULL,
   `depart_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `adult` smallint(5) UNSIGNED DEFAULT NULL,
   `children` smallint(5) UNSIGNED DEFAULT NULL,
+  `dob_year` smallint(4) UNSIGNED DEFAULT NULL,
   `dob_month` tinyint(2) UNSIGNED DEFAULT NULL,
   `dob_day` tinyint(2) UNSIGNED DEFAULT NULL,
   `mobile` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `experience` char(5) CHARACTER SET ascii NULL,
-  `planning` varchar(200) CHARACTER SET ascii DEFAULT NULL,
+  `experience` char(5) CHARACTER SET ascii DEFAULT NULL,
+  `planning` varchar(300) CHARACTER SET ascii DEFAULT NULL,
   `companion` varchar(100) CHARACTER SET ascii DEFAULT NULL,
-  `remarks` text CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+  `next_cruise` varchar(12) CHARACTER SET ascii DEFAULT NULL,
+  `book_exp` bit(1) DEFAULT NULL,
+  `crown` bit(1) DEFAULT NULL,
+  `long_vacation` bit(1) DEFAULT NULL,
+  `opt-in` bit(1) DEFAULT NULL,
+  `remarks` text CHARACTER SET utf8 COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 ALTER TABLE `www_form_submit`

@@ -2,10 +2,17 @@
 date_default_timezone_set('Asia/Hong_Kong');
 
 function connect() {
+   $debug = strpos( $_SERVER['HTTP_HOST'], '.ophubsolutions.com' );
    $db_host = 'localhost';
-   $db_user = 'rcidirect_db1';
-   $db_name = 'rcidirect_db1';
-   $db_password = 'R!c@200101';
+   if ( ! $debug ) {
+      $db_user = 'rcidirect_db1';
+      $db_name = 'rcidirect_db1';
+      $db_password = 'R!c@200101';
+   } else {
+      $db_user = 'rcidev';
+      $db_name = 'rcidev_db1';
+      $db_password = 'R!c@123456';
+   }
 
    mysqli_report( MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT );
    $mysqli = new mysqli( $db_host, $db_user, $db_password, $db_name );
@@ -84,6 +91,7 @@ function show_form () {
       <label><input type='radio' name='form' value='Contact'  required> 聯絡我們</label><br>
       <label><input type='radio' name='form' value='FastBook' > 快速預訂</label><br>
       <label><input type='radio' name='form' value='RegRoyal' > 皇家登記</label><br>
+      <label><input type='radio' name='form' value='Brochure' > 預訂小冊子</label><br>
       </p>
 
       <p>分隔符<br>
@@ -129,19 +137,29 @@ function export () {
          'title' => '稱謂',
          'firstname' => '名',
          'lastname' => '姓',
+         'address1' => '地址1',
+         'address2' => '地址2',
+         'city' => '城市',
+         'country' => '國家',
          'mobile' => '手機',
          'email' => '電郵',
+         'opt-in' => '獲取最新資訊',
+         'adult' => '成人',
+         'children' => '小童',
+         'planning' => '想去的地方',
+         'book_exp' => '有否預訂RCI',
+         'experience' => '郵輪經驗',
+         'crown' => '皇冠金錨會員',
+         'companion' => '預期的同行者',
+         'next_cruise' => '預期何時出發',
+         'long_vacation' => '能否長期旅遊',
+         'activity' => '感興趣的活動',
+         'remarks' => '留言',
          'dob_year' => '出生年',
          'dob_month' => '出生月',
          'dob_day' => '出生日',
          'depart_year' => '出發年',
          'depart_month' => '出發月',
-         'adult' => '成人',
-         'children' => '小童',
-         'experience' => '郵輪經驗',
-         'planning' => '想去',
-         'companion' => '同行',
-         'remarks' => '留言',
       );
       switch ( $form ) {
          case "'Contact'":
@@ -153,6 +171,9 @@ function export () {
          case "'RegRoyal'":
             $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_year', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
             break;
+         case "'Brochure'":
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'address1', 'address2', 'country', 'city', 'mobile', 'email', 'opt-in', 'planning', 'book_exp', 'experience', 'crown', 'next_cruise', 'long_vacation', 'activity' );
+            break;
          default:
             $fields = array_keys( $label );
       }
@@ -162,18 +183,24 @@ function export () {
       $headers = array();
       foreach ( $fields as $field ) $headers[] = $label[$field];
       fputcsv( $f, $headers, $delimiter );
-      //fseek( $f, -1, SEEK_END );
-      //fwrite( $f, "\r\n" );
+      $meta = array();
+      foreach ( $res->fetch_fields() as $def )
+         $meta[ $def->name ] = $def;
+
       while ( $row = $res->fetch_assoc() ) {
          $data = array();
          foreach ( $fields as $key ) {
-            $val = $row[$key];
-            if ( $key === 'mobile' ) $val .= "\t";
+            if ( $key === 'lang' )
+               $val = $row[$key] === 'en' ? '英文' : '中文';
+            else if ( $key === 'mobile' )
+               $val .= "\t"; // Prevent phone from parsed as integer by Excel
+            else if ( isset( $meta[ $key ] ) && $meta[$key]->type === MYSQLI_TYPE_BIT )
+               $val = $row[$key] === null ? '' : ( $row[$key] ? 'Yes' : 'No' );
+            else
+               $val = $row[$key] === null ? '' : $row[$key];
             $data[] = strtr( $val, "\r\n", "  " );
          }
          fputcsv( $f, $data, $delimiter );
-         //fseek( $f, -1, SEEK_END );
-         //fwrite( $f, "\r\n" );
       }
 
       header("Content-type: text/csv");

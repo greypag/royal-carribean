@@ -118,12 +118,12 @@ $(document).ready(function (){
 			<li>
             	<a>航線行程</a>
                 <ul>
-                	<li><a href="result.php">航線行程</a></li>
+                	<li><a href="result.php">預訂行程</a></li>
+					<li><a href="international-sailing-itinerary.php">國際航線行程</a></li>
 					<li><a href="shoreExcursions.php">岸上觀光</a></li>
-					<li><a href="departure-port-hong-kong.php">香港母港</a></li>
+					<li><a href="departure-port-hong-kong.php">亞洲出發</a></li>
 					<li><a href="top-10-destinations.php">全球十大航綫</a></li>
                 </ul>
-
             </li>
 			<li>
             	<a>皇家船隊</a>

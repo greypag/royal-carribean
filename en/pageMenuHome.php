@@ -227,7 +227,8 @@ $(document).ready(function (){
 			<li class="col1">
 				<a>PLAN A CRUISE</a>
 				<ul>
-					<li><a href="result.php">Plan a Cruise</a></li>
+                	<li><a href="result.php">Book a Cruise</a></li>
+					<li><a href="international-sailing-itinerary.php">International Sailing Itinerary</a></li>
 					<li><a href="shoreExcursions.php">Shore Excursions</a></li>
 					<li><a href="departure-port-hong-kong.php">Asia Ports of Departure</a></li>
 					<li><a href="top-10-destinations.php">Top 10 Destinations</a></li>

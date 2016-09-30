@@ -228,7 +228,7 @@ function save_form ( ) {
          if ( ! array_key_exists( $field, $data ) ) continue;
          $input = $data[$field];
          if ( $field === 'lang' ) $input = $input === 'en' ? '英文' : '中文';
-         $message .= '<tr><th valign=top>'.htmlspecialchars( $txt );
+         $message .= '<tr><th valign=top align=right>'.htmlspecialchars( $txt );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }
       $message .= '</table></body></html>';

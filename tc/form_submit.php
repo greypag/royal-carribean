@@ -199,19 +199,19 @@ function save_form ( ) {
          'country' => '國家',
          'mobile' => '手機',
          'email' => '電郵',
-         'opt-in' => '獵取最新資訊',
+         'opt-in' => '獲取最新資訊',
          'dob' => '生日',
          'depart' => '出發',
          'adult' => '成人',
          'children' => '小童',
-         'planning' => '想去',
-         'book_exp' => '預訂經驗',
+         'planning' => '想去的地方',
+         'book_exp' => 'RCI預訂經驗',
          'experience' => '郵輪經驗',
          'crown' => '皇冠金錨會員',
-         'companion' => '同行',
-         'next_cruise' => '下次預期',
-         'long_vacation' => '長旅行',
-         'activity' => '活動',
+         'companion' => '預期的同行者',
+         'next_cruise' => '預期何時出發',
+         'long_vacation' => '能否長期旅遊',
+         'activity' => '感興趣的活動',
          'remarks' => '留言',
       );
 
@@ -228,7 +228,7 @@ function save_form ( ) {
          if ( ! array_key_exists( $field, $data ) ) continue;
          $input = $data[$field];
          if ( $field === 'lang' ) $input = $input === 'en' ? '英文' : '中文';
-         $message .= '<tr><th valign=top>'.htmlspecialchars( $txt );
+         $message .= '<tr><th valign=top align=right>'.htmlspecialchars( $txt );
          $message .= '<td>'.str_replace( "\n", '<br>', htmlspecialchars( $input ) );
       }
       $message .= '</table></body></html>';

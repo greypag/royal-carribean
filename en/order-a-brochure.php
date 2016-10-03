@@ -110,7 +110,7 @@ span.feedback-failed {
 	<div style='height:92px; width:962px; margin:auto; position:relative' >
 		<?php include 'pageMenu.php'; ?>
 
-		<div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; Plan A Cruise &gt; <a href="rccl_xjp.php">International Sailing Itinerary</a>
+		<div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; Plan A Cruise &gt; <a href="rccl_xjp.php">Order a Brochure</a>
 		</div>
 	</div>
 

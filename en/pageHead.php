@@ -62,7 +62,7 @@
 <link href="../css/slidebox.css" rel="stylesheet" type="text/css" />
 <style type="text/css">body { background-color: #fff !important; }</style>
 <link href="../css/base.css" rel="stylesheet" />
-<link href="../css/content.css?20150303" rel="stylesheet" type="text/css" />
+<link href="../css/content.css?20161003" rel="stylesheet" type="text/css" />
 <script src="../js/jquery-1.10.4.min.js" type="text/javascript"></script>
 <script src="../js/rccl_en.js?20150825" type="text/javascript"></script>
 <script src="../js/menu.js" type="text/javascript"></script>

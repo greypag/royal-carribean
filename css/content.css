@@ -387,7 +387,7 @@ margin-right: 4px;
 .contentWarper{width:900px;margin:11px auto 0 auto; padding:0 0 150px 0;}
 
 .inner{width: 962px;float: left;margin: 150px 0 0 0;background: 10px 168px no-repeat;}
-.toolsContainer{color:#000; font-weight:bold;position:relative; float:right; height:80px;width:210px;text-align:right; overflow:hidden; z-index:1; margin:10px;}
+.toolsContainer{color:#000; font-weight:bold;position:relative; float:right; height:80px;width:240px;text-align:right; overflow:hidden; z-index:1; margin:10px;}
 .toolsContainer a, .toolsContainer a:hover, .toolsContainer a:active{color:#000; }
 .remark{font-size: 90%;}
 .searchCruise.inner{margin-top:50px;}

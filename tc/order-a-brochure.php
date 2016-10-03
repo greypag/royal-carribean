@@ -167,7 +167,7 @@ span.feedback-failed {
 					</tr>
 					<tr>
 						<td align="right"><label for="firstname">* 姓: </label></td>
-						<td ><input type="text" name="lastname" id="lastname" size="15" autocomplete="family-name" required autofocus></td>
+						<td ><input type="text" name="lastname" id="lastname" size="15" autocomplete="family-name" required></td>
 					</tr>
 					<tr>
 						<td align="right"><label for="lastname">* 名: </label></td>

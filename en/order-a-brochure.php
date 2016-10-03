@@ -165,7 +165,7 @@ span.feedback-failed {
 					</tr>
 					<tr>
 						<td align="right"><label for="firstname">* First Name or Forename: </label></td>
-						<td ><input type="text" name="firstname" id="firstname" size="15" autocomplete="given-name" required autofocus></td>
+						<td ><input type="text" name="firstname" id="firstname" size="15" autocomplete="given-name" required></td>
 					</tr>
 					<tr>
 						<td align="right"><label for="lastname">* Last Name or Surname: </label></td>

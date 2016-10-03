@@ -137,7 +137,7 @@ function save_form ( ) {
          case 'Brochure':
             if ( empty( $data['country'] ) ) return $err_data;
             $title = "Brochure Request: $data[lastname] $data[firstname] - $data[city]";
-            $thankyou = '<script>location.href="international-sailing-itinerary-thankyou.php";</script>';
+            $thankyou = '<script>location.href="order-a-brochure-thankyou.php";</script>';
             $email = $email_enquiry;
             break;
          case 'Contact':

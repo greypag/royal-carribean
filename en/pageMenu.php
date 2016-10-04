@@ -111,7 +111,8 @@ $(document).ready(function (){
 <a href="../en/<?php echo(basename($_SERVER['PHP_SELF'])); ?>" title="English Version"><span>ENGLISH</span></a>&nbsp;|&nbsp;
 <a href="../tc/<?php echo(basename($_SERVER['PHP_SELF'])); ?>" title="中文版"><span>中文</span></a><br/><br/>
 <span style="line-height: 23px;">
-	<a href="https://www.facebook.com/RoyalCaribbeanHongKong" target="_blank"><img src="../newimages/header/icon_facebook.png" alt="" title=""/></a>&nbsp;|&nbsp;<a href="contact.php" title="CONTACT U">Contact Us</a>
+   <a href="order-a-brochure.php" style="position:absolute;top: 6px; left: 0;"><img src="../newimages/header/order_brochure_en.png" alt="Order Brochure" /></a>
+   <a href="https://www.facebook.com/RoyalCaribbeanHongKong" target="_blank"><img src="../newimages/header/icon_facebook.png" alt="Facebook" /></a>&nbsp;|&nbsp;<a href="contact.php" title="CONTACT U">Contact Us</a>
 </span>
 </div>
 

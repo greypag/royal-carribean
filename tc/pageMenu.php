@@ -105,7 +105,8 @@ $(document).ready(function (){
 <a href="../en/<?php echo(basename($_SERVER['PHP_SELF'])); ?>" title="English Version"><span>ENGLISH</span></a>&nbsp;|&nbsp;
 <a href="../tc/<?php echo(basename($_SERVER['PHP_SELF'])); ?>" title="中文版"<span>中文</span></a><br/><br/>
 <span style="line-height: 23px;">
-	<a href="https://www.facebook.com/RoyalCaribbeanHongKong" target="_blank"><img src="../newimages/header/icon_facebook.png" alt="" title=""/></a>&nbsp;|&nbsp;<a href="contact.php" title="聯絡我們">聯絡我們</a>
+   <a href="order-a-brochure.php"><img src="../newimages/header/order_brochure_zh.png" alt="預訂小冊子" /></a>
+   <a href="https://www.facebook.com/RoyalCaribbeanHongKong" target="_blank"><img src="../newimages/header/icon_facebook.png" alt="臉書" /></a>&nbsp;|&nbsp;<a href="contact.php" title="聯絡我們">聯絡我們</a>
 </span>
 </div>
 

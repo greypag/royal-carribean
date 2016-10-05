@@ -54,7 +54,6 @@ function save_form ( ) {
       $email_sales = $email_enquiry = $email_debug;
       $cc = $cc_debug;
    } else {
-      $cc = '';
       if ( empty( $_POST['g-recaptcha-response'] ) )
          return $err3;
       $context = stream_context_create( array( 'http' => array(

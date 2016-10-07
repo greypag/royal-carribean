@@ -137,6 +137,7 @@ return array(
             'display_StepLong_TC' => 'yyyy年MM月dd日',
             'compare_day' => 'dd/M/yyyy',
             //'long_time' => 'dd/mm/yy kk:mm',
+            'time' => 'HH:mm:ss',
             'long_time' => 'dd/MM/yyyy HH:mm:ss',
         ),
         'CGridViewPagination' => array(

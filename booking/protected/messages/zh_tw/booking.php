@@ -26,7 +26,7 @@ return array (
   'Adults' => '成人',
   'All itineraries are subject to change without prior notice.' => '所有航線行程如有任何更改，恕不另行通知',
   'All stateroom phots are for reference only, its decoration may varies from one to the other and subject to final allocated stateroom.' => '以上艙房圖片謹供參考，個别艙房類別裝飾及罷設或有分別，以最終被分配艙房作準。',
-  'All taxes, fees and port expenses will be refunded if cancel sailing.' => '如取預訂，將退回所有碼頭稅及港口費',
+  'All taxes, fees and port expenses will be refunded if cancel sailing.' => '如取消預訂，將退回所有碼頭稅及港口費',
   'Balance Due' => '餘額',
   'Cancellation Charges' => '退款',
   'Card Information' => '信用卡資料',

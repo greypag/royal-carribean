@@ -1,0 +1,21 @@
+{
+    "name": "cornernote/gii-modeldoc-generator",
+    "description": "Gii ModelDoc Generator for Yii framework",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": ["yii", "gii", "modelDoc", "mrphp"],
+    "authors": [
+        {
+            "name": "Brett O'Donnell",
+            "email": "cornernote@gmail.com",
+            "homepage": "http://mrphp.com.au/"
+        },
+        {
+            "name": "Zain ul abidin",
+            "email": "zainengineer@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "yiisoft/yii": "1.1.15"
+    }
+}

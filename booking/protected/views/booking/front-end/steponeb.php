@@ -306,7 +306,7 @@
                 <b><?php echo Yii::t('booking', 'Payment Terms'); ?>:</b>
                 <div><?php echo Yii::t('booking', 'Full payment will be charged when you book this sailing (except for Quantum of the Seas Free Air Promotion).'); ?></div>
                 <div><?php echo Yii::t('booking', 'Cancellation Charges'); ?>:</div>
-                <div><?php echo Yii::t('booking', "45 – 30 days prior to sailing = 50% of total Cruise Fare"); ?></div>
+                <div><?php echo Yii::t('booking', '45 – 30 days prior to sailing = 50% of total Cruise Fare'); ?></div>
                 <div><?php echo Yii::t('booking', "29 – 8 days prior to sailing = 70% of total Cruise Fare"); ?></div>
                 <div><?php echo Yii::t('booking', "7 – 0 days prior to sailing = No refund"); ?></div>
                 <div><?php echo Yii::t('booking', "All taxes, fees and port expenses will be refunded if cancel sailing."); ?></div>

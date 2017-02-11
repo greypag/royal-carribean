@@ -20,13 +20,13 @@ return array (
   '(Stateroom number will be assigned according to the best availability)' => '艙房號碼將按最佳庫存安排',
   '(include taxes, fees and port expenses)' => '(包括碼頭稅及港口費)',
   '29 – 8 days prior to sailing = 70% of total Cruise Fare' => '出發前8-29天，退回30%郵輪票價',
-  '44 – 30 days prior to sailing = 50% of total Cruise Fare' => '出發前30-44天，退回50%郵輪票價',
+  '45 – 30 days prior to sailing = 50% of total Cruise Fare' => '出發前30-45天，退回50%郵輪票價',
   '7 – 0 days prior to sailing = No refund' => '出發前0-7天，不能退款',
   'Accept Terms & Conditions' => '同意條款及細則',
   'Adults' => '成人',
   'All itineraries are subject to change without prior notice.' => '所有航線行程如有任何更改，恕不另行通知',
   'All stateroom phots are for reference only, its decoration may varies from one to the other and subject to final allocated stateroom.' => '以上艙房圖片謹供參考，個别艙房類別裝飾及罷設或有分別，以最終被分配艙房作準。',
-  'All taxes, fees and port expenses will be refunded if cancel sailing.' => '如取預訂，將退回所有碼頭稅及港口費',
+  'All taxes, fees and port expenses will be refunded if cancel sailing.' => '如取消預訂，將退回所有碼頭稅及港口費',
   'Balance Due' => '餘額',
   'Cancellation Charges' => '退款',
   'Card Information' => '信用卡資料',
@@ -54,7 +54,7 @@ return array (
   'First Name' => '名字',
   'First Name on card' => '信用卡上之名字',
   'First Name on card cannot be blank.' => '信用卡上之名字不可空白',
-  'Full payment will be charged when you book this sailing.' => '預訂航程將全數收取郵輪票價',
+  'Full payment will be charged when you book this sailing (except for Quantum of the Seas Free Air Promotion).' => '除「海洋量子號」送機票推廣外，預訂航程將全數收取郵輪票價',
   'Gender' => '性別',
   'Given Name on card' => '姓氏',
   'Guest' => '旅客',
@@ -105,14 +105,14 @@ return array (
   'Title' => '稱謂',
   'Total' => '總金額',
   'Total No. of Guests' => '總旅客人數',
-  'We shall keep your personal data confidential at all times. All personal data collected will be in compliance with the Personal Data(Privacy) Ordinance under the law of Hong Kong.' => 
+  'We shall keep your personal data confidential at all times. All personal data collected will be in compliance with the Personal Data(Privacy) Ordinance under the law of Hong Kong.' =>
   '我們將時刻謹慎保存你的個人資料，並按香港個人資料（私隱）條例處理。',
   'YOUR CRUISE' => '您的郵輪',
   'Your Booking Reference Number is <span>{CODE}</span><br />
             Details of cruise document will be sent to you within the next two working days. <br />
             Meanwhile, you can plan your onboard agenda with various add-on package options. <br />
            Please visit our website <a href="mailto:sales@royalcaribbean.com.hk">www.royalcaribbean.com.hk</a> or should you have further questions, <br />
-           please email us at <a href="mailto:sales@royalcaribbean.com.hk">sales@royalcaribbean.com.hk</a> <br />' => 
+           please email us at <a href="mailto:sales@royalcaribbean.com.hk">sales@royalcaribbean.com.hk</a> <br />' =>
   '你的預訂編號為<span>{CODE}</span><br />
   我個將於兩個工作天後寄出正式郵輪文件到您的電郵信箱。<br />
   歡迎瀏覽<a href="mailto:sales@royalcaribbean.com.hk">www.royalcaribbean.com.hk</a>為您的旅程計劃更多額外套餐。<br />

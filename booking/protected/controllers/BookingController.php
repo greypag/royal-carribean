@@ -1110,7 +1110,7 @@ class BookingController extends GxController {
 				if($no_allGuest >= 4){
 					$no_allGuest = 3;
 				}
-                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, date('d/m/Y h:m:s', $bookingItem->booking_time) );
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(1, $row, date('d/m/Y H:i:s', $bookingItem->booking_time) ); //Leon changed time format
                 $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(2, $row, $occupancy[$no_allGuest]);
                 $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(3, $row, $bookingItem->itinerary_id);
 				//echo($itineraryRoomType[0]['rt']->rt_name);

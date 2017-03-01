@@ -890,6 +890,13 @@ class BookingController extends GxController {
                                             "title" => $guestModel->title,
                                             "first_name" => $guestModel->first_name,
                                             "last_name" => $guestModel->last_name,
+                                            // leon 20170301 mail item start
+                                            "date_of_birth" =>  $guestModel->date_of_birth,
+                                            "gender" => $guestModel->gender,
+                                            "citizenship" => $guestModel->citizenship,
+                                            "phone_no" => $guestModel->phone_no,
+                                            "email" => $guestModel->email,
+                                            // leon 20170301 end
                                             "cruise" => Yii::app()->format->formatNumber($guestPriceArray[$key]['cruise_fare']),
                                             "singleSupplement" => (!empty($guestPriceArray[$key]['singleSupplement'])) ? Yii::app()->format->formatNumber($guestPriceArray[$key]['singleSupplement']) : null,
                                             "tax" => Yii::app()->format->formatNumber($calculated_Object['otherPrice']),

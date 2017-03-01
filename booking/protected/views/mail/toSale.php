@@ -46,6 +46,12 @@ Your reservation details:<br /><br />
         <th style="text-align: left;">Title</th>
         <th style="text-align: left;">First Name</th>
         <th style="text-align: left;">Last Name</th>
+        <!-- leon 20170301 mail layout start -->
+        <th style="text-align: left;">Date of Birth</th>
+        <th style="text-align: left;">Gender</th>
+        <th style="text-align: left;">Citizenship</th>
+        <th style="text-align: left;">Phone Number</th>
+        <th style="text-align: left;">Email</th>
         <th style="text-align: left;">Cruise Fare
             <?php
             if (!empty($singleSupplement)) {
@@ -63,6 +69,12 @@ Your reservation details:<br /><br />
                 <td style="text-align: left;"><?php echo $item["title"] ?></td>
                 <td style="text-align: left;"><?php echo $item["first_name"] ?></td>
                 <td style="text-align: left;"><?php echo $item["last_name"] ?></td>
+                <td style="text-align: left;"><?php echo $item["date_of_birth"] ?></td>
+                <td style="text-align: left;"><?php echo $item["gender"] ?></td>
+                <td style="text-align: left;"><?php echo $item["citizenship"] ?></td>
+                <td style="text-align: left;"><?php echo $item["phone_no"] ?></td>
+                <td style="text-align: left;"><?php echo $item["email"]?></td>
+                <!-- leon 20170301 end -->
                 <td style="text-align: left;"><?php echo $item["cruise"] ?></td>
                 <td style="text-align: left;"><?php echo $item["tax"] ?></td>
                 <td style="text-align: left;"><?php echo $item["discount"] ?></td>

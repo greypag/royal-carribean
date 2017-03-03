@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
     <?php include 'pageMenu.php'; ?>
 
@@ -108,7 +108,7 @@ background-size: cover;">
 	        	height: 55px;
 	        	filter:  alpha(opacity=45);
 	        	opacity: .45;
-	        	
+
 	        	transition: opacity .6s;
 	        	-moz-transition: opacity .6s;
 	        	-webkit-transition: opacity .6s;
@@ -137,21 +137,21 @@ background-size: cover;">
 	    </div>
 	    <!-- ThumbnailNavigator Skin End -->
 	</div>
-	
+
 
     <div style="width: 962px;float: left;margin: -50px 0 0 0;background: #fff;">
         <div class="page_left">
-            <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">			
-			
+            <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
+
 			<div style="width:100%;height:50px;padding:10px 0;">
 				<div style="padding:10px 20px;">
-				<p style="color:#195f9b; font-weight:bold; font-size:16px;">岸上觀光團</p>			
+				<p style="color:#195f9b; font-weight:bold; font-size:16px;">岸上觀光團</p>
 				<p style="float:left;width:calc(100% - 275px);">
 				皇家加勒比國際遊輪提供不同類型的岸上觀光團，旅客可按照個人喜好及需要報名參與。請聯絡為您預訂航程的旅行社代辦報名手續或於登船後到有關服務檯進行預訂。
 				</p>
 				<img src="../newimages/shoreExcursions-01.jpg" style="width:250px;height:auto;float:right">
 				</div>
-			
+
 				<ul id="cat" class="wider-190"  style="width: 890px;">
    					<li id="vietnam" class="w130 active">越南</li>
 					<li id="japan" class="w130">日本</li>
@@ -191,7 +191,7 @@ background-size: cover;">
 				</ul>
 				</div>
 			</div>
-			
+
 
 			<div id="content">
 <!--
@@ -217,4 +217,4 @@ background-size: cover;">
 <p>
 費用:77美元/人
 </p>
--->			
+-->

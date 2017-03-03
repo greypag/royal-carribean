@@ -6,12 +6,12 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 <?php include 'pageHead.php'; ?>
 <link href="../css/crown.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -70,7 +70,7 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 									<td class="crown-grid onboard-diamond-grid"><?=($crown_benefits_value["diamond"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
 									<td class="crown-grid onboard-diamond-plus-grid"><?=($crown_benefits_value["diamond-plus"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
 									<td class="crown-grid onboard-pinnacle-club-grid"><?=($crown_benefits_value["pinnacle-club"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
-								
+
 			<?php 				} ?>
 							</tr>
 			<?php		}	?>
@@ -78,7 +78,7 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 				</div>
 				<div>
 					General Terms & Conditions:<br/>
-					Offers are subject to availability, Royal Caribbean Cruises Ltd. has the right to terminate the Crown & Anchor Society® Program or to change the Terms and Conditions of participation and benefits, in whole or in part; at any time without notice. 
+					Offers are subject to availability, Royal Caribbean Cruises Ltd. has the right to terminate the Crown & Anchor Society® Program or to change the Terms and Conditions of participation and benefits, in whole or in part; at any time without notice.
 				</div>
 			</div>
 		</div>

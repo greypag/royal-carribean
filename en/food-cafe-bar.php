@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <div style='height:92px; width:962px; margin:auto; position:relative' >
@@ -55,7 +56,7 @@ Perched high above the sea on the ship, the Viking Crown Lounge is our fleet's s
 <p>Note:</p>
 
 <ul class="llist">
-	<li>Above dining information are applicable for Voyager of the Seas Hong Kong homeport sailings, photos are for reference only. 
+	<li>Above dining information are applicable for Voyager of the Seas Hong Kong homeport sailings, photos are for reference only.
 	<li>Please refer to onboard Cruise Compass for operating hours of each restaurant, above information are for reference only.
 </ul>
 

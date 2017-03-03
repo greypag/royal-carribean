@@ -4,11 +4,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -111,9 +112,9 @@ Elemis香薰海藻療程，採用全天然草本精華，有效排除身體毒�
 我們有一系列療程針對青少年的需要：暗瘡，曰光浴後護理，修甲等。
 </div>
 </div>
-</div>			
+</div>
 
-<p>&nbsp;</p>			
+<p>&nbsp;</p>
 
 
 </div>

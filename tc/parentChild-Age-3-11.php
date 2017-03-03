@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 
@@ -68,7 +69,7 @@
     <td align="center" valign="top" bgcolor="#F5F5F5">航海家項目</td>
   </tr>
   <tr>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">快樂開始了 <br />
       房子裡的小章魚  <br />
       提前到達<br />
@@ -87,7 +88,7 @@
       汽車總動員  <br />
       Diego的拯救任務 <br />
       睡衣派對</div></td>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">
       簡單就是最好 <br />
 海洋俱樂部前10 <br />
@@ -95,7 +96,7 @@
 睡衣電影派對<br />
 瘋狂快餐<br />
 環遊世界 <br />
-男聲女生對抗賽<br /> 
+男聲女生對抗賽<br />
 海盜之夜<br />
 字母大挑戰<br />
 動起來 <br />
@@ -107,9 +108,9 @@
 水手生存大挑戰 <br />
 海洋探險俱樂部最愛<br />
 運動之夜</div></td>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">
-      簡單就是最好<br /> 
+      簡單就是最好<br />
 水手生存大挑戰 <br />
 環遊世界 <br />
 團隊極限<br />
@@ -175,7 +176,7 @@ ul.llist ul {
     line-height:1.3;
 	font-size:1em;
 }
-.page_left01 ul li a:hover{ 
+.page_left01 ul li a:hover{
 	line-height:1.3;
 	font-size:1em;
 }

@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -26,7 +27,7 @@
 <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
 <div style="padding:10px 20px;">
 <p><br/><br/><!--完美的出遊，是精心籌劃的努力結晶。我們早已為您一切準備就緒，隨時恭候您的光臨。只要一登上游輪，您即能展開一段畢生難忘的休閒與探奇之旅。
-  
+
   隨皇家加勒比國際遊輪夢想啟航，您不僅將走訪夢寐以求的絕美之地，還能深入感受世界，享受非同凡響的暢遊驚喜，全程更享盡極致款待與禮遇，令身心全然釋放，煥然重生。--></p>
 </div>
 <ul>
@@ -59,9 +60,9 @@
  Again: Cursor keeps movin inside the game because I have a freaking controller plugged in?!?!
 
 After 5/5 Games I bought the last week aren't working I am yet opening another discussion about how to solve this problem as noone is able to help me about that in the last 4.
-THE PROBLEM: My cursor ingame keeps raging through the menu. I've encountered this problem in numerous games now and I was able to solve it in the first one, FFXIII, by disabling a controller driver that (somehow) accidentaly installed itself. But now that all unwanted drivers are goners every game after the solved one remain in the state of being bugged and stuff rather than just being playable. I've checked all my drivers countless times now but I keep having an controller activated. WTF I dont even have the money to buy me such a waste of time?! Anyway am I supposed to just live with it and hope the next time I spend money on a game it will be better or is there some wizard saint out there who can solve the matter? 
+THE PROBLEM: My cursor ingame keeps raging through the menu. I've encountered this problem in numerous games now and I was able to solve it in the first one, FFXIII, by disabling a controller driver that (somehow) accidentaly installed itself. But now that all unwanted drivers are goners every game after the solved one remain in the state of being bugged and stuff rather than just being playable. I've checked all my drivers countless times now but I keep having an controller activated. WTF I dont even have the money to buy me such a waste of time?! Anyway am I supposed to just live with it and hope the next time I spend money on a game it will be better or is there some wizard saint out there who can solve the matter?
 
-Because it is your problem not the games' problem.  Any kind of USB device / driver may cause the errornous input.  Borrow a new harddisk, unplug all unnecessary devices (including phones and hubs - I mean all), install a new Window (you don't have to activate it), and see whether the problme is gone.  
+Because it is your problem not the games' problem.  Any kind of USB device / driver may cause the errornous input.  Borrow a new harddisk, unplug all unnecessary devices (including phones and hubs - I mean all), install a new Window (you don't have to activate it), and see whether the problme is gone.
 
 <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0">
   <tr>

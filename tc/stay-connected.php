@@ -3,12 +3,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -38,10 +38,10 @@
 						<li>最後海上航行日費：單機18美元（至航程終點）
 					</ul>
 					</li>
-				</ul>	
+				</ul>
 
 <!--
-				<span class="brdefydq" style="display:block;">上網服務套餐	</span>	  
+				<span class="brdefydq" style="display:block;">上網服務套餐	</span>
 				<ul class="llist">
 					<li>船上有提供24 小時Wi-Fi 無線上網服務套餐，旅客可按照個人需求選購(速度受訊號限制)：
 					<ul>
@@ -49,20 +49,20 @@
 						<li>航程超值套餐 (單機平均每日USD$15, 允許兩個設備無限量上網) </li>
 					</ul>
 					</li>
-				</ul>	
+				</ul>
 -->
 
 				</br></br>
 			  <span class="brdefydq" style="display:block;">長途電話服務</span>
 				<ul class="llist">
 					<li>遊輪上，每間客房均設有長途電話服務，每一分鐘收費為$7.95美元，有關費用會於旅客屆時之SeaPass帳戶中自動累計。</li>
-					<li>旅客的親友亦可直接撥打以下電話進行聯絡： 888-724-7447（自美國境內任何城市）或732-335-3285（自其他各國）。聽一段錄音說明後，只要輸入遊輪名稱之代表數字和#(如1#)，及個人信用卡卡號（VISA、AMEX、MASTER、JCB、DINERS CLUB、DISCOVER），待船上總機或語音應答後，再告知職員有關旅客的船艙號碼和英文姓名，以便接通。</li> 
+					<li>旅客的親友亦可直接撥打以下電話進行聯絡： 888-724-7447（自美國境內任何城市）或732-335-3285（自其他各國）。聽一段錄音說明後，只要輸入遊輪名稱之代表數字和#(如1#)，及個人信用卡卡號（VISA、AMEX、MASTER、JCB、DINERS CLUB、DISCOVER），待船上總機或語音應答後，再告知職員有關旅客的船艙號碼和英文姓名，以便接通。</li>
 					<li>於接通以上號碼後，即開始計費。衛星電話費參考價格為每分鍾美金$7.95。在撥打電話時要有一張可付費的信用卡備妥，才能完成打電話的程序。（各地收費或有差異，詳情請向您的電訊網絡供應商查詢。）</li>
-				
+
 					</br></br>
 					*以上套餐價錢只適用於「海洋航行者號」香港出發之航線，並只作參考及以船上收費作準。其他條款及細則，請前往遊輪上之客戶服務專櫃查詢。
 				</ul>
-				
+
 			</p>
             <p>&nbsp;</p>
         </div>

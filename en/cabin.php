@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -40,7 +41,7 @@ This room type offer floor-to-ceiling windows with expansive views of the ocean 
 Occupancy: 2 - 6 adults</p>
 
 <p><img src="../newimages/virtual-balcony.jpg" width="630" class="center"/><span class="header">Virtual Balcony (NEW!)</span>
-Offer the innovative design concept that brings virtual balconies to interior staterooms offering expansive real-time views of the ocean and exciting destinations. 
+Offer the innovative design concept that brings virtual balconies to interior staterooms offering expansive real-time views of the ocean and exciting destinations.
 <br />
 Occupancy: 2 adults</p>
 
@@ -80,7 +81,7 @@ Relax in luxury in our comfortable suites/deluxe staterooms. Most offer multiple
 
 4. All photos are for reference only<br>
 
-5. The information, room category and room decorations stated above apply to Voyager of the Seas and for reference only. Above are subject to change and advance notice will not be provided. 
+5. The information, room category and room decorations stated above apply to Voyager of the Seas and for reference only. Above are subject to change and advance notice will not be provided.
 </p>
 
 <p>&nbsp;</p>

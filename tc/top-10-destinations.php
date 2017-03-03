@@ -16,12 +16,12 @@ $top_country_bottom = array(
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 <link href="../css/top-destinations.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -66,12 +66,12 @@ $top_country_bottom = array(
 								<?php 	foreach ($schedule_header as $schedule_header_value) { ?>
 											<div class="top-country-schedule-<?=strtolower($schedule_header_value)?> left"><?=$schedule_header_text[$schedule_header_value]?></div>
 								<?php 	}	?>
-									
+
 								</div>
 								<!-- country schedule header end -->
 								<!-- country schedule content start -->
 								<div class="top-country-schedule-content float">
-									<?php 	
+									<?php
 									$daycount = 1;
 									foreach ($top_destination_value["details"] as $schedule_data_detail) { ?>
 										<div class="top-country-schedule-row float">
@@ -84,7 +84,7 @@ $top_country_bottom = array(
 												<div class="top-country-schedule-arrive left"><?=empty($schedule_data_detail["arrive"])? "&ndash;" : $schedule_data_detail["arrive"]?></div>
 												<div class="top-country-schedule-depart left"><?=empty($schedule_data_detail["depart"])? "&ndash;" : $schedule_data_detail["depart"]?></div>
 										</div>
-									<?php 	
+									<?php
 										$daycount++;
 									}	?>
 								</div>
@@ -92,16 +92,16 @@ $top_country_bottom = array(
 								<!-- country date list start -->
 								<div class="top-country-date-wrapper float">
 									<div class="top-country-date-title">出發日期: </div>
-									<?php 	
+									<?php
 									$daycount = 1;
 									$yearCount = 1;
 									$monthRowNum = $top_destination_value["monthRowNum"];
 									$monthColNum = $top_destination_value["monthColNum"];
 									$thisYear = "";
-									foreach ($top_destination_value["dates"] as $schedule_date_year=>$schedule_date) { 
+									foreach ($top_destination_value["dates"] as $schedule_date_year=>$schedule_date) {
 										if (!empty($thisYear) && $thisYear != $schedule_date_year){	?>
 											</div>
-								<?php 	}	
+								<?php 	}
 										$thisYear = $schedule_date_year;
 										$monthRowCountNum = 1;
 								?>
@@ -136,7 +136,7 @@ $top_country_bottom = array(
 												 } ?>
 												</div>
 
-									<?php 	
+									<?php
 										$daycount++;
 										$yearCount++;
 									}	?>
@@ -157,7 +157,7 @@ $top_country_bottom = array(
 							<!-- country back to top/order now start -->
 							<div class="top-country-bottom-link float">
 								<a href="#page-top">
-									<?=$top_country_bottom["back_to_top"]?></a> 
+									<?=$top_country_bottom["back_to_top"]?></a>
 									<a href="enquiry.php"><img src="../newimages/enquiry/btn_enquiry_tc.gif" alt="" title=""/></a>
 							</div>
 							<!-- country back to top/order now end -->

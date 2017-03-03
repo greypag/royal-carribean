@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 
@@ -67,7 +68,7 @@
     <td align="center" valign="top" bgcolor="#F5F5F5">Voyager Project</td>
   </tr>
   <tr>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">Happiness begun
         <br />
         Small Octopus House<br />
@@ -87,7 +88,7 @@
         Cars<br />
         Diego's Rescue Mission<br />
         Pajama Party</div></td>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">Simple is the Best <br />
         Top 10 Ocean Club<br />
         Built in Confrontation<br />
@@ -106,7 +107,7 @@
         Sailors Survive Challenge<br />
         Adventure Club Favorites<br />
         Sports Night</div></td>
-    <td width="33%" align="left" valign="top">      
+    <td width="33%" align="left" valign="top">
       <div style="font-size:12px; line-height:150%;">Simple is the Best<br />
         Sailors Survive Challenge<br />
         Around the World<br />
@@ -131,7 +132,7 @@
         <p>Notes:</p>
         <ul class="llist remark">
           <li>Certain activities are available on selective ships only.
-          <li>All phots are for reference only and subject to change without prior notice. 
+          <li>All phots are for reference only and subject to change without prior notice.
           <li>Please refer to onboard Cruise Compass for operating hours and cost.
         </ul>
         <p>&nbsp;</p>
@@ -172,7 +173,7 @@ ul.llist ul {
     line-height:1.3;
 	font-size:1em;
 }
-.page_left01 ul li a:hover{ 
+.page_left01 ul li a:hover{
 	line-height:1.3;
 	font-size:1em;
 }

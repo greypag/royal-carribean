@@ -22,7 +22,7 @@ $(document).ready(function() {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -163,4 +163,3 @@ $(document).ready(function() {
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

@@ -5,11 +5,12 @@
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <div style='height:92px; width:962px; margin:auto; position:relative' >
@@ -35,10 +36,10 @@
 <div class="sub-head">Sapphire Main Dining Room</div>
 <p><img src="../newimages/wine-dine/dine-room.jpg" class="display"/>
 
-Sweeping, multi-level ambience, world-class cuisine and extraordinary personal service from a dedicated wait staff. Our main dining room serves exceptional, multi-course meals for breakfast, lunch and dinner. 
+Sweeping, multi-level ambience, world-class cuisine and extraordinary personal service from a dedicated wait staff. Our main dining room serves exceptional, multi-course meals for breakfast, lunch and dinner.
 Enjoy a new dinner menu each evening in an elegant setting the all-new “E-sea dining” seat arrangement for on board restaurants.
 Guests will be seated base on the time given on their SEAPASS card with companions when they come to the restaurant instead of only getting a designated table.
-With our new collaboration with Xin Dau Ji, guest can now enjoy authentic Chinese cuisine free of charge each night. 
+With our new collaboration with Xin Dau Ji, guest can now enjoy authentic Chinese cuisine free of charge each night.
 </p>
 
 <div class="sub-head">Windjammer Buffet</div>

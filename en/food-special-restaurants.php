@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <div style='height:92px; width:962px; margin:auto; position:relative' >
@@ -55,8 +56,8 @@ Get the family together for good old-fashioned hamburgers and fries at Johnny Ro
 <ul class="llist">
 	<li>Above dining information are applicable for Voyager of the Seas Hong Kong homeport sailings, photos are for reference only.
 	<li>Please refer to onboard Cruise Compass for operating hours of each restaurant, above information are for reference only.
-	<li>US$10 will be charged per booking for specialty restaurants cancelled within 24hours of reservation time 
-	<li>Room service is available round the clock; guests can call in-room for enquiries.  (extra charges apply for room service between midnight till 5am) 
+	<li>US$10 will be charged per booking for specialty restaurants cancelled within 24hours of reservation time
+	<li>Room service is available round the clock; guests can call in-room for enquiries.  (extra charges apply for room service between midnight till 5am)
 	<li>For other terms and conditions, please go to guest services for enquiries.
 </ul>
 

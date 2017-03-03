@@ -5,14 +5,14 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;'><!--class="fleet" -->
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
 
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
   <?php include 'pageMenu.php'; ?>
   <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; All About Cruising &gt; <a href="parentChild.php">Family</a></div>
@@ -42,7 +42,7 @@ We've created adventures to keep even our tiniest cruisers entertained. Little o
 		<p>
 Babies 2 Go!*
 		</p><p>
-Our convenient service lets you pre-order Huggies® diapers, wipes and cream, and Gerber® organic baby food to be delivered right to your stateroom, when you arrive and throughout your cruise.		
+Our convenient service lets you pre-order Huggies® diapers, wipes and cream, and Gerber® organic baby food to be delivered right to your stateroom, when you arrive and throughout your cruise.
         </p>
         <p>&nbsp;</p>
 		<p>
@@ -56,9 +56,9 @@ Notes:
 		</p><p>
 3. Please refer to onboard Cruise Compass for operating hours and cost.
 		</p>
-		
+
       </div>
-    </div>           
+    </div>
   </div>
   <?php include 'pageRight.php'; ?>
 </div>
@@ -94,7 +94,7 @@ ul.llist ul {
     line-height:1.3;
 	font-size:1em;
 }
-.page_left01 ul li a:hover{ 
+.page_left01 ul li a:hover{
 	line-height:1.3;
 	font-size:1em;
 }

@@ -3,12 +3,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -103,8 +103,8 @@
 		<td colspan="2" align="left" valign="top" style="padding-left:10px;" >- 10 km (6 mi) by road to Kowloon Station Airport Express Line and airline check-in.</td>
 	</tr>
 	<tr>
-		<td colspan="2" align="left" valign="top" bgcolor="#EEEEEE" style="padding-left:10px;" >- 
-			
+		<td colspan="2" align="left" valign="top" bgcolor="#EEEEEE" style="padding-left:10px;" >-
+
 			5 km (3 mi) by road to Hung Hom train station, with rail connections to Shenzhen, Guangzhou, Shanghai, Beijing and other Chinese cities.</td>
 		</tr>
 		<tr>

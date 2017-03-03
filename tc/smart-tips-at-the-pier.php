@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -29,7 +30,7 @@
 <!--<p style="color:#195f9b; font-weight:bold; font-size:16px;">啟德郵輪碼頭</p>
 <p>地址：啟德郵輪碼頭，33豐盛路，九龍，香港</p>
 <p>完美的出遊，是精心籌劃的努力結晶。我們早已為您一切準備就緒，隨時恭候您的光臨。只要一登上游輪，您即能展開一段畢生難忘的休閒與探奇之旅。
-  
+
   隨皇家加勒比國際遊輪夢想啟航，您不僅將走訪夢寐以求的絕美之地，還能深入感受世界，享受非同凡響的暢遊驚喜，全程更享盡極致款待與禮遇，令身心全然釋放，煥然重生。</p>
 -->
 </div>
@@ -154,19 +155,19 @@ table.ttable th {
 	<tr>
 	<td><ul class="llist"><li>外幣零用錢</li></ul></td>
 	<td><ul class="llist"><li>動物</li></ul></td>
-	</tr>	
+	</tr>
 	<tr>
 	<td><ul class="llist"><li>牙刷及牙膏</li></ul></td>
 	<td></td>
-	</tr>	
+	</tr>
 	<tr>
 	<td><ul class="llist"><li>轉換插頭 (電壓110伏特 / 美式兩腳扁插座)</li></ul></td>
 	<td></td>
-	</tr>	
+	</tr>
 	<tr>
 	<td><ul class="llist"><li>晚宴服裝</li></ul></td>
 	<td></td>
-	</tr>	
+	</tr>
 	</table>
 	</td>
   </tr>
@@ -239,8 +240,8 @@ table.ttable th {
 		<li>船上所有消費頂目均以美元計算。信用卡公司則會將您的消費總金額轉換成個人所屬的國家貨幣作結算。</li>
 		<li>若就賬單有任何疑問，敬請於離船前到遊輪服務櫃檯查詢。</li>
 
-	</ul>	
-	</td>  
+	</ul>
+	</td>
 </tr>
 </table>
 <p>&nbsp;</p>

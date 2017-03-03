@@ -15,12 +15,12 @@ $top_country_bottom = array(
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 <link href="../css/top-destinations.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -45,7 +45,7 @@ $top_country_bottom = array(
 		</map>
 		<div class="descBox margin-20-30 marineBlue">
 			<div class="descBox__desc">The cruise line sails 24 of the world’s most innovative cruise ships to the most popular destinations in Bermuda and the Caribbean, Europe, Canada and New England, Alaska, South America, Asia, and Australia and New Zealand.</div>
-		</div>		
+		</div>
 		<div class="inner underDescBox">
 			<?php foreach ($schedule_data as $top_destination_key => $top_destination_value) { ?>
 				<div class="top-country-wrapper float" style="<?=($topcountCount==count($schedule_data)? "border-bottom: none;" : "")?>">
@@ -68,12 +68,12 @@ $top_country_bottom = array(
 								<?php 	foreach ($schedule_header as $schedule_header_value) { ?>
 											<div class="top-country-schedule-<?=strtolower($schedule_header_value)?> left"><?=$schedule_header_value?></div>
 								<?php 	}	?>
-									
+
 								</div>
 								<!-- country schedule header end -->
 								<!-- country schedule content start -->
 								<div class="top-country-schedule-content float">
-									<?php 	
+									<?php
 									$daycount = 1;
 									foreach ($top_destination_value["details"] as $schedule_data_detail) { ?>
 										<div class="top-country-schedule-row float">
@@ -86,7 +86,7 @@ $top_country_bottom = array(
 												<div class="top-country-schedule-arrive left"><?=empty($schedule_data_detail["arrive"])? "&ndash;" : $schedule_data_detail["arrive"]?></div>
 												<div class="top-country-schedule-depart left"><?=empty($schedule_data_detail["depart"])? "&ndash;" : $schedule_data_detail["depart"]?></div>
 										</div>
-									<?php 	
+									<?php
 										$daycount++;
 									}	?>
 								</div>
@@ -94,16 +94,16 @@ $top_country_bottom = array(
 								<!-- country date list start -->
 								<div class="top-country-date-wrapper float">
 									<div class="top-country-date-title">Departure Dates: </div>
-									<?php 	
+									<?php
 									$daycount = 1;
 									$yearCount = 1;
 									$monthRowNum = $top_destination_value["monthRowNum"];
 									$monthColNum = $top_destination_value["monthColNum"];
 									$thisYear = "";
-									foreach ($top_destination_value["dates"] as $schedule_date_year=>$schedule_date) { 
+									foreach ($top_destination_value["dates"] as $schedule_date_year=>$schedule_date) {
 										if (!empty($thisYear) && $thisYear != $schedule_date_year){	?>
 											</div>
-								<?php 	}	
+								<?php 	}
 										$thisYear = $schedule_date_year;
 										$monthRowCountNum = 1;
 								?>
@@ -120,7 +120,7 @@ $top_country_bottom = array(
 												 } ?>
 												</div>
 
-									<?php 	
+									<?php
 										$daycount++;
 										$yearCount++;
 									}	?>
@@ -139,7 +139,7 @@ $top_country_bottom = array(
 							<div class="float"><?=$top_destination_value["imageHTML"]?></div>
 							<!-- country back to top/order now start -->
 							<div class="top-country-bottom-link float">
-								<a href="#page-top"><?=$top_country_bottom["back_to_top"]?></a> 
+								<a href="#page-top"><?=$top_country_bottom["back_to_top"]?></a>
 								<a href="enquiry.php"><img src="../newimages/enquiry/btn_enquiry_en.gif" alt="" title=""/></a>
 							</div>
 							<!-- country back to top/order now end -->

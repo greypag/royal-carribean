@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -29,7 +30,7 @@
 <!--<p style="color:#195f9b; font-weight:bold; font-size:16px;">啟德郵輪碼頭</p>
 <p>地址：啟德郵輪碼頭，33豐盛路，九龍，香港</p>
 <p>完美的出遊，是精心籌劃的努力結晶。我們早已為您一切準備就緒，隨時恭候您的光臨。只要一登上游輪，您即能展開一段畢生難忘的休閒與探奇之旅。
-  
+
   隨皇家加勒比國際遊輪夢想啟航，您不僅將走訪夢寐以求的絕美之地，還能深入感受世界，享受非同凡響的暢遊驚喜，全程更享盡極致款待與禮遇，令身心全然釋放，煥然重生。</p>
 -->
 </div>
@@ -125,7 +126,7 @@ table.ttable th {
 		<li>船上設有醫療設備，及具備專業執照的醫師和護士服務。</li>
 		<li>所有的醫療服務都將會收取額外費用(以美元計算)。</li>
 		<li>船上醫療費用可能會較高，而且船上藥物數量有限，所以我們強烈建議旅客於登船前購買完備的旅遊保險、並帶備個人所需的應急藥物。</li>
-		<li>醫療服務並非被設計為旅客的私人診所，皇家加勒比國際遊輪公司對於任何診治和醫療服務不承擔任何責任。</li>	
+		<li>醫療服務並非被設計為旅客的私人診所，皇家加勒比國際遊輪公司對於任何診治和醫療服務不承擔任何責任。</li>
 	</ul>
 </td>
   </tr>
@@ -135,12 +136,12 @@ table.ttable th {
 	<ul class="llist">
 		<li>為旅客安全著想，航程及停泊港口會因應天氣情況及其他因素而作出更改</li>
 		<li>有關航程之最新資訊或變動，可參閱：</li>
-		<ul>		
+		<ul>
 			<li>香港官方網站：<a class="llink" href="http://www.royalcaribbean.com.hk/">www.royalcaribbean.com.hk/</a></li>
 			<li>官方facebook 專頁：<a class="llink" href="https://www.facebook.com/RoyalCaribbeanHongKong">www.facebook.com/RoyalCaribbeanHongKong</a></li>
 		</ul>
 	</ul>
-	
+
 </td>
   </tr>
 </table>

@@ -10,7 +10,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -98,4 +98,3 @@
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

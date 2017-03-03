@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 
@@ -84,7 +85,7 @@
 
 <div style="width: 683px; float: left; height: 17px; margin: 20px 0 0 18px;">
 <img src="../newimages/r_104.png" width="600" />
-</div>              
+</div>
 <p>&nbsp;</p>
 </div>
 </div>

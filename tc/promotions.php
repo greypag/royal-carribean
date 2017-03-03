@@ -78,7 +78,7 @@ form select {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style="height:92px; width:962px; margin:auto; position:relative">
 <?php include 'pageMenu.php'; ?>
 <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">首頁</a> &gt; <a href="get-royal-deals.php">最新優惠</a>
@@ -131,7 +131,7 @@ form select {
            <?php } ?>
 
            </div>
-        </div>		
+        </div>
     <?php
         $getRoyalDealRowCount++;
         if ($getRoyalDealRowCount > 3){ ?>
@@ -148,7 +148,7 @@ form select {
 
   </div>
     <div id="getRoyalDealsWrapBottom">
-		<?php include("agents.php"); ?>		
+		<?php include("agents.php"); ?>
     </div>
 </div>
 

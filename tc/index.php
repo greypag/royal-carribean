@@ -13,12 +13,12 @@ $(document).ready(function ($) {
         start: function(slider){
           $('body').removeClass('loading');
         }
-    });	  
-	  
+    });
+
 	var url = "popup/msg.php";
 	$.get(url)
-		.done(function() { 
-			
+		.done(function() {
+
 			$.fancybox({
 				'width': 500,
 				'height': 350,
@@ -27,11 +27,11 @@ $(document).ready(function ($) {
 				'fitToView': false,
 				'autoSize': false
 			});
-			
-		})	
+
+		})
 
 	$("a#popup_1").fancybox();
-	
+
 	$("a#video").fancybox();
 });
 </script>
@@ -44,7 +44,7 @@ $(document).ready(function ($) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style="height:80px; width:962px; margin:auto; position:relative">
 <?php include 'pageMenuHome.php'; ?>
 </div>
@@ -67,12 +67,12 @@ $(document).ready(function ($) {
                       <li>
                           <a href="http://www.royalcaribbean.com.hk/royalsuite2016/hk"><img u="image" src="../images/royalsuite2016-cn.jpg" /></a>
                       </li>
-                  </ul>	
+                  </ul>
 				</div>
-				
+
 				<div style="position:absolute;left:0;bottom:65px;width:100%;height:5px;background:#f9b934"></div>
 				<div style="position:absolute;left:0;bottom:60px;width:100%;height:5px;background:#0d1b59"></div>
-				
+
 			</div>
 
 <style>

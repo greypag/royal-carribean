@@ -38,20 +38,20 @@ table.dataTable tbody th, table.dataTable tbody td {
 <script type="text/javascript">
 
 $(document).ready(function() {
-	
-	
+
+
 		if (!window.location.origin) {
 		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
 		}
         site_url = window.location.origin + "/booking/index.php/";
 		if(Date.now){
-			Date.now = Date.now() ; 
+			Date.now = Date.now() ;
 		}else{
-			
-			Date.now =  new Date; 
+
+			Date.now =  new Date;
 		}
-		
-		
+
+
         $.ajax({
             url: site_url + "/itinerary/ServiceGetItineraries",
             type: 'GET',
@@ -68,28 +68,28 @@ $(document).ready(function() {
                     var pdf = '';
                     var book_btn = '';
                     var tmp_this = $(this)[0];
-					
+
                     var arr = tmp_this.start_date.split("/");
                     var mydate = new Date(arr[2], arr[1] - 1, arr[0]);
-					
+
 					if( mydate < Date.now ){
 						 return;
 					}
-					
+
                     if (tmp_this.pdf == '') {
                         pdf = '<td>' + tmp_this.itinerary_name_tc + '</td>';
                     } else {
                         pdf = '<td><a target="_blank" href="' + tmp_this.pdf + '"><img src="../images/pdf_icon.png" title="" alt=""/>' + tmp_this.itinerary_name_tc + '</a></td>';
                     }
-					
+
                     //book_btn = '<td><a target="_blank" href="enquiry.php"><img src="../newimages/enquiry/btn_enquirynow2008_tc.png" alt="" title="" width="85px" /></a></td>'
                     if (tmp_this.status == 'bookable') {
                         book_btn = '<td><a href="' + site_url + '/booking/stepone?id=' + tmp_this.itinerary_id + '&lang=tc" target="_blank"><img src="../newimages/enquiry/btn_booknow_tc.png" alt="" title="" width="85px" /></a></td>'
                     } else {
                         book_btn = '<td><a target="_blank" href="enquiry.php"><img src="../newimages/enquiry/btn_enquirynow2008_tc.png" alt="" title="" width="85px" /></a></td>'
                     }
-                    
-                    
+
+
                     result += '<tr> <td>' + tmp_this.start_date + '</td><td class="center">' + tmp_this.cruise.cruise_name_tc + '</td><td class="center">' + tmp_this.port_of_departure_tc + '</td>'
                             + pdf
                             + '<td class="center">' + tmp_this.days_nights_full_desc_tc + '</td>'
@@ -340,7 +340,7 @@ $(document).ready(function() {
 
             $('#filterSchedule').click();
         }
-  
+
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -356,7 +356,7 @@ $(document).ready(function() {
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;'><!--class="fleet" -->
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 	<?php include 'pageMenu.php'; ?>
   <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">首頁</a> &gt; <a href="result.php">航線行程</a></div>

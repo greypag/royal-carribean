@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -21,7 +22,7 @@
 </div>
 <div class="page_contentbox" style='width:962px'>
 	<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/r_71.png) no-repeat">
-    
+
 <div style="width: 962px;float: left;margin: 250px 0 0 0; background: 10px 168px no-repeat;">
 <div class="page_left">
 <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
@@ -39,7 +40,7 @@
 .food-title1{font-size:14px;color:#4a416d}
 .food-text2{font-size:11px;color:#000;}
 .freeIcon{background:url(../newimages/freeIcon.jpg) no-repeat;width:32px;height:17px;position:absolute;right:0px;top:0px;display:block}</style>
-                    
+
 <div class="food_01">
 
 <div class="food-div1">
@@ -57,7 +58,7 @@
 來自世界各地的專業冰上舞者，加上先進的音響和照明系統，帶來無與倫比的美妙感受
 </div>
 </div>
-						
+
 <div class="food-div1">
 <img style="width:150px; border:1px solid #ccc;" src="../newimages/enterenment_05.jpg"/>
 <div class="food-text1">
@@ -73,7 +74,7 @@
 置身於的士高內, 盡情享受現代音樂，將會high爆整個夜晚。
 </div>
 </div>
-						
+
 <div class="food-div1">
 <img style="width:150px; border:1px solid #ccc;" src="../newimages/enterenment_07.jpg"/>
 <div class="food-text1">
@@ -81,7 +82,7 @@
 擁有300多個賭場道具。無論你是一個高手或門外漢，都可以在這裡度過樂趣無窮的時光。
 </div>
 </div>
-                        
+
 <div class="food-div2">
 <img style="width:150px; border:1px solid #ccc;" src="../newimages/enterenment_15.jpg"/>
 <div class="food-text1">
@@ -166,7 +167,7 @@ Elemis香薰海藻療程，採用全天然草本精華，有效排除身體毒�
 我們有一系列療程針對青少年的需要：暗瘡，曰光浴後護理，修甲等。
 </div>
 </div>
-</div>						
+</div>
 
 
 </div>

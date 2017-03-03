@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
     <?php include 'pageMenu.php'; ?>
 
@@ -108,7 +108,7 @@ background-size: cover;">
 	        	height: 55px;
 	        	filter:  alpha(opacity=45);
 	        	opacity: .45;
-	        	
+
 	        	transition: opacity .6s;
 	        	-moz-transition: opacity .6s;
 	        	-webkit-transition: opacity .6s;
@@ -137,12 +137,12 @@ background-size: cover;">
 	    </div>
 	    <!-- ThumbnailNavigator Skin End -->
 	</div>
-	
+
 
     <div style="width: 962px;float: left;margin: -50px 0 0 0;background: #fff;">
         <div class="page_left">
-            <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">			
-			
+            <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
+
 			<div style="width:100%;height:50px;padding:10px 0;">
 				<ul id="cat" class="wider-190"  style="width: 890px;">
    					<li id="vietnam" class="w130 active">越南</li>
@@ -184,7 +184,7 @@ background-size: cover;">
 				</ul>
 				</div>
 			</div>
-			
+
 
 			<div id="content">
 <!--
@@ -210,22 +210,22 @@ background-size: cover;">
 <p>
 費用:77美元/人
 </p>
--->			
+-->
 			</div>
-<div style="padding:0 0 0 30px">	
+<div style="padding:0 0 0 30px">
 
 <p>• 以上價錢並不包括給予導遊及司機的服務小費, 服務小費則可隨心打賞。</p>
 <p>• 已參加之行程不能更改或取消, 如出發當日缺席，一切所繳費用既不退還。</p>
 <p>• 以上價錢只作參考並以報名時作準。</p>
 <p>• 其他條款及細則，請前往遊輪上之岸上觀光專櫃查詢。</p>
 <p>• 所有岸上觀光行程將以普通話進行，如須英文導遊，請參閱<a style="text-decoration:underline !important" href="http://www.royalcaribbean.com/findacruise/ports/group/home.do">皇家加勒比國際遊輪專頁</a></p>
-<p>• All shore excursions are conducted in Mandarin Chinese, should you require English speaking tours, 
+<p>• All shore excursions are conducted in Mandarin Chinese, should you require English speaking tours,
 </br><span style="color:white">• </span>please visit <a style="text-decoration:underline !important" href="http://www.royalcaribbean.com/findacruise/ports/group/home.do">Royal Caribbean International</a></p>
 
 <div style="text-align:right;margin-bottom:20px;cursor:pointer" class="backtotop">返回頁頂</div>
 </div>
 
-			
+
 <script>
 $(document).ready(function() {
 	var p0 = "<?php echo basename($_SERVER['PHP_SELF']); ?>";
@@ -236,27 +236,27 @@ $(document).ready(function() {
 
 	$.ajax({url: "storeExcursions/"+page+"-s"+tab+".html?nocache="+Math.random(), success: function(result){
 		$("#content").html(result);
-		
+
 		$("#cat li").removeClass("w130 active");
 		$("#cat li").addClass("w130");
 		$("#"+page).addClass("active");
 		$("#subcat ul").removeClass("subcat active");
 		$("#subcat ul").addClass("subcat");
 		$("#"+page+"-s").addClass("active");
-	}});		
+	}});
 
     $("#cat li").click(function() {
 		window.location.href = "shoreExcursions-"+this.id+"-0.php";
     });
 	$("#subcat ul li").click(function() {
-		//alert($(this).prevAll().length);		
+		//alert($(this).prevAll().length);
 		//$.ajax({url: "storeExcursions/"+$(this).closest("ul").attr("id")+$(this).prevAll().length+".html?nocache="+Math.random(), success: function(result){
 		//	$("#content").html(result);
-		//}});	
+		//}});
 		//alert($(this).closest("ul").attr("id"));
 		window.location.href = "shoreExcursions-"+page+"-"+$(this).prevAll().length+".php";
 	});
-	
+
 	$('.backtotop').click(function(){
 		$('html, body').animate({scrollTop : 500},500);
 		return false;
@@ -290,7 +290,7 @@ $(document).ready(function() {
 }
 .page_left01 ul.subcat {
 	width:670px;
-	height:auto;	
+	height:auto;
 }
 .page_left01 ul.subcat li {
 	width:auto;

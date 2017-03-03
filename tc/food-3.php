@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -54,25 +55,25 @@
 
 <p>其他咖啡廳及酒吧包</p>
 <p>括:小豬與口哨酒吧
-  / 
+  /
   「九霄」雞尾酒吧
-  / 
+  /
   「１９洞」高爾夫主題酒吧
-  / 
+  /
   七心撲克房
-  / 
+  /
   香檳吧
-  / 
+  /
   貴賓套房俱樂部
-  / 
+  /
   水族館酒吧
-  / 
+  /
   池畔酒吧
-  / 
+  /
   天際吧
-  / 
+  /
   illy咖啡店
-  / 
+  /
   Ben&Jerry雪榚店</p>
 
 

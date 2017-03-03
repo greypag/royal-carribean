@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -25,7 +26,7 @@
 <div class="page_left">
 <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
 <div style="padding:10px 20px;">
-<p><br/><br/><!--A Royal Caribbean cruise vacation is adventure on a grand scale. 
+<p><br/><br/><!--A Royal Caribbean cruise vacation is adventure on a grand scale.
 You'll visit incredible destinations you've only dreamed of and have adventures you never imagined.
 And best of all, you'll be pampered every step of the way.  --></p>
 </div>

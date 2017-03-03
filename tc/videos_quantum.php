@@ -1,12 +1,12 @@
 <?php $pageName = "quantum"; ?>
 <link href="../css/about.css" rel="stylesheet" type="text/css" />
 <?php include 'pageHead.php'; ?>
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
     <div style='height:92px; width:962px; margin:auto; position:relative' >
         <?php include 'pageMenu.php'; ?>
 
@@ -230,4 +230,3 @@
         </div>
     </div>
     <?php include 'pageFoot.php'; ?>
-

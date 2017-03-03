@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -21,7 +22,7 @@
 </div>
 <div class="page_contentbox" style='width:962px'>
 	<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/r_71.png) no-repeat">
-    
+
 <div style="width: 962px;float: left;margin: 250px 0 0 0; background: 10px 168px no-repeat;">
 <div class="page_left">
 <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
@@ -59,9 +60,9 @@
 </div></td>
     </tr>
   </table>
-  
+
 <p>&nbsp;</p>
-  
+
 
 </div>
 </div>

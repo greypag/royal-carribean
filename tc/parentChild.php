@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;'><!--class="fleet" -->
+<?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
   <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -48,7 +49,7 @@ Babies 2 Go!*
 我們提供方便的服務，您可以預購Huggies®尿布，濕巾，和Gerber®有機嬰兒食品直接發送到您的艙房，整個航程都無憂。
         </p>
         <p>&nbsp;</p>
-		
+
 		<p>
 *需額外收費，詳情請向船上有關職員查詢。
 		</p><p>
@@ -62,7 +63,7 @@ Babies 2 Go!*
 		</p>
 
       </div>
-        </div>              
+        </div>
       </div>
       <?php include 'pageRight.php'; ?>
     </div>
@@ -98,7 +99,7 @@ ul.llist ul {
     line-height:1.3;
 	font-size:1em;
 }
-.page_left01 ul li a:hover{ 
+.page_left01 ul li a:hover{
 	line-height:1.3;
 	font-size:1em;
 }

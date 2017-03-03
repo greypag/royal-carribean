@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 
@@ -36,7 +37,7 @@
 <p>
 Guests are not allowed to bring beer, hard liquor, fortified wines or non-alcoholic beverages onboard for consumption or any other use on boarding day or while in port. Alcoholic beverages seized on boarding day will not be returned.
 </p><p>
-Guests wishing to bring personal wine and champagne onboard may do so only on boarding day, limited to two (2) 750 ml bottles per stateroom. Additional bottles of wine beyond two (2) bottles that are brought onboard or any alcoholic beverages purchased in ports of call or from Shops On Board will be stored by the ship and delivered to your stateroom on the last day of the sailing. 
+Guests wishing to bring personal wine and champagne onboard may do so only on boarding day, limited to two (2) 750 ml bottles per stateroom. Additional bottles of wine beyond two (2) bottles that are brought onboard or any alcoholic beverages purchased in ports of call or from Shops On Board will be stored by the ship and delivered to your stateroom on the last day of the sailing.
 </p><p>
 Security may inspect containers (water bottles, soda bottles, mouthwash, luggage etc.) and will dispose of containers holding alcohol. Guests who violate any alcohol policies, (over consume, provide alcohol to people under age 21, demonstrate irresponsible behavior, or attempt to conceal alcoholic items at security and or luggage check points or any other time), may be disembarked or not allowed to board, at their own expense, in accordance with our Guest Conduct Policy. Guests who are under the permitted drinking age will not have alcohol returned to them.
 </p>
@@ -51,7 +52,7 @@ Security may inspect containers (water bottles, soda bottles, mouthwash, luggage
 
 <p style="color:#195f9b; font-weight:bold; font-size:16px;">Q: What services include in Royal Caribbean Cruises voyage fare?</p>
 <p>A: Cruise fares include accommodations, meals, snacks and drinks in complimentary dining venues, most sports facilities, daily entertainment programs and most children activities.</p>
- 
+
 <p style="color:#195f9b; font-weight:bold; font-size:16px;">Q: What services do not include in Royal Caribbean Cruises voyage fare?</p>
 <p>A: Cruise fares do not include service charges and gratuities, taxes, fees and port expenses. Other optional chargeable items include meals in specialty restaurants, non-complimentary beverages, shore excursions, telephone calls, Internet access, laundry services, beauty treatments and massage services, medical services, etc.</p>
 

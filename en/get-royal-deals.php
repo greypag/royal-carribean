@@ -87,12 +87,12 @@ include 'pageHead.php';
 		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
 		}
         site_url = window.location.origin + "/booking/index.php/";
-		
+
 		if(Date.now){
-			Date.now = Date.now() ; 
+			Date.now = Date.now() ;
 		}else{
-			
-			Date.now =  function() { return +new Date.getTime(); }; 
+
+			Date.now =  function() { return +new Date.getTime(); };
 		}
         $.ajax({
             url: site_url + "/itinerary/ServiceGetItineraries",
@@ -110,7 +110,7 @@ include 'pageHead.php';
                 var monthNames = ["January", "February", "March", "April", "May", "June",
                     "July", "August", "September", "October", "November", "December"
                 ];
-				
+
 
 
                 $.each(value.data, function (index, element) {
@@ -119,17 +119,17 @@ include 'pageHead.php';
                     var book_btn = '';
                     var isNewRow = (colNumber_current == 1 || colNumber_current % parseInt(rowPerCol+1) === 0) ? true : false;
 
-					
+
 
                     var arr = tmp_this.start_date.split("/");
                     var mydate = new Date(arr[2], arr[1] - 1, arr[0]);
                     //var mydate = new Date(tmp_this.start_date);
                     var str = mydate.getDate() + ' ' + monthNames[mydate.getMonth()];
-					
+
 					if( mydate < Date.now ){
 						return;
 					}
-					
+
                     if (isNewRow) {
                         colNumber = 1;
 						colNumber_current = 1;
@@ -152,7 +152,7 @@ include 'pageHead.php';
                     } else {
                         result += '<img src="' + tmp_this.image + '" width="180"  height="145" />';
                     }
-					
+
                     result += '</div>' + book_btn + '</div>';
 
                     if (colNumber == index) {
@@ -160,7 +160,7 @@ include 'pageHead.php';
                     }
                     //if (colNumber == rowPerCol) {
                     if (colNumber_current % parseInt(rowPerCol) === 0) {
-						
+
                         result += '</div>';
                     }
                     colNumber++;
@@ -177,12 +177,12 @@ include 'pageHead.php';
     );
 
 </script>
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
     <div style="height:92px; width:962px; margin:auto; position:relative">
         <?php include 'pageMenu.php'; ?>
         <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; <a href="get-royal-deals.php">Get Royal Deals</a>
@@ -198,13 +198,13 @@ include 'pageHead.php';
 				If you’re looking for more, you can check out our promotions page by clicking the promotions tab. Once you’re in the promotions section you can find great deals like an offer to fly roundtrip to our different ports for free!
 				</div>
 			</div>
-			
+
             <div class="underDescBox inner">
                 <div class="page_left">
                     <div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;width: 100%;background: none;margin-top: 35px;">
                         <h3>Get Royal Deals</h3>
 						<div style="clear:both"></div>
-						
+
                         <ul class="wider-190"  style="width: 890px;">
                             <li class="page_hover-190">Selected Sailing</li>
                             <!--
@@ -218,14 +218,14 @@ include 'pageHead.php';
 								<div id="getRoyalDealsWrapTop">
 
 								</div>
-							
-							
-								
+
+
+
 								<div id="getRoyalDealsWrapBottom">
 									<?php include("agents.php"); ?>
 								</div>
-								
-								
+
+
 							</div>
 
 						</div>

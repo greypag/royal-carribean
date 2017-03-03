@@ -1,12 +1,12 @@
 <?php $pageName = "quantum"; ?>
 <link href="../css/about.css" rel="stylesheet" type="text/css" />
 <?php include 'pageHead.php'; ?>
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
     <div style='height:92px; width:962px; margin:auto; position:relative' >
         <?php include 'pageMenu.php'; ?>
 
@@ -206,11 +206,11 @@
                         <li class="page_hover-190">Quantum of the Seas</li>
                         <li class=""><a href="videos_quantum.php">Videos</a></li>
                     </ul>
-                    
+
                     <div style="position:relative; float:left; width:640px; left:30px; top:10px;min-height:800px;">
                         <div id="quantum-top" class="float">
                             <h3 style="margin-left: 0; margin-bottom: 10px;">Quantum of the Seas</h3>
-                            <p>There's only one word that can possibly sum up our newest class, Quantum class: WOW! With this addition, Royal Caribbean International in Hong Kong have just reached a whole new level. Newly designed staterooms, game-changing technology, groundbreaking venues and the best dining ever are just the start of what you'll find onboard. Plus, we've enlisted celebrity experts in fields such as design, sports & fitness, entertainment and others to be part our QuantumSM Experience Advisor program to work hand-in-hand to provide their expertise to help shape interior design, key amenities and activities. By taking a quantum leap forward with the first ship in our Quantum class, we're holding ourselves up to the promise of building ships that take you to new heights. Plan a trip on the Quantum of the Seas or Ovation of the Seas and cruise from Hong Kong with style.</p> 
+                            <p>There's only one word that can possibly sum up our newest class, Quantum class: WOW! With this addition, Royal Caribbean International in Hong Kong have just reached a whole new level. Newly designed staterooms, game-changing technology, groundbreaking venues and the best dining ever are just the start of what you'll find onboard. Plus, we've enlisted celebrity experts in fields such as design, sports & fitness, entertainment and others to be part our QuantumSM Experience Advisor program to work hand-in-hand to provide their expertise to help shape interior design, key amenities and activities. By taking a quantum leap forward with the first ship in our Quantum class, we're holding ourselves up to the promise of building ships that take you to new heights. Plan a trip on the Quantum of the Seas or Ovation of the Seas and cruise from Hong Kong with style.</p>
                         </div>
                         <div id="quantum-bottom" class="float">
                             <br/>
@@ -280,15 +280,14 @@
 
             </div>
             <?php include 'pageRight.php'; ?>
-			
+
 			<div style="float:right;width:210px;margin:20px 30px 0 0;">
 			<p style="font-size:16px;color:#195f9b;font-weight:bold;text-align:left;padding:0;margin:0 0 10px 0">SHIPS FROM THE QUANTUM CLASS</p>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=QN&br=R">QUANTUM OF THE SEAS <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=OV&br=R">OVATION OF THE SEAS <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=AN&br=R">AUTHEM OF THE SEAS <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			</div>
-			
+
         </div>
     </div>
     <?php include 'pageFoot.php'; ?>
-

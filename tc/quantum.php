@@ -1,12 +1,12 @@
 <?php $pageName = "quantum";?>
 <link href="../css/about.css" rel="stylesheet" type="text/css" />
 <?php include 'pageHead.php'; ?>
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -104,7 +104,7 @@
 	        	height: 55px;
 	        	filter:  alpha(opacity=45);
 	        	opacity: .45;
-	        	
+
 	        	transition: opacity .6s;
 	        	-moz-transition: opacity .6s;
 	        	-webkit-transition: opacity .6s;
@@ -262,7 +262,7 @@
 								<div class="quantum-bottom-item-right left">
 									<div class="quantum-bottom-item-right-title">都會尚膳</div>
 									<div class="quantum-bottom-item-right-content">
-										富麗堂皇的用餐環境，豐富多彩的美味旅程，親切周到的餐廳服務，可24小時享用美食! 
+										富麗堂皇的用餐環境，豐富多彩的美味旅程，親切周到的餐廳服務，可24小時享用美食!
 									</div>
 								</div>
 							</div>
@@ -277,15 +277,14 @@
 
 		</div>
 		<?php include 'pageRight.php'; ?>
-			
+
 			<div style="float:right;width:210px;margin:20px 30px 0 0;">
 			<p style="font-size:16px;color:#195f9b;font-weight:bold;text-align:left;padding:0;margin:0 0 10px 0">遊輪介紹</p>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=QN&br=R">海洋量子號 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=OV&br=R">海洋贊禮號 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a style="display:block;margin-bottom:5px;" href="http://www.royalcaribbean.com/findacruise/ships/class/ship/home.do?shipClassCode=QN&shipCode=AN&br=R">海洋聖歌號 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			</div>
-			
+
 	</div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

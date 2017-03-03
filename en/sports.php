@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
@@ -21,7 +22,7 @@
 </div>
 <div class="page_contentbox" style='width:962px'>
 <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/sports.jpg) no-repeat">
-    
+
 
 <!--<div style="width: 962px; float: left; position: relative; background: #fff url(../newimages/banner/hongkong-03.jpg) no-repeat;">-->
 <div id="slider2_container" style=" float:left; position:relative; margin-top:0px; width: 962px; height: 365px;">
@@ -112,7 +113,7 @@
             height: 55px;
             filter:  alpha(opacity=45);
             opacity: .45;
-            
+
             transition: opacity .6s;
             -moz-transition: opacity .6s;
             -webkit-transition: opacity .6s;

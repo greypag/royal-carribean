@@ -73,7 +73,7 @@ ul.items li.find-more a:hover{
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 	<?php include 'pageMenu.php'; ?>
 
@@ -94,7 +94,7 @@ background-size: cover;">
 				<br/><br/>
 				What are you waiting for? Check out our many cruise packages today!
 			</div>
-		</div>	
+		</div>
 		<div style="width: 962px;float: left;background: 10px 168px no-repeat;">
 			<div class="page_left">
 				<div class="page_left01" style="height:auto; background-repeat:no-repeat; margin:0px auto auto 15px;">
@@ -133,7 +133,7 @@ background-size: cover;">
 									<li>New R Bar</li>
 									<li>Sky Bar</li>
 									<li>Starbucks Coffee Shop</li>
-									<li>Ben & Jerry</li>							
+									<li>Ben & Jerry</li>
 									<li class="find-more"><a href="food.php">Find out more</a></li>
 								</ul>
 							</div>

@@ -78,7 +78,7 @@
 	height: 8px;
 }
 #royal-fleet-layer-1 {
-	padding: 0 24px 24px 24px; 
+	padding: 0 24px 24px 24px;
 	border-bottom: 4px solid #061556;
 }
 #royal-fleet-layer-2, #royal-fleet-layer-3  {
@@ -99,7 +99,7 @@
 #royal-fleet-layer-3 a:hover {
 	text-decoration: underline !important;
 }
-#royal-fleet-layer-1-right a, 
+#royal-fleet-layer-1-right a,
 #royal-fleet-layer-2 a,
 #royal-fleet-layer-3 a {
 	color: #0073bb;
@@ -115,12 +115,12 @@ sup {
 }
 </style>
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 

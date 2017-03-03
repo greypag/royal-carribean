@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -39,19 +39,19 @@
 <img src="../newimages/deck-plan/Deck 2.gif" width="270" height="1432" style="float:right; margin:5px;"/>
 
 <h4>海景房</h4>
-  
+
 <p> 兩張雙人床（可改成大床）、<br />
 起居間（有些帶沙發床）、<br />
 私人浴室和洗臉盆。 （20平方米）
-  
+
 <h4>公共場合</h4>
-  
+
 <p>珊瑚大劇院<br />
-  
+
   放映室<br />
-  
+
   會議中心<br />
-  
+
   STUDIO B真冰溜冰場</p><br />
 <br />
 <br />
@@ -83,4 +83,3 @@
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

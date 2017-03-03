@@ -73,7 +73,7 @@ ul.items li.find-more a:hover{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -122,8 +122,8 @@ ul.items li.find-more a:hover{
 						<li>「思古諾」鋼琴吧</li>
 						<li>全新 R 吧</li>
 						<li>天際吧</li>
-						<li>Starbucks咖啡店</li>	
-						<li>Ben & Jerry雪糕店</li>					
+						<li>Starbucks咖啡店</li>
+						<li>Ben & Jerry雪糕店</li>
 						<li class="find-more"><a href="food.php">更多</a></li>
 					</ul>
 				</div>
@@ -208,4 +208,3 @@ ul.items li.find-more a:hover{
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -30,7 +31,7 @@
 <p style="color:#195f9b; font-weight:bold; font-size:16px;">啟德郵輪碼頭</p>
 <p>地址：啟德郵輪碼頭，33豐盛路，九龍，香港</p>
 <p>完美的出遊，是精心籌劃的努力結晶。我們早已為您一切準備就緒，隨時恭候您的光臨。只要一登上游輪，您即能展開一段畢生難忘的休閒與探奇之旅。
-  
+
   隨皇家加勒比國際遊輪夢想啟航，您不僅將走訪夢寐以求的絕美之地，還能深入感受世界，享受非同凡響的暢遊驚喜，全程更享盡極致款待與禮遇，令身心全然釋放，煥然重生。</p>
 -->
 </div>
@@ -47,7 +48,7 @@
 <p><img src="../newimages/before-you-board/byc-traveldoc.jpg" align="left"/>出門前，請花幾分鐘時間來熟悉所需的旅行證件。</p>
 
 <p style="color:#195f9b; font-weight:bold; font-size:16px;">請留意</p>
-  
+
 <p>以下所提規定，為各國政府所製定條規與政策，並隨時可能會有所更改，恕不另行通知。 </p>
 <p>遊輪乘客必須對個人旅遊證件的認證及持有全權負責，並在必要時出示。適用旅遊證件包括了護照、簽證、檢疫證明及家庭法律文件。
   </p>

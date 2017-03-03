@@ -85,14 +85,14 @@ form select {
 		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
 		}
         site_url = window.location.origin + "/booking/index.php/";
-		
+
 		if(Date.now){
-			Date.now = Date.now() ; 
+			Date.now = Date.now() ;
 		}else{
-			
-			Date.now =  function() { return +new Date.getTime(); }; 
+
+			Date.now =  function() { return +new Date.getTime(); };
 		}
-		
+
         $.ajax({
             url: site_url + "/itinerary/ServiceGetItineraries",
             type: 'GET',
@@ -109,7 +109,7 @@ form select {
                 var monthNames = ["1月", "2月", "3月", "4月", "5月", "6月",
                     "7月", "8月", "9月", "10月", "11月", "12月"
                 ];
-				
+
 
 
                 $.each(value.data, function (index, element) {
@@ -118,18 +118,18 @@ form select {
                     var book_btn = '';
                     var isNewRow = (colNumber_current == 1 || colNumber_current % parseInt(rowPerCol+1) === 0) ? true : false;
 
-					
+
 
                     var arr = tmp_this.start_date.split("/");
                     var mydate = new Date(arr[2], arr[1] - 1, arr[0]);
                     //var mydate = new Date(tmp_this.start_date);
                     var str =  monthNames[mydate.getMonth()] + mydate.getDate() + ' 日';
-					
+
 					if( mydate < Date.now ){
 						return;
 					}
-					
-					
+
+
                     if (isNewRow) {
                         colNumber = 1;
 						colNumber_current = 1;
@@ -152,7 +152,7 @@ form select {
                     } else {
                         result += '<img src="' + tmp_this.image + '" width="180"  height="145" />';
                     }
-					
+
                     result += '</div>' + book_btn + '</div>';
 
                     if (colNumber == index) {
@@ -160,7 +160,7 @@ form select {
                     }
                     //if (colNumber == rowPerCol) {
                     if (colNumber_current % parseInt(rowPerCol) === 0) {
-						
+
                         result += '</div>';
                     }
                     colNumber++;
@@ -182,7 +182,7 @@ form select {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style="height:92px; width:962px; margin:auto; position:relative">
 <?php include 'pageMenu.php'; ?>
 <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">首頁</a> &gt; <a href="get-royal-deals.php">皇家禮遇</a>
@@ -218,7 +218,7 @@ form select {
 
 
 			<div id="getRoyalDealsWrapBottom">
-				<?php include("agents.php"); ?>		
+				<?php include("agents.php"); ?>
 			</div>
   </div>
 </div>

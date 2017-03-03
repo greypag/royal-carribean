@@ -3,12 +3,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -34,7 +34,7 @@
 </ul>
 
 <script>
-function tab(id) {	
+function tab(id) {
 	if (id == "others") {
 		document.getElementById('hongkong').style.display = "none";
 		document.getElementById('tab_hongkong').style.display = "none";
@@ -124,8 +124,8 @@ function tab(id) {
 		<td colspan="2" align="left" valign="top" style="padding-left:10px;" >- 10 km (6 mi) by road to Kowloon Station Airport Express Line and airline check-in.</td>
 	</tr>
 	<tr>
-		<td colspan="2" align="left" valign="top" bgcolor="#EEEEEE" style="padding-left:10px;" >- 
-			
+		<td colspan="2" align="left" valign="top" bgcolor="#EEEEEE" style="padding-left:10px;" >-
+
 			5 km (3 mi) by road to Hung Hom train station, with rail connections to Shenzhen, Guangzhou, Shanghai, Beijing and other Chinese cities.</td>
 		</tr>
 		<tr>
@@ -133,8 +133,8 @@ function tab(id) {
 			<td style="padding-left:10px;" align="left" valign="top">&nbsp;</td>
 		</tr>
 </table>
-</div> 
-						
+</div>
+
 <div id="others" style="position:relative; float:left; width:640px; left:30px; top:10px; min-height:600px; display:none">
 <table width="95%" border="0" align="left" cellpadding="3" cellspacing="0">
 	<tr>
@@ -155,7 +155,7 @@ function tab(id) {
 	<tr>
 		<td style="padding-left:10px;" width="26%" align="left" valign="top" bgcolor="#EEEEEE">Kochi</td>
 		<td style="padding-left:10px;" bgcolor="#EEEEEE" align="left" valign="top">
-		Kochi Misatochiku No.7-3 wharf  
+		Kochi Misatochiku No.7-3 wharf
 		</br>
 		4706-6, Niida, Kochi-City,Japan
 		</td>
@@ -201,7 +201,7 @@ function tab(id) {
 		<td style="padding-left:10px;" align="left" valign="top" bgcolor="#EEEEEE">
 		基隆港 西16號碼頭 (VY0723 & VY0929)
 		</td>
-	</tr>	
+	</tr>
 	<tr>
 		<td style="padding-left:10px;" width="26%" align="left" valign="top">Hualien</td>
 		<td style="padding-left:10px;" align="left" valign="top">
@@ -225,7 +225,7 @@ function tab(id) {
 		<td style="padding-left:10px;" align="left" valign="top" bgcolor="#EEEEEE">
 		International Cruise Terminal
 		</br>
-		 Sanya Phoenix Island 
+		 Sanya Phoenix Island
 		</td>
 	</tr>
 	<tr>
@@ -241,16 +241,16 @@ function tab(id) {
 		<td style="padding-left:10px;" align="left" valign="top" bgcolor="#EEEEEE">
 		Busan Gamman Container Terminal (Berth No.3~4)
 		</br>
-		 #147 Bukhangro, Nam-Gu, Busan, Korea  
+		 #147 Bukhangro, Nam-Gu, Busan, Korea
 		</td>
 	</tr>
 </table>
 
 <p>&nbsp;</p>
 <p class="remark">
-Notes: 
+Notes:
 Port information is for reference only.
-Each port may differ subject to sailing and will be final according to ship’s update. 
+Each port may differ subject to sailing and will be final according to ship’s update.
 </p>
 
 </div>

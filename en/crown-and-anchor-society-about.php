@@ -2,12 +2,12 @@
 <?php include 'pageHead.php'; ?>
 <link href="../css/crown.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -28,7 +28,7 @@
 			<div class="title crown-large-title" class="left">About the Program</div>
 			<div class="crown-content">
 				The Crown & Anchor® Society is our way of recognizing and rewarding our most loyal guests. As a member, you'll receive exclusive benefits and privileges to make your cruise experiences with Royal Caribbean International® even more spectacular.<br/><br/>
-				You can join after just one sailing. Enroll now in this complimentary program, and start earning cruise points every time you sail. Points add up to great benefits that you’ll enjoy before you sail and while you are onboard. 
+				You can join after just one sailing. Enroll now in this complimentary program, and start earning cruise points every time you sail. Points add up to great benefits that you’ll enjoy before you sail and while you are onboard.
 				<br/><br/><br/>
 			</div>
 		</div>

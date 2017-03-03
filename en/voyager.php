@@ -7,12 +7,12 @@ $(document).ready(function() {
     }
 });
 </script>
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
   <tr>
     <td width="25%" align="left" valign="top" bgcolor="#F2F2F2">Registry</td>
-    <td width="75%" align="left" valign="top" bgcolor="#F2F2F2">Registry: Bahamas • Built in Turku shipyard Kvaerner Masa-Yards 
+    <td width="75%" align="left" valign="top" bgcolor="#F2F2F2">Registry: Bahamas • Built in Turku shipyard Kvaerner Masa-Yards
 </td>
   </tr>
   <tr>
@@ -109,4 +109,3 @@ $(document).ready(function() {
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

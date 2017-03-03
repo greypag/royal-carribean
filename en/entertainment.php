@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;'><!--class="fleet" -->
-
+<?php include 'tracking_tag.php'; ?>
   <!--头部框架<script language="javascript" type="text/javascript">RCCLHeader('bg/4.jpg')</script>-->
 
 
@@ -50,7 +50,7 @@ background-size: cover;'><!--class="fleet" -->
             <p>Notes</p>
             <ul class="llist">
               <li>The information provided applies to Voyager of the Seas. All phots are for reference only and subject to change without prior notice.
-              <li>Extra charge applies for some entertainment. 
+              <li>Extra charge applies for some entertainment.
               <li>Please refer to onboard Cruise Compass for operating hours.
             </ul>
 

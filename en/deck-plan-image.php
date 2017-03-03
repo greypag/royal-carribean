@@ -35,10 +35,11 @@ if (isset($type) && !empty($type)){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=0.7; maximum-scale=1.0; user-scalable=0;" />  
+<meta name="viewport" content="width=device-width; initial-scale=0.7; maximum-scale=1.0; user-scalable=0;" />
 <title>Royal Caribbean International- Quantum Odyssey 海洋量子號</title>
 </head>
 <body>
+  <?php include 'tracking_tag.php'; ?>
 <script>
   $(document).ready(function() {
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

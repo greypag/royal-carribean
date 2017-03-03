@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 	<?php include 'pageMenu.php'; ?>
 
@@ -108,7 +108,7 @@ background-size: cover;">
 	        	height: 55px;
 	        	filter:  alpha(opacity=45);
 	        	opacity: .45;
-	        	
+
 	        	transition: opacity .6s;
 	        	-moz-transition: opacity .6s;
 	        	-webkit-transition: opacity .6s;
@@ -146,8 +146,8 @@ background-size: cover;">
 					<p style="margin-top:20px">
 					 * Should you require English speaking tours, please visit <a style="text-decoration:underline !important" href="http://www.royalcaribbean.com/findacruise/ports/group/home.do">Royal Caribbean International</a>
 					</p>
-					
-					
+
+
 					<p align="justify">
 						<img src="../newimages/shore-excursions/korea.jpg" width="300px" align="left" style="padding:10px;padding-left:0px;"/>
 						<span class="brdefydq">Korea</span>
@@ -162,7 +162,7 @@ background-size: cover;">
 					<p align="justify">
 						<img src="../newimages/shore-excursions/japan.jpg" width="300px" align="left" style="padding:10px;padding-left:0px;"/>
 						<span class="brdefydq">Japan</span>
-						
+
 						<span style="display:block;font-weight:bold;">Kobe</span>
 						Located in southern Hyogo and on the northern coast of the Osaka Bay, Mt. Rokko is known as the best sightseeing and health resort in the Hanshin (Osaka-Kobe) district. The peak of the mountain is approximately 931 meters above sea level. The view of Kobe from the mountain is breathtaking and has gained the title, “the Million Dollar Night View.”
 						<span  style="display:block;">&nbsp;</span>
@@ -171,11 +171,11 @@ background-size: cover;">
 						<span style="display:block;font-weight:bold;">Nagasaki</span>
 						Many people in Japan consider Nagasaki to be one of the country's most beautiful cities. And it is also, perhaps, Japan's most cosmopolitan city, with a unique blend of outside cultures interwoven with its history, architecture, food, and festivals. The port of Nagasaki resembles an amphitheater looking out to the sea. Its matsuri (festivals) are famed throughout Japan for their exuberance and authenticity. These festivals can feature everything from dragon boat races to lantern festivals to kite fights and usually have elaborate parades with brightly colored floats.
 						<span  style="display:block;">&nbsp;</span>
-						
+
 						<span style="display:block;font-weight:bold;">Okinawa</span>
 						Naha, the capital and largest city of Okinawa Prefecture, boasts a unique Japanese culture. As the region's transportation hub, Naha connects travelers with other parts of Okinawa, Japan and Asia; consequently, Okinawans have grown accustomed to openly sharing their distinctive customs with visitors from all over the world - right down to their very own dialect, Uchinaguchi.
 						<span  style="display:block;">&nbsp;</span>
-						
+
 						<span style="display:block;font-weight:bold;">Beppu</span>
 						Beppu is located in the central part of Oita, on the coast of Beppu Bay faces the sea, with Mt. Tsurumi and the rest of the Tsurumi Volcanoes in the rear. Hot water gushes at many spots in the city. The Beppu-onsen Spa consists of eight hot spring areas, which are collectively called "Beppu Hatto". On the outskirts of Beppu, Takasaki Shizen-dobutsu-en(Mt. Takasaki Monkey Land Natural Park) featuring a specifies of monkey native of Japan designated as a Natural Monument and Lake Shidaka-ko amid Mt. Tsurumi-dake, Mt. Yufu-dake and other mountains.
 					</p>
@@ -183,7 +183,7 @@ background-size: cover;">
 					<p align="justify">
 						<img src="../newimages/shore-excursions/taiwan.jpg" width="300px" align="left" style="padding:10px;padding-left:0px;"/>
 						<span class="brdefydq">Taiwan</span>
-						
+
 						<span style="display:block;font-weight:bold;">Keelung (Taipei)</span>
 						Taipei is a city of opposites. There are ancient temples and neon-laden clubs. The world's tallest building and tiniest markets. The bustle of millions of people and the peace of botanical gardens. And if you are a gourmet, Taipei offers the greatest variety of Chinese food in the world. This capital of the Republic of China and Taiwan's largest city is one destination that will leave you feeling a more fulfilled person.
 						<span  style="display:block;">&nbsp;</span>

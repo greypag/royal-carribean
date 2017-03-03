@@ -6,12 +6,12 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 <?php include 'pageHead.php'; ?>
 <link href="../css/crown.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -37,7 +37,7 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 						在預定您的每個航次時，確保您預先辦理網上登記或在您的航行期間親身填妥表格。在航行結束後就會自動累計積分。每航行一晚，就擁有1分，如您是入住套房，則積分翻倍。<br/><br/>
 						<a href="https://secure.royalcaribbean.com/cas/enroll/home.do"><img src="../newimages/crown/btn_enroll_tc.png" alt="" title=""/></a><br/><br/>
 						感謝您對皇家加勒比遊輪一如既往的支持，期待與您再次相見！祝您有個愉快的海上假期！
-					
+
 					</div>
 					<div class="crown-content-right left">
 						<div id="grid-gold" class="crown-benefits-grid left">Gold</div>
@@ -71,7 +71,7 @@ $crown_benefits_data = json_decode($crown_json_file, true);
 									<td class="crown-grid onboard-diamond-grid"><?=($crown_benefits_value["diamond"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
 									<td class="crown-grid onboard-diamond-plus-grid"><?=($crown_benefits_value["diamond-plus"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
 									<td class="crown-grid onboard-pinnacle-club-grid"><?=($crown_benefits_value["pinnacle-club"] == 1)? "<img src='../newimages/crown/all-benefits-anchor.png' alt='' title=''/>" : ""?></td>
-								
+
 			<?php 				} ?>
 							</tr>
 			<?php		}	?>

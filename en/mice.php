@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="voyager.php" id="form1">
 
 
@@ -36,7 +37,7 @@
 <img src="../newimages/mice/screening.jpg" class="display"/>
 
 <div class="sub-head">Boardroom* / Capacity: approx. 20 seatings</div>
-<img src="../newimages/mice/boardroom.jpg" class="display"/> 
+<img src="../newimages/mice/boardroom.jpg" class="display"/>
 
 
 

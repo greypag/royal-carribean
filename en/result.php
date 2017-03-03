@@ -47,20 +47,20 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-		
+
 		if (!window.location.origin) {
 		  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
 		}
         site_url = window.location.origin + "/booking/index.php/";
-		
-		
+
+
 		if(Date.now){
-			Date.now = Date.now() ; 
+			Date.now = Date.now() ;
 		}else{
-			
-			Date.now =  new Date; 
+
+			Date.now =  new Date;
 		}
-		
+
         $.ajax({
             url: site_url + "/itinerary/ServiceGetItineraries",
             type: 'GET',
@@ -71,41 +71,41 @@
 
                 //console.log(value);
                 var result = '';
-				
+
                 $.each(value.data, function (index, element) {
 
                     var pdf = '';
                     var book_btn = '';
                     var tmp_this = $(this)[0];
-					
+
                     var arr = tmp_this.start_date.split("/");
                     var mydate = new Date(arr[2], arr[1] - 1, arr[0]);
-					
+
 					/*
 					console.log(mydate);
 					console.log(mydate.getTime());
 					console.log(Date.now);
 					console.log('=========================');
 					*/
-					
+
 					if( mydate < Date.now ){
 						 return;
 					}
-					
+
                     if (tmp_this.pdf == '') {
                         pdf = '<td>' + tmp_this.itinerary_name + '</td>';
                     } else {
                         pdf = '<td><a target="_blank" href="' + tmp_this.pdf + '"><img src="../images/pdf_icon.png" title="" alt=""/>' + tmp_this.itinerary_name + '</a></td>';
                     }
-					
+
                     //book_btn = '<td><a target="_blank" href="enquiry.php"><img src="../newimages/enquiry/btn_enquirynow2008.png" alt="" title="" width="85px" /></a></td>'
                     if (tmp_this.status == 'bookable') {
                         book_btn = '<td><a href="' + site_url + '/booking/stepone?id=' + tmp_this.itinerary_id + '&lang=en" target="_blank"><img src="../newimages/enquiry/btn_booknow.png" alt="" title="" width="85px" /></a></td>'
                     } else {
                         book_btn = '<td><a target="_blank" href="enquiry.php"><img src="../newimages/enquiry/btn_enquirynow2008.png" alt="" title="" width="85px" /></a></td>'
                     }
-                    
-                    
+
+
                     result += '<tr> <td>' + tmp_this.start_date + '</td><td class="center">' + tmp_this.cruise.cruise_name + '</td><td class="center">' + tmp_this.port_of_departure + '</td>'
                             + pdf
                             + '<td class="center">' + tmp_this.days_nights_full_desc + '</td>'
@@ -114,7 +114,7 @@
 
                     //console.log(result);
                 });
-				
+
                 $('#schedule').find('tbody').html(result);
                 $('#schedule').slideToggle();
                 init();
@@ -163,7 +163,7 @@
                         select.append('<option value="' + d + '">' + d + '</option>');
                         if ($("#departure_year option[value='"+ d.substr(6,4) +"']").length <= 0) {
                         	$("#departure_year").append('<option value="' + d.substr(6,4) + '">' + d.substr(6,4) + '</option>');
-                        }                        
+                        }
                     });
                 } else {
                     if (select != undefined) {
@@ -276,12 +276,12 @@
 
 </script>
 
-<body style='background: url(../newimages/bodyBG.jpg) top center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) top center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;'><!--class="fleet" -->
-
+<?php include 'tracking_tag.php'; ?>
     <div style='height:92px; width:962px; margin:auto; position:relative' >
         <?php include 'pageMenu.php'; ?>
         <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; <a href="result.php">Plan a Cruise</a></div>
@@ -292,7 +292,7 @@
 			<div class="descBox banner-margin-top margin-20-30 marineBlue">
 				<h1 class="descBox__title">Plan a Cruise: Check Out Our Many Cruises Departing from Hong Kong or Many More Worldwide Ports</h1>
 				<div class="descBox__desc">Plan your next trip with the Royal Caribbean cruise planner. Check any of our upcoming cruise information, deals and destinations. Start by identifying a cruise ship and your ideal departure date. There are plenty of vessels to choose from such as the Voyager of the Seas, Quantum of the Seas, Ovation of the Seas, Harmony of the Seas and more. For specific Hong Kong cruise itinerary, you may download flyers to find out more information. There's a ship and destination for everyone. We are looking forward to having you aboard!</div>
-			</div>	
+			</div>
             <div style="width: 962px;float: left; background: url(../newimages/filter_en.jpg) 20px 50px no-repeat;">
                 <div style="width: 962px;float: left; margin: 50px 10px 10px 10px; ">
                     <div style="padding: 60px 40px 20px;">

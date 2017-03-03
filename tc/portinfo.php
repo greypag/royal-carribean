@@ -5,12 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style="background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style="background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
-
+<?php include 'tracking_tag.php'; ?>
 <div style='height:92px; width:962px; margin:auto; position:relative' >
 <?php include 'pageMenu.php'; ?>
 
@@ -144,12 +144,12 @@
 			  <tr>
 			    <td style="padding-left:10px;"width="20%" align="left" valign="top" bgcolor="#EEEEEE">四處走走</td>
 			    <td style="padding-left:10px;"align="left" valign="top" bgcolor="#EEEEEE">主要市區地點均在10公里範圍內。
-			  
+
 			  距離香港國際機場約42公里。
-			  
+
 			      <br />
 			      前往九龍機鐵站辦理登機手續只有10公里路程。
-			  
+
 			      <br />
 		        紅磡火車站相距只約5公里路程，提供前赴深圳、廣洲、<br />
 		        上海、北京及內地其他城市的火車服務。</td>
@@ -170,4 +170,3 @@
 </div>
 </div>
 <?php include 'pageFoot.php'; ?>
-

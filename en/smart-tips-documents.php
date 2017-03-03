@@ -5,11 +5,12 @@
 <link href="../css/person.css" rel="stylesheet" type="text/css" />
 <link href="../css/deck.css" rel="stylesheet" type="text/css" />
 
-<body style='background: url(../newimages/bodyBG.jpg) center center fixed; 
+<body style='background: url(../newimages/bodyBG.jpg) center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;'><!--class="fleet" -->
+  <?php include 'tracking_tag.php'; ?>
 <form method="post" action="notice.php" id="form1">
 
 
@@ -42,12 +43,12 @@
 
 <div style="position:relative; float:left; width:640px; left:30px;min-height:600px;">
 
-<p><img src="../newimages/before-you-board/byc-traveldoc.jpg" align="left"/>Before Leaving Home Please take a few minutes to familiarise yourself with the required travel documents you will be asked to provide prior to boarding the ship. 
+<p><img src="../newimages/before-you-board/byc-traveldoc.jpg" align="left"/>Before Leaving Home Please take a few minutes to familiarise yourself with the required travel documents you will be asked to provide prior to boarding the ship.
 </p>
   <br/>
     <br/>
 <p style="color:#195f9b; font-weight:bold; font-size:16px;">Caution</p>
-  
+
 <p> The requirements described below are required by government regulations and policies. They are subject to change without notice.
   </p>
 <p>It is the sole responsibility of the guest to identify and obtain all required travel documents and have them available when necessary. These appropriate valid travel documents such as passports, visas, inoculation certificate and family legal documents are required for boarding and re-entry into the United States and other countries.

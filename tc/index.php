@@ -56,13 +56,10 @@ $(document).ready(function ($) {
 				<div class="flexslider">
                   <ul class="slides">
                       <li>
-                         <a href="promotions.php"><img u="image" src="../images/RCI_Caribbean_Autumn_Promotion_Website_Banner.jpg" /></a>
+                          <a href="http://www.royalcaribbean.com.hk/tc/promotions.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion2_CHI_V3.jpg" /></a>
                       </li>
                       <li>
-                           <a href="result.php"><img u="image"  src="../images/BannerOne-tc.jpg" /></a>
-                      </li>
-                      <li>
-                          <a href="http://www.royalcaribbean.com.hk/harmonyoftheseas"><img u="image"  src="../images/Harmony-cn.jpg" /></a>
+                          <a href="http://www.royalcaribbean.com.hk/tc/order-a-brochure.php"><img u="image"  src="../images/Royal-Cruise_Web-CN_v2.jpg" /></a>
                       </li>
                       <li>
                           <a href="http://www.royalcaribbean.com.hk/royalsuite2016/hk"><img u="image" src="../images/royalsuite2016-cn.jpg" /></a>

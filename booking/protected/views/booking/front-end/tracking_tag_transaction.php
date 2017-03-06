@@ -4,35 +4,31 @@ Remarketing tags may not be associated with personally identifiable information 
 --------------------------------------------------->
 
 <?php
-$page = $_SERVER['SCRIPT_NAME'];
-// // travel_destid
-// $destid = trim($page, "/booking/index.php/booking/stepone/id/");
 
-
-// startdate
-
-// enddate
+$page = $_SERVER['REQUEST_URI'];
 
 // travel_pagetype
 $page_type = '';
 
-  if($page == '/tc/index.php'){
-    $page_type = 'home';
-  }elseif ($page == '/tc/result.php') {
-    $page_type = 'searchresults';
+  if($page == '/booking/index.php/booking/thankyou'){
+    $page_type = 'conversion';
   }else {
-    $page_type = 'other';
+    $page_type = 'conversionintent';
   }
 
-// totalvalue
-
 ?>
-
-<script type="text/javascript">
-var google_tag_params = {
- travel_pagetype: <?php echo $page_type ?>,
-};
-</script>
+<?php
+// var_dump($_SESSION['captcha']);
+ ?>
+ <script type="text/javascript">
+ var google_tag_params = {
+   travel_destid: <?php echo $_SESSION['captcha']['destid']; ?>,
+   travel_startdate: <?php echo $_SESSION['captcha']['startdate']; ?>,
+   travel_enddate: <?php echo $_SESSION['captcha']['enddate']; ?>,
+   travel_pagetype: <?php echo $page_type ?>,
+   travel_totalvalue: <?php echo $_SESSION['captcha']['totalvalue'] ?>,
+ };
+ </script>
 
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -60,4 +56,4 @@ var google_remarketing_only = true;
 <!-- Xaxis -->
 <!-- Lightning Bolt Begins -->
     <script type="text/javascript" id="lightning_bolt" src="//cdn-akamai.mookie1.com/LB/LightningBolt.js"></script>
-    <!-- Lightning Bolt Ends -->
+<!-- Lightning Bolt Ends -->     

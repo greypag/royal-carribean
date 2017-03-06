@@ -1,3 +1,11 @@
+<?php include 'tracking_tag_transaction.php'; ?>
+
+<script type="text/javascript">
+//         var lbTrans = <?php echo $booking_item->booking_id ?>;
+        var lbValue = <?php echo $_SESSION['captcha']['totalvalue'] ?>;
+//         var lbData = '[Attribute/Value Pairs for Custom Data]';
+    </script>
+
 <div class="header">
     <ul>
         <li class="stepone"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>
@@ -15,7 +23,7 @@
     </div>
     <div class="row">
         <div class="thankyou-msg">
-            <?php echo str_replace("{CODE}", $code ,Yii::t('booking', 
+            <?php echo str_replace("{CODE}", $code ,Yii::t('booking',
             'Your Booking Reference Number is <span>{CODE}</span><br />
             Details of cruise document will be sent to you within the next two working days. <br />
             Meanwhile, you can plan your onboard agenda with various add-on package options. <br />

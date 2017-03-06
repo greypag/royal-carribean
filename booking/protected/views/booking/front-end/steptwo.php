@@ -3,6 +3,9 @@ $isnt_EN = Yii::app()->language == 'en' ? true : false;
 Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
 $nowTimeStamp = strtotime("now");
 ?>
+
+<?php include 'tracking_tag_transaction.php'; ?>
+
 <div class="header">
     <ul>
         <li class="stepone"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>
@@ -56,7 +59,7 @@ $nowTimeStamp = strtotime("now");
 
                 <div class="guests row">
                     <div class="row title">
-                        <h1> 
+                        <h1>
                             <?php
 							echo Yii::t('booking', 'Guest');
                             echo $i + 1;
@@ -435,7 +438,7 @@ $nowTimeStamp = strtotime("now");
             ?>
             <div class="row buttons">
 
-				
+
                 <?php
 					if ($isnt_EN) {
 						echo GxHtml::imageButton(Yii::app()->request->baseUrl . '/images/icons/btn_prev.png', array('class' => 'btn_prev'));
@@ -444,7 +447,7 @@ $nowTimeStamp = strtotime("now");
 					}
 				?>
                 <span class="next">
-                    <?php 
+                    <?php
 					if ($isnt_EN) {
 						echo GxHtml::imageButton(Yii::app()->request->baseUrl . '/images/icons/btn_next.png', array('class' => 'ajaxBtn', 'data-url' => Yii::app()->createAbsoluteUrl("booking/steptwo"), 'data-nexturl' => Yii::app()->createAbsoluteUrl("booking/stepthree")));
 					}else{
@@ -469,7 +472,7 @@ $nowTimeStamp = strtotime("now");
         <div class="box">
             <h2><?php echo Yii::t('booking', 'YOUR CRUISE'); ?></h2>
             <hr/>
-            <?php //echo $itineraryModel->getAttributeLabel('port_of_departure'); 
+            <?php //echo $itineraryModel->getAttributeLabel('port_of_departure');
 			echo Yii::t('booking', 'Port of Departure');
 			?>: <br/>
             <b><?php echo $cookies[0]; ?></b>
@@ -485,7 +488,7 @@ $nowTimeStamp = strtotime("now");
             <hr/>
             <?php echo Yii::t('booking', 'Sailing Date'); ?>:<br/>
             <b><?php echo $cookies[2]; ?></b> - <br/>
-            <b><?php echo $cookies[3]; ?></b>            
+            <b><?php echo $cookies[3]; ?></b>
             <br/>
             <?php
             echo $cookies[10];
@@ -507,7 +510,7 @@ $nowTimeStamp = strtotime("now");
                   "><?php echo Yii::t('booking', '(include taxes, fees and port expenses)'); ?>
             </span>
             <div class="price">
-                <b>$</b> <h2 id="totalPrice"><?php echo $cookies[8]; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b> 
+                <b>$</b> <h2 id="totalPrice"><?php echo $cookies[8]; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
             </div>
             <div class="remark">
                 <!--View Summary of Charges,<br/>

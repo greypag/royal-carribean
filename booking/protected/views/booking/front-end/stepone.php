@@ -23,10 +23,42 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
 				'fitToView': false,
 				'autoSize': false
 			});
-			
+
 		});
 })();
 </script>
+
+<?php
+$session=new CHttpSession;
+$session->open();
+$page = $_SERVER['REQUEST_URI'];
+  // travel_destid
+    $destid = trim($page, "/booking/index.php/booking/stepone/id/");
+
+  // startdate
+    $startdate = $model ->start_date;
+    $startdate = str_replace('/', '-', $startdate);
+    $startdate = date('Y-m-d', strtotime($startdate));
+
+  // enddate
+    $enddate = $model->end_date;
+    $enddate = str_replace('/', '-', $enddate);
+    $enddate = date('Y-m-d', strtotime($enddate));
+
+  // totalvalue
+  $totalvalue = $totalPrice;
+
+  $session['captcha'] = [
+    'destid' => $destid,
+    'startdate' => $startdate,
+    'enddate' => $enddate,
+    'totalvalue' => $totalvalue
+  ];
+$session->close();
+?>
+
+<?php include 'tracking_tag_transaction.php'; ?>
+
 <div class="header">
     <ul>
         <li class="stepone current"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>
@@ -85,7 +117,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
 
             <div class="row">
                 <div class="col">
-                    <?php 
+                    <?php
 					//echo $form->label($model, 'port_of_departure'); //echo $form->labelEx($model, 'port_of_departure');
 					echo Yii::t('booking', 'Port of Departure');
 					?>:<br/>
@@ -100,11 +132,11 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                 <div class="col">
 
                     <?php echo $form->hiddenField($model['cruise'], 'cruise_id'); ?>
-                    <?php 
+                    <?php
 					echo Yii::t('booking', 'Ship');
 					//echo $form->label($model['cruise'], 'cruise_name'); //echo $form->labelEx($model['cruise'], 'cruise_name'); ?>:<br/>
                     <?php
-                    //echo CHtml::textField("cruise_name", $model['cruise']->cruise_name, array('readonly' => true)); 
+                    //echo CHtml::textField("cruise_name", $model['cruise']->cruise_name, array('readonly' => true));
 
                     if ($isnt_EN) {
                         echo $form->dropDownList($model['cruise'], 'cruise_name', array($model['cruise']->cruise_name => $model['cruise']->cruise_name), array('disabled' => true, 'style' => 'width:250px'));
@@ -120,14 +152,14 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                 <div class="col">
                     <label for="Itinerary_adults"><?php echo Yii::t('booking', 'Adults'); ?>:</label><br/>
                     <?php
-					
+
 					$arrayDisableOptions = array();
-					
+
 					if( !($roomsModelData[0]['rt']->rt_capacity >2) ){
 					//echo $roomsModelData[0]['rt']->rt_capacity;
 						$arrayDisableOptions = array( 3=>array('disabled'=>'disabled'), 4 => array('disabled'=>'disabled'));
 					}
-					
+
                     echo CHtml::dropDownList('Others[adults]', null, array('1' => '1', '2' => '2', '3' => '3', '4' => '4'), array(
                         'style' => 'width:100px',
                         'class' => 'dynamic_dropDown',
@@ -140,18 +172,18 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                 <div class="col">
                     <label for="Itinerary_children"><?php echo Yii::t('booking', 'Children'); ?>:</label><br/>
                     <?php
-					
+
 					$arrayDisableOptions = array();
-					
+
 					if( !($roomsModelData[0]['rt']->rt_capacity >2) ){
 					//echo $roomsModelData[0]['rt']->rt_capacity;
 						$arrayDisableOptions = array( 2=>array('disabled'=>'disabled'), 3=>array('disabled'=>'disabled'));
 					}
-					
+
                     echo CHtml::dropDownList(
-							'Others[child]', 
-							null, 
-							array('0' => '0', '1' => '1', '2' => '2', '3' => '3'), 
+							'Others[child]',
+							null,
+							array('0' => '0', '1' => '1', '2' => '2', '3' => '3'),
 							array(
 								'style' => 'width:100px',
 								'class' => 'dynamic_dropDown',
@@ -167,7 +199,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                     <?php
 //echo CHtml::textField("cruise_room", '1', array('readonly' => true)
                     echo CHtml::dropDownList('cruise_room', null, array('1' => '1'), array('disabled' => true, 'style' => 'width:100px'));
-//); 
+//);
                     ?>
                 </div>
                 <div class="clear"></div>
@@ -178,8 +210,8 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
             <div class="row">
 				<b>
 					<label for="Others[promotion_code]">
-					<?php 
-					//echo $promoModel->getAttributeLabel('promotion_code'); 
+					<?php
+					//echo $promoModel->getAttributeLabel('promotion_code');
 					echo Yii::t('booking', 'Promotion Code');
 					?>:</label>
 				</b>
@@ -193,18 +225,18 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                     'dataType' => 'json',
                     'success' => 'js:function(data){
                 loadbtn = $("#Others_promotion_code_btn");
-                setTimeout(function(){ 
+                setTimeout(function(){
                 loadbtn.removeClass("active");
                 if(data.result==="fail"){
 
                 loadbtn.siblings(".prmo_name").html("");
-                alert(data.data);   
+                alert(data.data);
                 }else if( data.result === "success"){
 
                 //console.log(data.data);
                 //loadbtn.siblings(".prmo_name").html(data.data.promotion_name + " have been loaded !");
                 loadbtn.siblings(".prmo_name").html("Promotion Code have been loaded successfully!");
-                
+
                 royalObject.calutionPrice(royalObject.getSelectedRoom(), data.data);
                 //$(data.formID).find(".errorMessage").hide();
                 }
@@ -267,32 +299,32 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                 ));
                 ?>
                 <br/><br/>
-				
-                <b class="black"><?php echo Yii::t('booking', 'If the above options do not meet your choice, please contact our customer service officer at +852 3189 3200 or fill out the equiry form'); ?> 
-				
-				<?php 
+
+                <b class="black"><?php echo Yii::t('booking', 'If the above options do not meet your choice, please contact our customer service officer at +852 3189 3200 or fill out the equiry form'); ?>
+
+				<?php
 				if ($isnt_EN) {
 				?>
 					<a href="http://www.royalcaribbean.com.hk/en/enquiry.php"><?php echo Yii::t('booking', 'click here'); ?></a>.
-				<?php 
+				<?php
                 } else {
 				?>
 					<a href="http://www.royalcaribbean.com.hk/tc/enquiry.php"><?php echo Yii::t('booking', 'click here'); ?></a>.
-				<?php 
+				<?php
                 }
 				?>
 				</b>
-				
+
                 <br/><br/>
                 <div class="js-event-log"></div>
                 <div class="rooms">
                     <?php
                     //CVarDumper::dump($roomsModelData, 10, true);
-					
+
 
 					//CVarDumper::dump($roomsModelData 10, true);
 					//exit();
-						
+
                     foreach ($roomsModelData as $key => $roomModelData) {
 
 
@@ -301,7 +333,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                             'rt_id' => $roomModelData["rt"]["sys_rt_id"],
                             'status' => 'available',
                         ));
-						
+
                         $disable = 'false';
                         if ($roomInventory <= 0) {
                             $disable = 'true';
@@ -326,16 +358,16 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                           }
                          */
                         ?>
-                        <div id="room_<?php echo $roomModelData->irt_id; ?>" class="roomDesc"  
-                             data-capacity="<?php echo $roomModelData['rt']->rt_capacity; ?>"  
-                             data-fare1="<?php echo $roomModelData->fare_guest1_2; ?>" 
-                             data-fare2="<?php echo $roomModelData->fare_guest3_4; ?>"  
-                             data-taxes="<?php echo Yii::app()->format->unformatNumber($model->taxes_fee); ?>" 
+                        <div id="room_<?php echo $roomModelData->irt_id; ?>" class="roomDesc"
+                             data-capacity="<?php echo $roomModelData['rt']->rt_capacity; ?>"
+                             data-fare1="<?php echo $roomModelData->fare_guest1_2; ?>"
+                             data-fare2="<?php echo $roomModelData->fare_guest3_4; ?>"
+                             data-taxes="<?php echo Yii::app()->format->unformatNumber($model->taxes_fee); ?>"
                              data-port="0<?php //echo Yii::app()->format->unformatNumber($model->port_expenses);                                                   ?>"
                              data-ncff="<?php echo Yii::app()->format->unformatNumber($model->ncff); ?>"
                              data-disable="<?php echo $disable; ?>"
                              data-rt_id="<?php echo $roomModelData['rt']->sys_rt_id; ?>"
-                             >   
+                             >
                             <table>
                                 <tbody>
                                     <tr>
@@ -378,30 +410,30 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                                             ?>
                                             <div>
                                                 <?php
-                                                //echo $form->labelEx($roomModelData, 'fare_guest1_2'); 
+                                                //echo $form->labelEx($roomModelData, 'fare_guest1_2');
                                                 echo Yii::t('booking', 'Cruise Fare per head for first and second guest');
                                                 ?>:
                                                 HK$ <?php echo Yii::app()->format->formatNumber($roomModelData->fare_guest1_2 + Yii::app()->format->unformatNumber($model->ncff)); ?>
                                                 <br/>
-												
-												<?php 
+
+												<?php
 												if( $roomModelData['rt']->rt_capacity >2 ){
 												?>
                                                 <?php
                                                 echo Yii::t('booking', 'Cruise Fare per head for third and forth guest');
-                                                //echo $form->labelEx($roomModelData, 'fare_guest3_4'); 
+                                                //echo $form->labelEx($roomModelData, 'fare_guest3_4');
                                                 ?>:
                                                 HK$ <?php echo Yii::app()->format->formatNumber($roomModelData->fare_guest3_4 + Yii::app()->format->unformatNumber($model->ncff)); ?>
                                                 <br/>
 												<?php
-												}	
+												}
 												?>
-												
-												
+
+
 												<br/>
                                                 <?php
                                                 echo Yii::t('booking', 'Single Supplement');
-                                                //echo $form->labelEx($roomModelData, 'fare_guest3_4'); 
+                                                //echo $form->labelEx($roomModelData, 'fare_guest3_4');
                                                 ?>:
                                                 HK$ <?php echo Yii::app()->format->formatNumber(Yii::app()->format->calculateSingleSupplement($roomModelData, $model)); ?>
                                                 <br/>
@@ -466,12 +498,12 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
         <div class="box">
             <h2><?php echo Yii::t('booking', 'YOUR CRUISE'); ?></h2>
             <hr/>
-            <?php //echo $form->label($model, 'port_of_departure'); 
+            <?php //echo $form->label($model, 'port_of_departure');
 			echo Yii::t('booking', 'Port of Departure');
-			
-			?>: <br/> 
+
+			?>: <br/>
             <?php
-            //echo $form->labelEx($model, 'port_of_departure'); 
+            //echo $form->labelEx($model, 'port_of_departure');
             ?>
             <b>
 			<?php
@@ -556,7 +588,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
                   "><?php echo Yii::t('booking', '(include taxes, fees and port expenses)'); ?>
             </span>
             <div class="price">
-                <b>$</b> <h2 id="totalPrice"><?php //echo $totalPrice;                                ?></h2> <b> HKD</b> 
+                <b>$</b> <h2 id="totalPrice"><?php //echo $totalPrice;                                ?></h2> <b> HKD</b>
             </div>
             <div class="remark">
                 <!--View Summary of Charges,<br/>
@@ -571,24 +603,24 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
 <script>
 
 $(window).load(function() {
-    <?php 
-        if ($isnt_EN) { 
-            if ($model->alert_message != '' && !is_null($model->alert_message) ) { 
+    <?php
+        if ($isnt_EN) {
+            if ($model->alert_message != '' && !is_null($model->alert_message) ) {
     ?>
                 var alert_message = "<?php echo $model->alert_message;?>";
                 alert(alert_message);
 
-    <?php    
+    <?php
             }
         }
         else {
-            if ($model->alert_message_tc != '' && !is_null($model->alert_message_tc) ) { 
+            if ($model->alert_message_tc != '' && !is_null($model->alert_message_tc) ) {
     ?>
                 var alert_message = "<?php echo $model->alert_message_tc;?>";
                 alert(alert_message);
-    <?php 
+    <?php
             }
-        } 
+        }
     ?>
 });
 

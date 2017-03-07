@@ -8,6 +8,9 @@
 $isnt_EN = Yii::app()->language == 'en' ? true : false;
 Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
 ?>
+
+<?php include 'tracking_tag_transaction.php'; ?>
+
 <div class="header">
     <ul>
         <li class="stepone"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>
@@ -54,7 +57,7 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
                             <td><?php echo Yii::t('booking', 'Room'); ?>: <b>1</b></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><?php echo Yii::t('booking', 'Stateroom '); ?>: 
+                            <td colspan="2"><?php echo Yii::t('booking', 'Stateroom '); ?>:
                                 <b><?php echo $cookies['display'][7]; ?></b>
                                 <br/>
                                 <span style="font-size: 12px;"><?php echo Yii::t('booking', '(Stateroom number will be assigned according to the best availability)'); ?></span>
@@ -174,7 +177,7 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
 
             <div class="row"
                  style="
-                 //font-size: 9px;      
+                 //font-size: 9px;
                  //-webkit-transform: scale(0.9);
                  "
                  >
@@ -201,9 +204,9 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
 						echo GxHtml::link(GxHtml::imageButton(Yii::app()->request->baseUrl . '/images/icons/btn_next_tc.png'), Yii::app()->createUrl('booking/stepfour'));
 					}*/
 					if ($isnt_EN) {
-						echo GxHtml::link(CHtml::image(Yii::app()->request->baseUrl . '/images/icons/btn_next.png'), Yii::app()->createUrl('booking/stepfour')); 
+						echo GxHtml::link(CHtml::image(Yii::app()->request->baseUrl . '/images/icons/btn_next.png'), Yii::app()->createUrl('booking/stepfour'));
 					} else {
-						echo GxHtml::link(CHtml::image(Yii::app()->request->baseUrl . '/images/icons/btn_next_tc.png'), Yii::app()->createUrl('booking/stepfour')); 
+						echo GxHtml::link(CHtml::image(Yii::app()->request->baseUrl . '/images/icons/btn_next_tc.png'), Yii::app()->createUrl('booking/stepfour'));
 					}
 					?>
                 </span>
@@ -216,8 +219,8 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
         <div class="box">
             <h2><?php echo Yii::t('booking', 'YOUR CRUISE'); ?></h2>
             <hr/>
-            <?php 
-			//echo $itineraryModel->getAttributeLabel('port_of_departure'); 
+            <?php
+			//echo $itineraryModel->getAttributeLabel('port_of_departure');
 			echo Yii::t('booking', 'Port of Departure');
 			?>: <br/>
             <b><?php echo $cookies['display'][0]; ?></b>
@@ -233,7 +236,7 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
             <hr/>
             <?php echo Yii::t('booking', 'Sailing Date'); ?>:<br/>
             <b><?php echo $cookies['display'][2]; ?></b> - <br/>
-            <b><?php echo $cookies['display'][3]; ?></b>            
+            <b><?php echo $cookies['display'][3]; ?></b>
             <br/>
             <?php
             echo $cookies['display'][10];
@@ -255,7 +258,7 @@ Yii::app()->royalCaribbeanHelper->echoTimerScript($twentyTimeStamp);
                   "><?php echo Yii::t('booking', '(include taxes, fees and port expenses)'); ?>
             </span>
             <div class="price">
-                <b>$</b> <h2 id="totalPrice"><?php echo $cookies['display'][8]; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b> 
+                <b>$</b> <h2 id="totalPrice"><?php echo $cookies['display'][8]; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
             </div>
             <div class="remark">
                 <!--View Summary of Charges,<br/>

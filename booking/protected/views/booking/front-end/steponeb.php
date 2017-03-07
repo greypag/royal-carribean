@@ -11,6 +11,10 @@
         })
     });
 </script>
+
+<?php include 'tracking_tag_transaction.php'; ?>
+
+
 <div class="header">
     <ul>
         <li class="stepone current"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>

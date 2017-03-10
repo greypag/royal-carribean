@@ -120,7 +120,7 @@ $(document).ready(function (){
             	<a>航線行程</a>
                 <ul>
                 	<li><a href="result.php">預訂行程</a></li>
-					<li><a href="order-a-brochure.php">預訂國際航線小冊子</a></li>
+					<li><a href="order-a-brochure.php">訂閱國際航線行程小冊子</a></li>
 					<li><a href="shoreExcursions.php">岸上觀光</a></li>
 					<li><a href="departure-port-hong-kong.php">亞洲出發</a></li>
 					<li><a href="top-10-destinations.php">全球十大航綫</a></li>

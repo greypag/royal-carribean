@@ -363,8 +363,9 @@ background-size: cover;'><!--class="fleet" -->
 </div>
 <div class="page_contentbox" style='width:962px;display:block;'>
 
-  <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">
-    <div style="width: 962px;float: left;margin: 250px 0 0 0; background: url(../newimages/filter_tc.jpg) 20px 50px no-repeat;">
+  <!--<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">-->
+<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/result-20170307-tc.jpg) no-repeat">
+    <div style="width: 962px;float: left;margin: 310px 0 0 0; background: url(../newimages/filter_tc.jpg) 20px 50px no-repeat;">
       <div style="width: 962px;float: left; margin: 50px 10px 10px 10px; ">
         <div style="padding: 60px 40px 20px;">
           <span>篩選:<span>
@@ -444,6 +445,5 @@ background-size: cover;'><!--class="fleet" -->
       </div>
   </div>
 </div>
-
 
 <?php include 'pageFoot.php'; ?>

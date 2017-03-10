@@ -1,31 +1,29 @@
 {
-    "fares":[
-        {
-            "title" : "",
-            "submitTitle" : "",
-            "image" : "RCI_Caribbean_Autumn_Promotion.jpg",
-            "file" : "RCI_Caribbean_Autumn_Promotion.jpg"
-        },
-        {
-            "title" : "",
-            "submitTitle" : "",
-            "image" : "AD Royal Caribbean SS-SK_v6-01.jpg",
-            "file" : "AD Royal Caribbean SS-SK_v6-01.pdf"
-        },
-        {
-            "title" : "",
-            "submitTitle" : "",
-            "image" : "2016_summer.jpg",
-            "file" : "Royal Caribbean Summer 2016.pdf"
-        },
-        {
-            "title" : "",
-            "submitTitle" : "",
-            "image" : "20160422_presscon_SkyPost_VY2016_265x327.jpg",
-            "file" : "20160422_presscon_SkyPost_VY2016_265x327.pdf"
-        }
-    ],
-    "agents":[
+   "fares":[
+     {
+        "title" : "",
+        "submitTitle" : "",
+        "image" : "RCI 2017 Itinerary Flyer OV(Okinawa Roadshow version)_FINAL.png",
+        "file" : "RCI 2017 Itinerary Flyer OV(Okinawa Roadshow version)_FINAL.PDF",
+        "xximage" : "RCI 2017 Itinerary Flyer VY(March version)_11.jpg",
+        "xxfile" : "RCI 2017 Itinerary Flyer VY(March version)_11.pdf"
+    },
+    {
+       "title" : "",
+       "submitTitle" : "",
+       "image" : "RCI 2017 Itinerary Flyer VY(Okinawa Roadshow version)_FINAL.png",
+       "file" : "RCI 2017 Itinerary Flyer VY(Okinawa Roadshow version)_FINAL.PDF",
+       "xximage" : "RCI 2017 Itinerary Flyer OV(March version)_9.jpg",
+       "xxfile" : "RCI 2017 Itinerary Flyer OV(March version)_9.pdf"
+  },
+     {
+        "title" : "",
+        "submitTitle" : "",
+        "image" : "BOGO60-Promo-Flyer.jpg",
+        "file" : "BOGO60 Promo Flyer.pdf"
+    }
+],
+   "agents":[
         {
             "image" : "travel_logo_01.gif",
             "hotline" : "23157287",

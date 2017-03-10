@@ -11,7 +11,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
 ?>
 <script src="/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
 <link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-<script>(function(){
+<script>(function(){/*
 	var url = "/booking/popup/stepone.<?php echo Yii::app()->language ?>.php";
 	$.get(url)
 		.done(function() {
@@ -25,7 +25,7 @@ $date_format = $isnt_EN ? Yii::app()->params->dateFormat['display_StepLong'] : Y
 			});
 
 		});
-})();
+*/})();
 </script>
 
 <?php

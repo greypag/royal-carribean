@@ -288,14 +288,15 @@
     </div>
     <div class="page_contentbox" style='width:962px;display:block;'>
 
-        <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">
+        <!--<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">-->
+          <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/result-20170307-en.jpg) no-repeat">
 			<div class="descBox banner-margin-top margin-20-30 marineBlue">
 				<h1 class="descBox__title">Plan a Cruise: Check Out Our Many Cruises Departing from Hong Kong or Many More Worldwide Ports</h1>
 				<div class="descBox__desc">Plan your next trip with the Royal Caribbean cruise planner. Check any of our upcoming cruise information, deals and destinations. Start by identifying a cruise ship and your ideal departure date. There are plenty of vessels to choose from such as the Voyager of the Seas, Quantum of the Seas, Ovation of the Seas, Harmony of the Seas and more. For specific Hong Kong cruise itinerary, you may download flyers to find out more information. There's a ship and destination for everyone. We are looking forward to having you aboard!</div>
 			</div>
-            <div style="width: 962px;float: left; background: url(../newimages/filter_en.jpg) 20px 50px no-repeat;">
-                <div style="width: 962px;float: left; margin: 50px 10px 10px 10px; ">
-                    <div style="padding: 60px 40px 20px;">
+            <div style="width: 962px;float: left; background: url(../newimages/filter_en.jpg) 20px 0px no-repeat;">
+                <div style="width: 962px;float: left; margin: 20px 10px 10px 10px; ">
+                    <div style="padding: 40px 40px 20px;">
                         <span>Filter:<span>
                                 <!--
                                         <select id="departureDate" style="width:80px">
@@ -368,5 +369,11 @@
                                     </div>
                                 </div>
                                 </div>
+
+<style>
+.descBox.banner-margin-top {
+    margin-top: 360px;
+}
+</style>
 
                                 <?php include 'pageFoot.php'; ?>

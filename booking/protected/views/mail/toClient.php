@@ -8,6 +8,10 @@ Your reservation details:<br /><br />
         <td><?php echo $bookingID; ?></td>
     </tr>
     <tr>
+        <td>Reservation ID:</td>
+        <td><?php echo $reservationID; ?></td>
+    </tr>
+    <tr>
         <td>Itinerary Booked:</td>
         <td><?php echo $itinerary; ?></td>
     </tr>

@@ -282,6 +282,24 @@
       -o-background-size: cover;
       background-size: cover;'><!--class="fleet" -->
 <?php include 'tracking_tag.php'; ?>
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: SLT 1en - Cruise Search (EN)
+URL of the webpage where the tag is expected to be placed: http://www.royalcaribbean.com.hk/en/result.php
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 02/27/2017
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6589353;type=visit0;cat=slt1e0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6589353;type=visit0;cat=slt1e0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
     <div style='height:92px; width:962px; margin:auto; position:relative' >
         <?php include 'pageMenu.php'; ?>
         <div style="width: 920px; position: absolute; color: #444; line-height: 35px; left: 8px; top: 71px;"><a href="index.php">Home</a> &gt; <a href="result.php">Plan a Cruise</a></div>

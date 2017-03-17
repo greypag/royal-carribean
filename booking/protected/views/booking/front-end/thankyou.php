@@ -18,7 +18,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
 <script type="text/javascript">
-//         var lbTrans = <?php echo $booking_item->booking_id ?>;
+//         var lbTrans = <?php // echo $booking_item->booking_id ?>;
         var lbValue = <?php echo $_SESSION['captcha']['totalvalue'] ?>;
 //         var lbData = '[Attribute/Value Pairs for Custom Data]';
     </script>

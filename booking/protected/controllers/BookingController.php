@@ -956,12 +956,20 @@ class BookingController extends GxController {
                                     $mail2Sale->send();
 
 
+                                    /* $this->deleteCookies();
+                                    Yii::app()->session->clear();
+                                    Yii::app()->session->destroy();
+                                    */
+
+                                    $this->redirect(array('booking/thankyou/code/' . base64_encode($refNumber)));
+                                    //$this->redirect(array('booking/thankyou/code/' . base64_encode($paymentResponse["reservationID"])));
+
+                                    // Thank you page requires transaction variables for tracking purposes.
+                                    // Move cookie/session deletion after the thank you page.
                                     $this->deleteCookies();
                                     Yii::app()->session->clear();
                                     Yii::app()->session->destroy();
 
-                                    $this->redirect(array('booking/thankyou/code/' . base64_encode($refNumber)));
-                                    //$this->redirect(array('booking/thankyou/code/' . base64_encode($paymentResponse["reservationID"])));
                                     Yii::app()->end();
 
 								} else {

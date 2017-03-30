@@ -114,15 +114,17 @@ class ELangPick extends CPortlet {
                     //Sai created that if.
                     if ($trans == 'zh_tw') {
                         //CVarDumper::dump($trans == 'zh_tw', 10, true);
-                        echo CHtml::link('中文', Yii::app()->homeUrl, array('class' => (Yii::app()->getLanguage() == $trans ? 'active' : 'inactive'), 'submit' => '', 'params' => array('languagePicker' => $trans))) . ($trans === end($translations) ? '' : $this->linksSeparator);
+                        echo CHtml::link('中文', '?lang=zh_tw', array('class' => (Yii::app()->getLanguage() == $trans ? 'active' : 'inactive'), 'submit' => '', 'params' => array('languagePicker' => $trans))) . ($trans === end($translations) ? '' : $this->linksSeparator);
                     } else if ($trans == 'en') {
-                        echo CHtml::link(strtoupper('ENGLISH'), Yii::app()->homeUrl, array('class' => (Yii::app()->getLanguage() == $trans ? 'active' : 'inactive'), 'submit' => '', 'params' => array('languagePicker' => $trans))) . ($trans === end($translations) ? '' : $this->linksSeparator);
+                        echo CHtml::link(strtoupper('ENGLISH'), '?lang=en', array('class' => (Yii::app()->getLanguage() == $trans ? 'active' : 'inactive'), 'submit' => '', 'params' => array('languagePicker' => $trans))) . ($trans === end($translations) ? '' : $this->linksSeparator);
                     }
                     //echo CHtml::link(strtoupper($trans), Yii::app()->homeUrl, array('class' => (Yii::app()->getLanguage() == $trans ? 'active' : 'inactive'), 'submit' => '', 'params' => array('languagePicker' => $trans))) . ($trans === end($translations) ? '' : $this->linksSeparator);
                 }
                 break;
         }
         echo '</div>';
+        echo '<script>if ( location.search && location.search.length > "?lang=zh_tw".length ) 
+            $( "#languagePickerContainer a" ).each( function(){ this.href = location.search + "&" + this.getAttribute("href").substring(1) } ) </script>';
     }
 
     /**

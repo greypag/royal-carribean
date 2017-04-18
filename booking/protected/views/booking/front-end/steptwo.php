@@ -10,7 +10,7 @@ $nowTimeStamp = strtotime("now");
 Start of DoubleClick Floodlight Tag: Please do not remove
 Activity name of this tag: SLT 4 - Information (Step 2)
 URL of the webpage where the tag is expected to be placed: http://www.royalcaribbean.com.hk/booking/index.php/booking/steptwo
-This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+This tag must be placed between the body tags, as close as possible to the opening tag.
 Creation Date: 02/27/2017
 -->
 <script type="text/javascript">

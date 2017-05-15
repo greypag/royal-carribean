@@ -247,9 +247,10 @@ $(document).ready(function (){
 			<li class="col3">
 				<a>GET ROYAL DEALS</a>
 				<ul>
-                	<li><a href="get-royal-deals.php">GET ROYAL DEALS</a></li>
-                	<li><a href="royal-deals.php">SIGN UP NOW</a></li>
-                </ul>
+						<li><a href="get-royal-deals.php">Selected Sailing</a></li>
+						<li><a href="promotions.php">Promotions</a></li>
+						<li><a href="royal-deals.php">Sign Up Now</a></li>
+					</ul>
 			</li>
 			<li class="col4">
 				<a>ALL ABOUT CRUISING</a>

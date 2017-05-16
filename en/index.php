@@ -73,8 +73,11 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 
 				<div class="flexslider">
                   <ul class="slides">
+										<li>
+											 <a href="http://www.royalcaribbean.com.hk/en/result.php"><img u="image" src="../images/RCI Mother Day Web Banner_English_FINAL.jpg" /></a>
+										</li>
                       <li>
-                          <a href="http://www.royalcaribbean.com.hk/en/promotions.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion2_ENG_V3.jpg" /></a>
+                          <a href="http://www.royalcaribbean.com.hk/en/result.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion_Eng_v3.jpg" /></a>
                       </li>
                       <li>
                           <a href="http://www.royalcaribbean.com.hk/en/order-a-brochure.php"><img u="image"  src="../images/Royal-Cruise_Web-Eng_v2.jpg" /></a>
@@ -85,8 +88,8 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
                   </ul>
 				</div>
 
-				<div style="position:absolute;left:0;bottom:65px;width:100%;height:5px;background:#f9b934"></div>
-				<div style="position:absolute;left:0;bottom:60px;width:100%;height:5px;background:#0d1b59"></div>
+				<div style="position:absolute;left:0;bottom:60px;width:100%;height:5px;background:#f9b934"></div>
+				<div style="position:absolute;left:0;bottom:55px;width:100%;height:5px;background:#0d1b59"></div>
 
 			</div>
 
@@ -148,7 +151,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 		</div>
 
         <div style="width:225px; position:relative; float:left; text-align:left; margin:5px; text-align:center;">
-            <h3 style="width:225px; text-algin:left;padding:0px; margin:0px;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold">QN @ HK</h3>
+            <h3 style="width:225px; text-algin:left;padding:0px; margin:0px;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold">OV @ HK</h3>
             <div style="width:225px; text-align:center;">
 				<a id="video" class="fancybox.iframe" href="http://www.youtube.com/embed/50jZhxEPjsk?autoplay=1" >
 					<img src="../newimages/index/video-split.jpg" />

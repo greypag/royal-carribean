@@ -202,7 +202,7 @@ $(document).ready(function (){
             	<a>皇家船隊</a>
                 <ul>
                 	<li><a href="onboard-experience.php">海洋航行者號</a></li>
-                	<li><a href="quantum.php">海洋量子號</a></li>
+                	<li><a href="ovation.php">海洋贊禮號</a></li>
 					<li><a href="royal-fleet.php">皇家全球船隊</a></li>
                 </ul>
             </li>

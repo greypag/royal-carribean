@@ -128,12 +128,27 @@ span.feedback-failed {
 			</p><p>
 			Nothing makes planning your vacation easier than flipping through our new brochure. From quick escapes to long getaways, there are adventures for every style. Start dreaming now and discover every corner of the globe on the best ships at sea.
 			</p><p>
-			Want to check out the brochure right now? Click on our e-brochure links below. Still want to hold and flip through real pages? Go ahead and fill out form below so we can mail one right away. Don't forget to check the box so we can email you special offers too.
+			Want to check out the brochure right now? Click on our e-brochure links below. Still want to hold and flip through real pages? Go ahead and fill out form below so we can mail one right away (for international sailing only). Don't forget to check the box so we can email you special offers too.
 			</p>
 			<table style="width:100%">
 				<tr>
-					<td style="width:25%;vertical-align:middle;text-align:center"></td>
-					<td style="width:50%;vertical-align:middle;text-align:center">
+					<td style="width:33.3333%;vertical-align:top;text-align:center;padding-right:10px">
+						<img src="../newimages/VY_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<div style="display:inline-block;text-align:left;">
+						View our Voyager of the Seas ebrochures for:
+						</br>
+						<a href="../pdf/2017 Feb VY Brochure_FINAL.pdf" target="_blank" style="color:#0073BB;">2017 Hong Kong Homeport Sailing</a>
+						</div>
+					</td>
+					<td style="width:33.3333%;vertical-align:top;text-align:center">
+						<img src="../newimages/OV_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<div style="display:inline-block;text-align:left;">
+						View our Ovation of the Seas ebrochures for:
+						</br>
+						<a href="../pdf/OV Brochure 2017_FINAL.pdf" target="_blank" style="color:#0073BB;">2017 Hong Kong Homeport Sailing</a>
+						</div>
+					</td>
+					<td style="width:33.3333%;vertical-align:top;text-align:center;padding-left:10px">
 						<img src="../newimages/usa_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
 						<div style="display:inline-block;text-align:left;">
 						View our 2017-2018 ebrochures for:
@@ -149,7 +164,6 @@ span.feedback-failed {
 						<a href="http://viewer.zmags.com/publication/8801a76b" target="_blank" style="color:#0073BB;">Alaska & Canada Cruisetours</a>
 						</div>
 					</td>
-					<td style="width:25%;vertical-align:middle;text-align:center"></td>
 				</tr>
 			</table>
 

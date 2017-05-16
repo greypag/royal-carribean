@@ -64,6 +64,7 @@
 				<div class="right08s_2">
 					<ul>
 						<li><a onClick="Start_Select('ship','Voyager of the Seas')">Voyager of the Seas</a></li>
+						<li><a onClick="Start_Select('ship','Ovation of the Seas')">Ovation of the Seas</a></li>
 						<li><a onClick="Start_Select('ship','Allure of the Seas')">Allure of the Seas</a></li>
 						<li><a onClick="Start_Select('ship','Anthem of the Seas')">Anthem of the Seas</a></li>
 						<li><a onClick="Start_Select('ship','Brilliance of the Seas')">Brilliance of the Seas</a></li>
@@ -101,12 +102,12 @@ function Start_Select(s_type, s_value, s_text ) {
 	$("#s_year_list,#s_month_list,#s_ship_list,#s_port_list").hide();
 	if ( s_type === 'port' ) {
 		Start_Select( 'ship', {
-			'Hong Kong':'Voyager of the Seas','Rome':'Allure of the Seas',
+			'Hong Kong':'Voyager of the Seas','Hong Kong':'Ovation of the Seas','Rome':'Allure of the Seas',
 			'Southampton':'Anthem of the Seas','Harwich':'Brilliance of the Seas','Seattle':'Jewel of the Seas'
 		}[ s_value ] );
 	} else if ( s_type === 'ship' ) {
 		 Start_Select( 'port', {
-			'Voyager of the Seas':'Hong Kong','Allure of the Seas':'Rome',
+			'Voyager of the Seas':'Hong Kong','Ovation of the Seas':'Hong Kong','Allure of the Seas':'Rome',
 			'Anthem of the Seas':'Southampton','Brilliance of the Seas':'Harwich','Jewel of the Seas':'Seattle'
 		}[ s_value ] );
 	}

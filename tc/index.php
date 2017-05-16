@@ -73,8 +73,11 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 
 				<div class="flexslider">
                   <ul class="slides">
+										<li>
+											 <a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image" src="../images/RCI Mother Day Web Banner_Chinese_FINAL.jpg" /></a>
+										</li>
                       <li>
-                          <a href="http://www.royalcaribbean.com.hk/tc/promotions.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion2_CHI_V3.jpg" /></a>
+                          <a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion_Chi_v3.jpg" /></a>
                       </li>
                       <li>
                           <a href="http://www.royalcaribbean.com.hk/tc/order-a-brochure.php"><img u="image"  src="../images/Royal-Cruise_Web-CN_v2.jpg" /></a>
@@ -85,8 +88,8 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
                   </ul>
 				</div>
 
-				<div style="position:absolute;left:0;bottom:65px;width:100%;height:5px;background:#f9b934"></div>
-				<div style="position:absolute;left:0;bottom:60px;width:100%;height:5px;background:#0d1b59"></div>
+				<div style="position:absolute;left:0;bottom:60px;width:100%;height:5px;background:#f9b934"></div>
+				<div style="position:absolute;left:0;bottom:55px;width:100%;height:5px;background:#0d1b59"></div>
 
 			</div>
 
@@ -124,7 +127,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 
 
 
-<div style="margin-top:-100px;" class="inner">
+<div style="margin-top:-50px;" class="inner">
 <div class="page_left">
 <div class="page_left01" style="height:auto; background:none; margin:10px auto auto 0;">
 
@@ -146,7 +149,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 		</div>
 
         <div style="width:225px; position:relative; float:left; text-align:left; margin:5px; text-align:center;">
-            <h3 style="width:225px; text-algin:left;padding:0px; margin:0px;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold">量子@香港</h3>
+            <h3 style="width:225px; text-algin:left;padding:0px; margin:0px;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold">贊禮@香港</h3>
             <div style="width:225px; text-align:center;">
             <a id="video" class="fancybox.iframe" href="http://www.youtube.com/embed/50jZhxEPjsk?autoplay=1" >
 			<img src="../newimages/index/video-split.jpg" />

@@ -79,6 +79,7 @@
 				<div class="right08s_2">
 					<ul>
 						<li><a onClick="Start_Select('ship','海洋航行者號')">海洋航行者號</a></li>
+						<li><a onClick="Start_Select('ship','海洋贊禮號')">海洋贊禮號</a></li>
 						<li><a onClick="Start_Select('ship','海洋魅麗號')">海洋魅麗號</a></li>
 						<li><a onClick="Start_Select('ship','海洋聖歌號')">海洋聖歌號</a></li>
 						<li><a onClick="Start_Select('ship','海洋光輝號')">海洋光輝號</a></li>
@@ -116,9 +117,9 @@ function Start_Select(s_type, s_value, s_text ) {
 	//$("#s_date_list,#s_port_list,#s_ship_list").hide();
 	$("#s_year_list,#s_month_list,#s_ship_list,#s_port_list").hide();
 	if ( s_type === 'port' ) {
-		Start_Select( 'ship', {'香港':'海洋航行者號','羅馬':'海洋魅麗號','修咸頓':'海洋聖歌號','哈裡奇':'海洋光輝號','西雅圖':'海洋珠寶號'}[ s_value ] );
+		Start_Select( 'ship', {'香港':'海洋航行者號','香港':'海洋贊禮號','羅馬':'海洋魅麗號','修咸頓':'海洋聖歌號','哈裡奇':'海洋光輝號','西雅圖':'海洋珠寶號'}[ s_value ] );
 	} else if ( s_type === 'ship' ) {
-		Start_Select( 'port', {'海洋航行者號':'香港','海洋魅麗號':'羅馬','海洋聖歌號':'修咸頓','海洋光輝號':'哈裡奇','海洋珠寶號':'西雅圖'}[ s_value ] );
+		Start_Select( 'port', {'海洋航行者號':'香港','海洋贊禮號':'香港','海洋魅麗號':'羅馬','海洋聖歌號':'修咸頓','海洋光輝號':'哈裡奇','海洋珠寶號':'西雅圖'}[ s_value ] );
 	}
 	s_update_search();
 }

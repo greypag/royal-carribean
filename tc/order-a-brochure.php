@@ -128,14 +128,29 @@ span.feedback-failed {
 			</p><p>
 			皇家加勒比國際遊輪，多達 270 條航線，無論是短途旅程或悠長假期都能滿足您的各種喜好。
 			</p><p>
-			請點擊以下電子手冊連結或填寫表格，以便我們將精美小冊子書本裝郵寄給您。
+			請點擊以下電子手冊連結或填寫表格，以便我們將精美小冊子書本裝郵寄給您(只限國際航線行程)。
 			</br>
 			*小冊子將為英文版本
 			</p>
 			<table style="width:100%">
 				<tr>
-					<td style="width:25%;vertical-align:middle;text-align:center"></td>
-					<td style="width:50%;vertical-align:middle;text-align:center">
+					<td style="width:33.3333%;vertical-align:top;text-align:center;padding-right:10px">
+						<img src="../newimages/VY_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<div style="display:inline-block;text-align:left;">
+						立即瀏覽海洋航行者號電子小冊子:
+						</br>
+						<a href="../pdf/2017 Feb VY Brochure_FINAL.pdf" target="_blank" style="color:#0073BB;">2017香港母港航線行程</a>
+						</div>
+					</td>
+					<td style="width:33.3333%;vertical-align:top;text-align:center">
+						<img src="../newimages/OV_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<div style="display:inline-block;text-align:left;">
+						立即瀏覽海洋贊禮號電子小冊子:
+						</br>
+						<a href="../pdf/OV Brochure 2017_FINAL.pdf" target="_blank" style="color:#0073BB;">2017香港母港航線行程</a>
+						</div>
+					</td>
+					<td style="width:50%;vertical-align:middle;text-align:center;padding-left:10px">
 						<img src="../newimages/usa_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
 						<div style="display:inline-block;text-align:left;">
 						立即瀏覽 2017 – 2018 電子小冊子:
@@ -151,7 +166,6 @@ span.feedback-failed {
 						<a href="http://viewer.zmags.com/publication/8801a76b" target="_blank" style="color:#0073BB;">阿拉斯加及加拿大</a>
 						</div>
 					</td>
-					<td style="width:25%;vertical-align:middle;text-align:center"></td>
 				</tr>
 			</table>
 

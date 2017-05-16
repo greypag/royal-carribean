@@ -951,7 +951,7 @@ class BookingController extends GxController {
                                     $mail2Sale->setData($emailData);
                                     $mail2Sale->setFrom("sales@royalcaribbean.com.hk", "Royal Caribbean");
                                     $mail2Sale->setTo(array('sales@royalcaribbean.com.hk', 'PTam@RCCLAPAC.com'));
-                                    $mail2Sale->setCc(array('mng@rcclapac.com'));
+                                    $mail2Sale->setCc(array('mng@rcclapac.com', 'JacksonYeung@rcclapac.com'));
                                     $mail2Sale->setSubject('Booking Confirmation(to Sales)');
                                     $mail2Sale->send();
 

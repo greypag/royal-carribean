@@ -137,7 +137,8 @@ $(document).ready(function (){
             <li>
             	<a>皇家禮遇</a>
             	<ul>
-                	<li><a href="get-royal-deals.php">皇家禮遇</a></li>
+                	<li><a href="get-royal-deals.php">精選航線</a></li>
+									<li><a href="promotions.php">最新優惠</a></li>
                 	<li><a href="royal-deals.php">立即登記</a></li>
                 </ul>
             </li>

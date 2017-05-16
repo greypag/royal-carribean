@@ -52,7 +52,7 @@
                     <li>
                         <a>航線行程</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/result.php'); ?>">航線行程</a></li>	
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/result.php'); ?>">航線行程</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/shoreExcursions.php'); ?>">岸上觀光</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/departure-port-hong-kong.php'); ?>">亞洲出發</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/top-10-destinations.php'); ?>">全球十大航綫</a></li>
@@ -62,16 +62,17 @@
                     <li>
                         <a>皇家船隊</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/voyager.php'); ?>">海洋航行者號</a></li>   
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/voyager.php'); ?>">海洋航行者號</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/quantum.php'); ?>">海洋量子號</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/royal-fleet.php'); ?>">皇家全球船隊</a></li>               
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/royal-fleet.php'); ?>">皇家全球船隊</a></li>
                         </ul>
                     </li>
                     <li>
                         <a>皇家禮遇</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/get-royal-deals.php'); ?>">皇家禮遇</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/royal-deals.php'); ?>">立即登記</a></li>           
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/get-royal-deals.php'); ?>">精選航線</a></li>
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/promotions.php'); ?>">最新優惠</a></li>           
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/royal-deals.php'); ?>">立即登記</a></li>
                         </ul>
                     </li>
                     <li>
@@ -84,7 +85,7 @@
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/sports.php'); ?>">船上運動</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/parentChild.php'); ?>">親子樂園</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/mice.php'); ?>">商旅公務</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/passion.php'); ?>">海上浪漫</a></li>               
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/passion.php'); ?>">海上浪漫</a></li>
                         </ul>
                     </li>
                     <li>
@@ -92,14 +93,14 @@
                         <ul>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/notice.php'); ?>">行前須知</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/qa.php'); ?>">常見問題</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/departure-port-hong-kong.php'); ?>">出發港【香港】</a></li>               
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/departure-port-hong-kong.php'); ?>">出發港【香港】</a></li>
                         </ul>
                     </li>
                     <li>
                         <a>皇冠金錨俱樂部</a>
                         <ul>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/crown-and-anchor-society-about.php'); ?>">關於俱樂部</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/crown-and-anchor-society-benefits.php'); ?>">會員權益</a></li>          
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('tc/crown-and-anchor-society-benefits.php'); ?>">會員權益</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -138,7 +139,7 @@
                                         <strong>+852 3189 3200</strong> | <a href="mailto:enquiry@royalcaribbean.com.hk" style="color:#ffde00; text-decoration:none; font-weight:normal;">enquiry@royalcaribbean.com.hk</a>
                                     </div></b></span></div><div class="copyright05" style="display:none;">
 
-                            <b> 
+                            <b>
                                 <div style="width: 80px; height: 84px; float: left;left:0px; position: absolute; top: 10px;">
 
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/r_14.png" width="80" height="84" border="0" usemap="#Map">

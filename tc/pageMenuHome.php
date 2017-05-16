@@ -209,9 +209,10 @@ $(document).ready(function (){
             <li class="col3">
 				<a>皇家禮遇</a>
 				<ul>
-                	<li><a href="get-royal-deals.php">皇家禮遇</a></li>
-                	<li><a href="royal-deals.php">立即登記</a></li>
-                </ul>
+						<li><a href="get-royal-deals.php">精選航線</a></li>
+						<li><a href="promotions.php">最新優惠</a></li>
+						<li><a href="royal-deals.php">立即登記</a></li>
+					</ul>
 			</li>
             <li class="col4">
             	<a>遊輪體驗</a>

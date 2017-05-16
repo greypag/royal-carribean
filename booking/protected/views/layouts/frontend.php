@@ -50,26 +50,27 @@
                     <li>
                         <a>PLAN A CRUISE</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/result.php'); ?>">Plan a Cruise</a></li>	
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/result.php'); ?>">Plan a Cruise</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/shoreExcursions.php'); ?>">Shore Excursions</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/departure-port-hong-kong.php'); ?>">Asia Ports of Departure</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/top-10-destinations.php'); ?>">Top 10 Destinations</a></li>                    
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/top-10-destinations.php'); ?>">Top 10 Destinations</a></li>
                         </ul>
 
                     </li>
                     <li>
                         <a>FIND A SHIP</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/voyager.php'); ?>">Voyager of the Seas</a></li>  
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/voyager.php'); ?>">Voyager of the Seas</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/quantum.php'); ?>">Quantum of the Seas</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/royal-fleet.php'); ?>">Royal Fleet</a></li>                
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/royal-fleet.php'); ?>">Royal Fleet</a></li>
                         </ul>
                     </li>
                     <li class="col2">
                         <a>GET ROYAL DEALS</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/get-royal-deals.php'); ?>">GET ROYAL DEALS</a></li>         
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/royal-deals.php'); ?>">SIGN UP NOW</a></li>
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/get-royal-deals.php'); ?>">Selected Sailing</a></li>
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/promotions.php'); ?>">Promotions</a></li>                  
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/royal-deals.php'); ?>">Sign Up Now</a></li>
                         </ul>
                     </li>
                     <li>
@@ -82,7 +83,7 @@
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/sports.php'); ?>">Sports</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/parentChild.php'); ?>">Family</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/mice.php'); ?>">MICE</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/passion.php'); ?>">Passion</a></li>               
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/passion.php'); ?>">Passion</a></li>
                         </ul>
                     </li>
                     <li class="col4">
@@ -90,22 +91,22 @@
                         <ul>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/notice.php'); ?>">Before you Board</a></li>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/qa.php'); ?>">FAQ</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/departure-port-hong-kong.php'); ?>" >Hong Kong Port of Departure</a></li>               
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/departure-port-hong-kong.php'); ?>" >Hong Kong Port of Departure</a></li>
                         </ul>
                     </li>
                     <li class="col5">
                         <a>CROWN AND <br/>ANCHOR SOCIETY</a>
                         <ul>
                             <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/crown-and-anchor-society-about.php'); ?>">About the Program</a></li>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/crown-and-anchor-society-benefits.php'); ?>">Member Benefits</a></li>          
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/crown-and-anchor-society-benefits.php'); ?>">Member Benefits</a></li>
                         </ul>
                     </li>
 
                     <li style="display:none;">
                         <a>CROWN & ANCHOR SOCIETY</a>
                         <ul>
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/memclub.php'); ?>">About CAS</a></li>   
-                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/member.php'); ?>">Become a Member</a></li>         
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/memclub.php'); ?>">About CAS</a></li>
+                            <li><a href="<?php Yii::app()->royalCaribbeanHelper->echoBooking_menu_link('en/member.php'); ?>">Become a Member</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -145,7 +146,7 @@
                                         <strong>+852 3189 3200</strong> | <a href="mailto:enquiry@royalcaribbean.com.hk" style="color:#ffde00; text-decoration:none; font-weight:normal;">enquiry@royalcaribbean.com.hk</a>
                                     </div></b></span></div><div class="copyright05" style="display:none;">
 
-                            <b> 
+                            <b>
                                 <div style="width: 80px; height: 84px; float: left;left:0px; position: absolute; top: 10px;">
 
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/r_14.png" width="80" height="84" border="0" usemap="#Map">
@@ -273,4 +274,3 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     </body>
 </html>
-

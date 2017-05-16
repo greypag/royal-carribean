@@ -139,14 +139,14 @@ form select {
       <input type="text" name="firstname" class="contact" autocomplete="family-name" required></label>
   </div>
 </div>
-<p>*出生日期:<br>
-  <select id="dob_year" name="dob_year" required>
+<p>出生日期:<br>
+  <select id="dob_year" name="dob_year">
     <option value="">年</option>
     <?php for($i = date('Y')-2, $j = date('Y')-120; $i >= $j; $i--) {
       echo "<option value='$i'>$i</option>";
     } ?>
   </select>
-  <select id="dob_day" name="dob_day" required>
+  <select id="dob_day" name="dob_day">
     <option value="">日</option>
     <?php for($i = 1; $i <= 9; $i++) {
       echo "<option value='$i'>0$i</option>";
@@ -155,7 +155,7 @@ form select {
       echo "<option value='$i'>$i</option>";
     } ?>
   </select>
-  <select id="dob_month" name="dob_month" required>
+  <select id="dob_month" name="dob_month">
     <option value="">月</option>
     <?php for($i = 1; $i <= 12; $i++) {
       echo "<option value='$i'>$monthText[$i]月</option>";
@@ -212,14 +212,15 @@ form select {
 <script>
 
 function check( event ) {
-   var year = ~~document.querySelector('#dob_year').value;
-   var month = ~~document.querySelector('#dob_month').value-1;
-   var day = ~~document.querySelector('#dob_day').value;
-   var date = new Date( year, month, day );
-   if ( date.getMonth() !== month || date.getDate() !== day ) {
-      event.preventDefault();
-      return alert( "日期錯誤" );
-   }
+  // leon remove DOB check
+  //  var year = ~~document.querySelector('#dob_year').value;
+  //  var month = ~~document.querySelector('#dob_month').value-1;
+  //  var day = ~~document.querySelector('#dob_day').value;
+  //  var date = new Date( year, month, day );
+  //  if ( date.getMonth() !== month || date.getDate() !== day ) {
+  //     event.preventDefault();
+  //     return alert( "日期錯誤" );
+  //  }
    if ( ! location.href.match( /:\/\/localhost\// ) && ! grecaptcha.getResponse() ) {
       event.preventDefault();
       document.querySelector('.g-recaptcha').scrollIntoView();

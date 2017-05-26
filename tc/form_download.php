@@ -194,7 +194,7 @@ function export () {
             if ( $key === 'lang' )
                $val = $row[$key] === 'en' ? '英文' : '中文';
             else if ( $key === 'mobile' )
-               $val .= "\t"; // Prevent phone from parsed as integer by Excel
+               $val = "$row[$key]\t"; // Prevent phone from parsed as integer by Excel
             else if ( isset( $meta[ $key ] ) && $meta[$key]->type === MYSQLI_TYPE_BIT )
                $val = $row[$key] === null ? '' : ( $row[$key] ? 'Yes' : 'No' );
             else

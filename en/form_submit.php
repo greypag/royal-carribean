@@ -199,6 +199,7 @@ function save_form ( ) {
          'mobile' => 'Mobile',
          'email' => 'Email',
          'opt-in' => 'Want Latest News',
+         'data-collection' => 'Personal Data Collection',
          'dob' => 'Birthday',
          'depart' => 'Birthday',
          'adult' => 'Adult',

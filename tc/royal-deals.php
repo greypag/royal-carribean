@@ -201,7 +201,7 @@ form select {
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
     <b>收集個人資料聲明:</b><br>
-    <input type="checkbox" name="PICS" class="" required> 我們重視閣下的私隱權,並竭力維護閣下個人資料得到保密。我們將收集到的個人資料,均依據香港法例&lt;個人資料(私隱)條例&gt;規定處理。
+    <input type="checkbox" name="data-collection" checked> 我們重視閣下的私隱權,並竭力維護閣下個人資料得到保密。我們將收集到的個人資料,均依據香港法例&lt;個人資料(私隱)條例&gt;規定處理。
     </span>
 </div>
 <br>

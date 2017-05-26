@@ -144,6 +144,7 @@ function export () {
          'mobile' => '手機',
          'email' => '電郵',
          'opt-in' => '獲取最新資訊',
+         'data-collection' => '收集個人資料',
          'adult' => '成人',
          'children' => '小童',
          'planning' => '想去的地方',
@@ -169,7 +170,7 @@ function export () {
             $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'mobile', 'email', 'planning', 'depart_year', 'depart_month', 'adult', 'children' );
             break;
          case "'RegRoyal'":
-            $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_year', 'dob_month', 'dob_day', 'experience', 'planning', 'companion' );
+            $fields = array( 'from_ip', 'date', 'time', 'lang', 'title', 'firstname', 'lastname', 'mobile', 'email', 'dob_year', 'dob_month', 'dob_day', 'experience', 'planning', 'companion', 'data-collection' );
             break;
          case "'Brochure'":
             $fields = array( 'from_ip', 'date', 'time', 'lang', 'firstname', 'lastname', 'address1', 'address2', 'country', 'city', 'mobile', 'email', 'opt-in', 'planning', 'book_exp', 'experience', 'crown', 'next_cruise', 'long_vacation', 'activity' );

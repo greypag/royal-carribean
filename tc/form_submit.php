@@ -199,6 +199,7 @@ function save_form ( ) {
          'mobile' => '手機',
          'email' => '電郵',
          'opt-in' => '獲取最新資訊',
+         'data-collection' => '收集個人資料',
          'dob' => '生日',
          'depart' => '出發',
          'adult' => '成人',

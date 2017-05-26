@@ -35,7 +35,7 @@ function save_form ( ) {
    $email_name = "Royal Caribbean Hong Kong";
    $email_sales = "sales@royalcaribbean.com.hk";
    $email_enquiry = "enquiry@royalcaribbean.com.hk";
-   $cc = 'mng@rcclapac.com';
+   $cc = 'mng@rcclapac.com, JacksonYeung@rcclapac.com';
    $email_debug = "ivan@ophubsolutions.com";
    $cc_debug = 'scarlett@ophubsolutions.com,mng@rcclapac.com';
 

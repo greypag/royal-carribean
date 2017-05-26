@@ -382,8 +382,8 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 <div class="page_contentbox" style='width:962px;display:block;'>
 
   <!--<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">-->
-<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/RCI-2017-launch-ad_962x341_newVersion_Chi_v4.jpg) no-repeat">
-    <div style="width: 962px;float: left;margin: 310px 0 0 0; background: url(../newimages/filter_tc.jpg) 20px 50px no-repeat;">
+<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/RCI-2017-Website-Banner-May17-OV-Chi-op.jpg) no-repeat">
+    <div style="width: 962px;float: left;margin: 360px 0 0 0; background: url(../newimages/filter_tc.jpg) 20px 50px no-repeat;">
       <div style="width: 962px;float: left; margin: 50px 10px 10px 10px; ">
         <div style="padding: 60px 40px 20px;">
           <span>篩選:<span>

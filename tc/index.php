@@ -11,7 +11,7 @@ $(document).ready(function ($) {
 	$('.flexslider').flexslider({
 		pauseOnAction: false,
         start: function(slider){
-          $('body').removeClass('loading');
+					$('.flexslider').css('background','none');
         }
     });
 
@@ -74,11 +74,17 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 				<div class="flexslider">
                   <ul class="slides">
 										<li>
-											 <a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image" src="../images/RCI Mother Day Web Banner_Chinese_FINAL.jpg" /></a>
+												<a href="http://www.royalcaribbean.com.hk/tc/promotions.php"><img u="image"  src="../images/Viet-Flash-Website-Banner_CHI_Extension_FINAL.jpg" /></a>
 										</li>
-                      <li>
-                          <a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image"  src="../images/RCI-2017-launch-ad_962x390_newVersion_Chi_v3.jpg" /></a>
-                      </li>
+										<li>
+												<a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image"  src="../images/RCI-2017-Website-Banner-May-VY-Music-Chi-4.jpg" /></a>
+										</li>
+										<li>
+												<a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image"  src="../images/RCI-2017-Website-Banner-May-VY-Panda-Chi-5.jpg" /></a>
+										</li>
+									<li>
+												<a href="http://www.royalcaribbean.com.hk/tc/result.php"><img u="image"  src="../images/RCI 2017 Website Banner(May17)VY-Chi-op.jpg" /></a>
+										</li>
                       <li>
                           <a href="http://www.royalcaribbean.com.hk/tc/order-a-brochure.php"><img u="image"  src="../images/Royal-Cruise_Web-CN_v2.jpg" /></a>
                       </li>

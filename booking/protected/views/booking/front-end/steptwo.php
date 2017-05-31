@@ -23,6 +23,13 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
+<?php
+$session=new CHttpSession;
+$session->open();
+
+$session->close();
+?>
+
 <div class="header">
     <ul>
         <li class="stepone"><span></span><?php echo Yii::t('booking', 'Cruise'); ?><div class="next"></div></li>
@@ -527,7 +534,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
                   "><?php echo Yii::t('booking', '(include taxes, fees and port expenses)'); ?>
             </span>
             <div class="price">
-                <b>$</b> <h2 id="totalPrice"><?php echo $cookies[8]; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
+                <b>$</b> <h2 id="totalPrice"><?php echo $session['session_total']; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
             </div>
             <div class="remark">
                 <!--View Summary of Charges,<br/>

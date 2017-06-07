@@ -534,7 +534,7 @@ $session->close();
                   "><?php echo Yii::t('booking', '(include taxes, fees and port expenses)'); ?>
             </span>
             <div class="price">
-                <b>$</b> <h2 id="totalPrice"><?php echo $session['session_total']; ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
+                <b>$</b> <h2 id="totalPrice"><?php echo Yii::app()->format->formatNumber($session['session_total']); ?></h2> <b> <?php echo Yii::t('booking', 'HKD');?></b>
             </div>
             <div class="remark">
                 <!--View Summary of Charges,<br/>

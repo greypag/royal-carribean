@@ -660,6 +660,7 @@ class BookingController extends GxController {
         $no_of_guest = count(Yii::app()->session['guestModels']);
         $now_timeStamp = strtotime('now');
         $finalprice = Yii::app()->session['session_total'];
+        $finalprice = Yii::app()->format->formatNumber($finalprice);
 
         try {
             $itineraryModel = Itinerary::model()->findByPk($booking_main[0]);

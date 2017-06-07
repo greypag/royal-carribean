@@ -3,20 +3,8 @@
      {
         "title" : "",
         "submitTitle" : "",
-        "image" : "Kung-Fu-Panda-ad_FINAL-thumb.jpg",
-        "file" : "Kung Fu Panda ad_FINAL.jpg"
-    },
-     {
-        "title" : "",
-        "submitTitle" : "",
-        "image" : "OV Mother's Day Flyer_with NCCF.jpg",
-        "file" : "OV Mother's Day Flyer_with NCCF.pdf"
-    },
-     {
-        "title" : "",
-        "submitTitle" : "",
-        "image" : "VY Mother's Day Flyer_with NCCF.jpg",
-        "file" : "VY Mother's Day Flyer_with NCCF.pdf"
+        "image" : "VY_Viet-Flash_FINAL_Extension.jpg",
+        "file" : "VY_Viet-Flash_FINAL_Extension.pdf"
     },
      {
         "title" : "",
@@ -41,13 +29,7 @@
       "submitTitle" : "",
       "image" : "FP-Kids-Gallery_FINAL_20170330.jpg",
       "file" : "FP Kids Gallery_FINAL_20170330.jpg"
-  },
-     {
-        "title" : "",
-        "submitTitle" : "",
-        "image" : "BOGO60-Promo-Flyer.jpg",
-        "file" : "BOGO60 Promo Flyer.pdf"
-    }
+  }
 ],
    "agents":[
         {

@@ -184,7 +184,7 @@ form select {
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
     <b>Personal Information Collection Statement:</b><br>
-    We shall keep your personal data confidential at all times. All personal data collected will be in accordance with the Personal Data (Privacy) Ordinance under the law of Hong Kong.
+    <input type="checkbox" name="data-collection" checked> We shall keep your personal data confidential at all times. All personal data collected will be in accordance with the Personal Data (Privacy) Ordinance under the law of Hong Kong.
     </span>
 </div>
 <br>

@@ -307,7 +307,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
     <div class="page_contentbox" style='width:962px;display:block;'>
 
         <!--<div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/plan-a-cruise.jpg) no-repeat">-->
-          <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/RCI-2017-launch-ad_962x341_newVersion_Eng_v4.jpg) no-repeat">
+          <div style="width: 962px; float: left; position: relative; background:#fff url(../newimages/banner/RCI-2017-Website-Banner-May17-OV-Eng-op.jpg) no-repeat">
 			<div class="descBox banner-margin-top margin-20-30 marineBlue">
 				<h1 class="descBox__title">Plan a Cruise: Check Out Our Many Cruises Departing from Hong Kong or Many More Worldwide Ports</h1>
 				<div class="descBox__desc">Plan your next trip with the Royal Caribbean cruise planner. Check any of our upcoming cruise information, deals and destinations. Start by identifying a cruise ship and your ideal departure date. There are plenty of vessels to choose from such as the Voyager of the Seas, Quantum of the Seas, Ovation of the Seas, Harmony of the Seas and more. For specific Hong Kong cruise itinerary, you may download flyers to find out more information. There's a ship and destination for everyone. We are looking forward to having you aboard!</div>
@@ -390,7 +390,7 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 
 <style>
 .descBox.banner-margin-top {
-    margin-top: 360px;
+    margin-top: 410px;
 }
 </style>
 

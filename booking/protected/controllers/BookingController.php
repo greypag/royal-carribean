@@ -659,7 +659,7 @@ class BookingController extends GxController {
         $cookies['promotion'] = $booking_promotion;
         $no_of_guest = count(Yii::app()->session['guestModels']);
         $now_timeStamp = strtotime('now');
-
+        $finalprice = Yii::app()->session['session_total'];
 
         try {
             $itineraryModel = Itinerary::model()->findByPk($booking_main[0]);
@@ -781,7 +781,7 @@ class BookingController extends GxController {
                             if ($retrieveResponse["status"]) {
 
                                 //$paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, $calculated_Object['sum']);
-                                $paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $cookies['display'][8]));
+                                $paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $finalprice));
                                 //$paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $cookies['display'][8]));
                                 if ($paymentResponse["status"]) {
 											/**/
@@ -831,7 +831,7 @@ class BookingController extends GxController {
                                     $booking_item->booking_time = $now_timeStamp;
                                     $booking_item->ip = CHttpRequest::getUserHostAddress();
                                     $booking_item->no_of_guest = $no_of_guest;
-                                    $booking_item->total_payment = $calculated_Object['sum'];
+                                    $booking_item->total_payment = $finalprice; //$calculated_Object['sum'];
                                     $booking_item->booking_status = 'payment_successful';
                                     $booking_item->promotion_id = (!is_null($promotionCodeObj)) ? $promotionCodeObj->promotion_id : '';
                                     $booking_item->itinerary_id = $booking_main[0];
@@ -845,7 +845,8 @@ class BookingController extends GxController {
 									$log_model = new Log;
 									$log_model->create_date = $now_timeStamp;
 									$log_model->category = 'Booking_Payment_log(payment)';
-									$log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $cookies['display'][8]);
+                  $log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $finalprice);
+									//$log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $cookies['display'][8]);
 									$log_model->save();
 
 
@@ -923,7 +924,8 @@ class BookingController extends GxController {
                                         'category' => $cookies['display'][7],
                                         'card' => "XXXX-XXXX-XXXX-" . substr($cardNumber, -4),
                                         'promotionCode' => (!is_null($promotionCodeObj)) ? $promotionCodeObj->promotion_name . ' (' . $promotionCodeObj->promotion_code . ')' : 'Not Applicable',
-                                        'total' => Yii::app()->format->formatNumber($calculated_Object['sum']),
+                                        'total' => Yii::app()->format->formatNumber($finalprice),
+                                        //'total' => Yii::app()->format->formatNumber($calculated_Object['sum']),
 										'guestPriceArray'=> $guestPriceArray,
                                         'items' => $items,);
 

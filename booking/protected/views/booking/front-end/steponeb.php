@@ -716,3 +716,11 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
     </div>
     <div class="clear"></div>
 </div>
+<?php
+	$session=new CHttpSession;
+	$session->open();
+
+	$session['session_total'] = $total;
+
+	$session->close();		
+?>

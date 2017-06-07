@@ -22,11 +22,23 @@ $page_type = '';
  ?>
  <script type="text/javascript">
  var google_tag_params = {
-   travel_destid: <?php echo $_SESSION['captcha']['destid']; ?>,
-   travel_startdate: <?php echo $_SESSION['captcha']['startdate']; ?>,
-   travel_enddate: <?php echo $_SESSION['captcha']['enddate']; ?>,
+   travel_destid: <?php if (isset($_SESSION['captcha']['destid'])) {
+     echo $_SESSION['captcha']['destid'];
+     //unset($_SESSION['captcha']['destid']);
+   } ?>,
+   travel_startdate: <?php if (isset($_SESSION['captcha']['startdate'])) {
+     echo $_SESSION['captcha']['startdate'];
+     //unset($_SESSION['captcha']['startdate']);
+   } ?>,
+   travel_enddate: <?php if (isset($_SESSION['captcha']['enddate'])) {
+     echo $_SESSION['captcha']['enddate'];
+     //unset($_SESSION['captcha']['startdate']);
+   } ?>,
    travel_pagetype: <?php echo $page_type ?>,
-   travel_totalvalue: <?php echo $_SESSION['captcha']['totalvalue'] ?>,
+   travel_totalvalue: <?php if ($_SESSION['captcha']['totalvalue']) {
+     echo $_SESSION['captcha']['totalvalue'];
+     //unset($_SESSION['captcha']['totalvalue']);
+   } ?>,
  };
  </script>
 

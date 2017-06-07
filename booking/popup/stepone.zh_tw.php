@@ -1,10 +1,6 @@
-<!DOCTYPE html><meta charset='utf-8' />
-
-<style>
+﻿<style>
 
 * {font-family: sans-serif;}
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
 
 </style>
 
@@ -14,115 +10,20 @@ a:hover { text-decoration: underline; }
 
 <div style="display:table-cell;vertical-align:middle;padding:0 5%">
 
-<?php if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0819' ) !== false ) { ?>
-
-
-
-<h1 style="color:red">優惠代碼 2 選 1 !</h1>
-
-<p>優惠代碼 1: <b>SUMMER2016</b><br>
-網上預訂海洋航行者號 8 月 19 日出發之航次及用此優惠代碼，<b><u>第二位必須是 12 歲或以下或 66 歲或以上之客人即獲免船費(CCF)優惠</u></b>。<b><u>每房更額外加送船上消費額</u></b>。</p>
-<p>訂購 8 月 19 日出發之航程可獲船上消費額以每房計算:<br>
-內艙房及海景房金額為 100 美元；陽台房及套房金額為 200 美元。</p>
-
-<p><br>優惠代碼2: <b>OBC0716</b><br>
-網上預訂此航程及用此優惠代碼即獲<b><u>每房美金 100 元船上消費額</u></b>。</p>
-
-<p style="font-size:.9em"><br>船上消費額會於旅客登船後自動存入旅客之帳戶。優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
-
-
-
-<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0827' ) !== false ) { ?>
-
-
-
-<h1 style="color:red">優惠代碼2選1 !</h1>
-
-<p>優惠代碼1: <b>SUMMER2016</b><br>
-網上預訂海洋航行者號 8 月 27 日出發之航次及用此優惠代碼，<b><u>第二位必須是 12 歲或以下或 66 歲或以上之客人即獲免船費(CCF)優惠</u></b>。<b><u>每房更額外加送船上消費額</u></b>。</p>
-<p>訂購 8 月 27 日出發之航程可獲船上消費額以每房計算:<br>
-內艙房及海景房金額為 50 美元；陽台房及套房金額為 100 美元。</p>
-
-<p><br>優惠代碼2: <b>OBC0716</b><br>
-網上預訂此航程及用此優惠代碼即獲<b><u>每房美金 100 元船上消費額</u></b>。</p>
-
-<p style="font-size:.9em"><br>船上消費額會於旅客登船後自動存入旅客之帳戶。優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
-
-
-
-<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0905' ) !== false ) { ?>
-
-
-
-<h1 style="color:red">優惠代碼 2 選 1 !</h1>
-
-<p>優惠代碼 1: <b>BUTTERFLY</b><br>
-網上預訂海洋航行者號 9 月 5 日出發之航次及用此優惠代碼，即可以低至 $2,308 購買海洋航行者號 8 月 31 日出發之航次 (VY0831) 或 9 月 10 日出發之航次 (VY0910)，一個旅程玩盡廈門、沖繩及越南! <br>
-<br>
-<b>優惠詳情:</b><br>
-以$2,308購買VY0831/ VY910 之內艙房<br>
-以$2,708購買VY0831/ VY910 之海景房<br>
-以$3,308購買VY0831/ VY910 之陽台房<br>
-以$4,008購買VY0831/ VY910 之標準套房<br>
+<p style="font-size:1.25em;font-weight:bold;">
+<span style="color:#0070c0">慶賀2017年海洋量子號非凡優惠</span>
 </p>
 
-<p><br>優惠代碼2: <b>OBC0716</b><br>
-網上預訂此航程及用此優惠代碼即獲<b><u>每房美金 100 元船上消費額</u></b>。</p>
-
-<p style="font-size:.9em"><br>船上消費額會於旅客登船後自動存入旅客之帳戶。優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
-
-
-
-<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'VY0915' ) !== false ) { ?>
-
-
-
-<h1 style="color:red">優惠代碼 2 選 1 !</h1>
-
-<p>優惠代碼 1: <b>BUTTERFLY</b><br>
-網上預訂海洋航行者號 9 月 15 日出發之航次及用此優惠代碼，即可以低至 $2,308 購買海洋航行者號 9 月 10 日出發之航次 (VY0910)，一個旅程玩盡沖繩及越南!</p>
-
-<p><b>優惠詳情:</b><br>
-以 $2,308 購買 VY910 之內艙房<br>
-以 $2,708 購買 VY910 之海景房<br>
-以 $3,308 購買 VY910 之陽台房<br>
-以 $4,008 購買 VY910 之標準套房</p>
-
-<p><br>優惠代碼2: <b>OBC0716</b><br>
-網上預訂此航程及用此優惠代碼即獲<b><u>每房美金 100 元船上消費額</u></b>。</p>
-
-<p style="font-size:.9em"><br>船上消費額會於旅客登船後自動存入旅客之帳戶。優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
-
-
-
-<?php } else if ( isset( $_SERVER['HTTP_REFERER'] ) && 
-  ( strpos( $_SERVER['HTTP_REFERER'], 'OV1029' ) !== false ||
-    strpos( $_SERVER['HTTP_REFERER'], 'OV1105' ) !== false ||
-    strpos( $_SERVER['HTTP_REFERER'], 'OV1123' ) !== false )  ) { ?>
-
-
-
-<h1 style="color:red">OV2016 優惠代碼</h1>
-
-<p>
-<b>網上預訂此航程及用此優惠代碼即獲每房美金 100 元船上消費額，消費額會於旅客登船後自動存入旅客之帳戶。</b>
+<p><span style="color:#ed7d31;font-weight:bold">預訂陽台房或以上，即送您指定香港上海來回機票*</span>
+<br style="margin-top:.5em;display:block">一經購買，將有專人與您聯絡有關機票之事宜。
+<br style="margin-top:.5em;display:block">優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:85231893200'>3189 3200</a>。謝謝!</br>
 </p>
 
-<p style="font-size:.9em">優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
+<p>&nbsp;</p>
 
-
-
-<?php } else { ?>
-
-
-
-<h1 style="color:red">OBC0716 優惠代碼</h1>
-<p>網上預訂此航程及用此優惠代碼即獲每房美金 100 元船上消費額，消費額會於旅客登船後自動存入旅客之帳戶。</p>
-<p style="font-size:.9em">優惠受條款及細則約束，如有任何查詢，請電郵至 <a href='mailto:enquiry@royalcaribbean.com.hk'>enquiry@royalcaribbean.com.hk</a> 或致電 <a href='tel:+85231983200'>3198 3200</a>。謝謝!</p>
-
-
-
-<?php }?>
+<p style="font-size:.9em;text-align:right">
+更新時間: 2016年12月13日   下午2時00分
+</p>
 
 </div>
 

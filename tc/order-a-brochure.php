@@ -135,19 +135,19 @@ span.feedback-failed {
 			<table style="width:100%">
 				<tr>
 					<td style="width:33.3333%;vertical-align:top;text-align:center;padding-right:10px">
-						<img src="../newimages/VY_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<img src="../newimages/2017-Brand-Brochure-Final.jpg" style="width:210px;height:auto;margin:15px 0;">
 						<div style="display:inline-block;text-align:left;">
-						立即瀏覽海洋航行者號電子小冊子:
+						立即瀏覽海洋航行者號及海洋贊禮號電子小冊子:
 						</br>
-						<a href="../pdf/2017 Feb VY Brochure_FINAL.pdf" target="_blank" style="color:#0073BB;">2017香港母港航線行程</a>
+						<a href="../pdf/2017 Brand Brochure Final.pdf" target="_blank" style="color:#0073BB;">2017香港母港航線行程</a>
 						</div>
 					</td>
 					<td style="width:33.3333%;vertical-align:top;text-align:center">
-						<img src="../newimages/OV_cover.jpg" style="width:210px;height:auto;margin:15px 0;">
+						<img src="../newimages/2017-Shore-Excursions-Brochure-FINAL.jpg" style="width:210px;height:auto;margin:15px 0;">
 						<div style="display:inline-block;text-align:left;">
-						立即瀏覽海洋贊禮號電子小冊子:
+						立即瀏覽2017電子小冊子:
 						</br>
-						<a href="../pdf/OV Brochure 2017_FINAL.pdf" target="_blank" style="color:#0073BB;">2017香港母港航線行程</a>
+						<a href="../pdf/2017 Shore Excursions Brochure FINAL.pdf" target="_blank" style="color:#0073BB;">2017岸上觀光行程</a>
 						</div>
 					</td>
 					<td style="width:50%;vertical-align:middle;text-align:center;padding-left:10px">

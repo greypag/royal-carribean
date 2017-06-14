@@ -3,14 +3,26 @@
      {
         "title" : "",
         "submitTitle" : "",
-        "image" : "VY_Viet-Flash_FINAL_Extension.jpg",
-        "file" : "VY_Viet-Flash_FINAL_Extension.pdf"
+        "image" : "FINAL_VY.jpg",
+        "file" : "FINAL_VY.pdf"
     },
      {
         "title" : "",
         "submitTitle" : "",
-        "image" : "Flyer-English_3pages_FINAL.jpg",
-        "file" : "Flyer English_3pages_FINAL.pdf"
+        "image" : "FINAL_OV.jpg",
+        "file" : "FINAL_OV.pdf"
+    },
+     {
+        "title" : "",
+        "submitTitle" : "",
+        "image" : "Tentcard_Database-Collection-snap.jpg",
+        "file" : "Tentcard_Database-Collection.jpg"
+    },
+     {
+        "title" : "",
+        "submitTitle" : "",
+        "image" : "Royal-Caribbean-Kids-Cruise-Flyer_10.jpg",
+        "file" : "Royal Caribbean Kids Cruise Flyer_10(3pages).pdf"
     },
      {
         "title" : "",
@@ -36,7 +48,7 @@
             "image" : "travel_logo_01.gif",
             "hotline" : "23157287",
             "license" : "350273",
-            "url" : "http://www.ctshk.com/eng/cruise/package.htm"
+            "url" : "http://www.ctshk.com/cruise/package.htm"
         },
         {
             "image" : "travel_logo_02.gif",
@@ -54,7 +66,7 @@
             "image" : "travel_logo_04.gif",
             "hotline" : "23161199",
             "license" : "350296",
-            "url" : "http://www.lotus-tours.com.hk/Travel/cruises/default.asp"
+            "url" : "http://www.lotus-tours.com.hk/Travel/cruises/"
         },
         {
             "image" : "travel_logo_05.gif",
@@ -78,13 +90,13 @@
             "image" : "travel_logo_08.gif",
             "hotline" : "31884538",
             "license" : "353495",
-            "url" : "http://cruise.travelexpert.com.hk/En/index.aspx"
+            "url" : "http://cruise.travelexpert.com.hk/"
         },
         {
             "image" : "travel_logo_09.gif",
             "hotline" : "23139877",
             "license" : "350488",
-            "url" : "http://www.westminstertravel.com/hk/Cruise/"
+            "url" : "http://www.westminstertravel.com/hk/Cruise/?lang=zh-tw"
         },
         {
             "image" : "travel_logo_10.gif",

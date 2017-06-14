@@ -74,7 +74,10 @@ document.write('<iframe src="https://6589353.fls.doubleclick.net/activityi;src=6
 				<div class="flexslider">
                   <ul class="slides">
 										<li>
-												<a href="http://www.royalcaribbean.com.hk/en/promotions.php"><img u="image"  src="../images/Viet-Flash-Website-Banner_ENG_Extension_FINAL.jpg" /></a>
+												<a href="http://www.royalcaribbean.com.hk/en/result.php"><img u="image"  src="../images/Website-Banner_Fathers-Day_ENG.jpg" /></a>
+										</li>
+										<li>
+												<a href="http://bit.ly/RCIHK3rdBirthday"><img u="image"  src="../images/Website-Banner_Database-Collection_ENG.jpg" /></a>
 										</li>
 										<li>
 												<a href="http://www.royalcaribbean.com.hk/en/result.php"><img u="image"  src="../images/RCI-2017-Website-Banner-May-VY-Music-Eng-1.jpg" /></a>

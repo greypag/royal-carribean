@@ -164,15 +164,9 @@ background-size: cover;">
 				<div id="subcat">
 				<ul id="china-s" class="subcat">
 					<li>三亞</li>
-					<li>廈門</li>
 				</ul>
 				<ul id="japan-s" class="subcat">
-					<li>長崎</li>
 					<li>沖繩</li>
-					<li>別府</li>
-					<li>宮崎</li>
-					<li>廣島</li>
-					<li>高知</li>
 				</ul>
 				<ul id="korea-s" class="subcat">
 					<li>濟州</li>
@@ -180,14 +174,12 @@ background-size: cover;">
 					<li>釜山</li>
 				</ul>
 				<ul id="taiwan-s" class="subcat">
+          <li>台北</li>
 					<li>高雄</li>
-					<li>台北</li>
-					<li>花蓮</li>
 				</ul>
 				<ul id="vietnam-s" class="subcat active">
 					<li>峴港/順化(真美)</li>
 					<li>芽莊</li>
-					<li>胡志明市</li>
 				</ul>
 				</div>
 			</div>

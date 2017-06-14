@@ -1,19 +1,30 @@
 			</div>
-			
-<div style="padding:0 0 0 30px">	
 
+<div style="padding:0 0 0 30px">
+
+<!--
 <p>• 以上價錢並不包括給予導遊及司機的服務小費, 服務小費則可隨心打賞。</p>
 <p>• 已參加之行程不能更改或取消, 如出發當日缺席，一切所繳費用既不退還。</p>
 <p>• 以上價錢只作參考並以報名時作準。</p>
 <p>• 其他條款及細則，請前往遊輪上之岸上觀光專櫃查詢。</p>
 <p>• 所有岸上觀光行程將以普通話進行，如須英文導遊，請參閱<a style="text-decoration:underline !important" href="http://www.royalcaribbean.com/findacruise/ports/group/home.do">皇家加勒比國際遊輪專頁</a></p>
-<p>• All shore excursions are conducted in Mandarin Chinese, should you require English speaking tours, 
+<p>• All shore excursions are conducted in Mandarin Chinese, should you require English speaking tours,
 </br><span style="color:white">• </span>please visit <a style="text-decoration:underline !important" href="http://www.royalcaribbean.com/findacruise/ports/group/home.do">Royal Caribbean International</a></p>
+-->
+
+<p>岸上觀光注意事</p>
+<ol>
+<li>可於出發前最少3天前聯絡你的旅行社或致電報名熱線31893200 (按2) 預訂；如未能預先訂購，請前往船上岸上觀光專櫃選購。</li>
+<li>岸上觀光具體行程、時間、價格或有機會調整，景點遊覽次序會根據出行實際狀況進行調整，以實際接待為準。</li>
+<li>本小冊子中的所有岸上觀光以普通話進行及以美金計算並不包括給予導遊及司機的服務小費，服務小費則可隨心打賞。</li>
+<li>已參加之行程不能更改或取消，如出發當日缺席，一切已繳交的費用一概不能退還。</li>
+<li>私人定制岸上觀光團敬請前往船上的岸上觀光專櫃查詢或與我們聯絡。</li>
+</ol>
 
 <div style="text-align:right;margin-bottom:20px;cursor:pointer" class="backtotop">返回頁頂</div>
 </div>
 
-			
+
 <script>
 $(document).ready(function() {
 	var p0 = "<?php echo basename($_SERVER['PHP_SELF']); ?>";
@@ -21,7 +32,7 @@ $(document).ready(function() {
 	var p2 = p1[0].split("-");
 	var page = p2[1];
 	var tab = p2[2];
-		
+
 	$("#cat li").removeClass("w130 active");
 	$("#cat li").addClass("w130");
 	$("#"+page).addClass("active");
@@ -35,7 +46,7 @@ $(document).ready(function() {
 	$("#subcat ul li").click(function() {
 		window.location.href = "shoreExcursions-"+page+"-"+$(this).prevAll().length+".php";
 	});
-	
+
 	$('.backtotop').click(function(){
 		$('html, body').animate({scrollTop : 500},500);
 		return false;
@@ -43,6 +54,14 @@ $(document).ready(function() {
 });
 </script>
 <style>
+ol {
+	padding-left: 15px;
+}
+ol li {
+	list-style-type: number;
+	margin-bottom: 5px;
+	line-height: 1.5;
+}
 .page_left01 li.w130 {
 	width: 130px;
 	float: left;
@@ -69,7 +88,7 @@ $(document).ready(function() {
 }
 .page_left01 ul.subcat {
 	width:670px;
-	height:auto;	
+	height:auto;
 }
 .page_left01 ul.subcat li {
 	width:auto;

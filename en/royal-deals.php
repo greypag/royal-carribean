@@ -184,7 +184,8 @@ form select {
 <div class="float" style="margin-top: 10px;color: #666666">
     <span id="privacytext">
     <b>Personal Information Collection Statement:</b><br>
-    <input type="checkbox" name="data-collection" required> We shall keep your personal data confidential at all times. All personal data collected will be in accordance with the Personal Data (Privacy) Ordinance under the law of Hong Kong.
+    <input type="checkbox" name="data-collection" required> By subscribing Royal Caribbean eNews, I agree and authorize consent that Royal Caribbean will use my personal data collected including Names, Telephone/Mobile Numbers and Email addresses for promoting and advertising any Royal Caribbean brand activities, itineraries, special offer, etc.<br/>
+    All personal data collected will be obliged by Privacy Data (Privacy) Ordinance under the law of Hong Kong. Royal Caribbean reserves the rights of interpretation and final decision within laws and ordinances.
     </span>
 </div>
 <br>

@@ -659,8 +659,8 @@ class BookingController extends GxController {
         $cookies['promotion'] = $booking_promotion;
         $no_of_guest = count(Yii::app()->session['guestModels']);
         $now_timeStamp = strtotime('now');
-        $finalprice = Yii::app()->session['session_total'];
-        $finalprice = Yii::app()->format->formatNumber($finalprice);
+        $finalprice = Yii::app()->session['session_total']; // unformatted price
+        $paymentprice = Yii::app()->format->formatNumber($finalprice); // formatted price
 
         try {
             $itineraryModel = Itinerary::model()->findByPk($booking_main[0]);
@@ -782,7 +782,7 @@ class BookingController extends GxController {
                             if ($retrieveResponse["status"]) {
 
                                 //$paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, $calculated_Object['sum']);
-                                $paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $finalprice));
+                                $paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $paymentprice));
                                 //$paymentResponse = RoomInventory::model()->makePayment($reservation_code, $cardType, $cardFamilyName . ", " . $cardGivenName, $cardNumber, $cardYear, $cardMonth, str_replace(",", "", $cookies['display'][8]));
                                 if ($paymentResponse["status"]) {
 											/**/
@@ -846,7 +846,7 @@ class BookingController extends GxController {
 									$log_model = new Log;
 									$log_model->create_date = $now_timeStamp;
 									$log_model->category = 'Booking_Payment_log(payment)';
-                  $log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $finalprice);
+                  $log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $paymentprice);
 									//$log_model->description = $refNumber . ' has completed the payment ' .str_replace(",", "", $cookies['display'][8]);
 									$log_model->save();
 
